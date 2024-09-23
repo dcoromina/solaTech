@@ -3,16 +3,17 @@ import Image from "next/image";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
-import Logo from "/public/no-bgicon.png";
 import LogoSvg from "/public/slogo.svg";
 import "../styles.css";
 
 const NavigationMenuDemo = () => {
   return (
-    <div className="flex flex-row w-full ">
-      <div className="flex flex-row items-center gap-5">
-        <Image src={Logo} width={38} height={38} alt="Logo" />
-        <h1 className="font-bold">SOLA</h1>
+    <div className="flex flex-row w-full justify-evenly items-center p-10">
+      <div className="flex flex-row space-x-3 ">
+        <Image src={LogoSvg} aria-hidden width="38" height="38" alt="logo" />
+        <p className="uppercase  text-white font-extrabold text-lg w-fit">
+          Sola Tech
+        </p>
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
         <NavigationMenu.List className="NavigationMenuList">
@@ -25,7 +26,13 @@ const NavigationMenuDemo = () => {
                 <li style={{ gridRow: "span 3" }}>
                   <NavigationMenu.Link asChild>
                     <a className="Callout" href="/">
-                      <Image src={LogoSvg} aria-hidden width="38" height="38" />
+                      <Image
+                        src={LogoSvg}
+                        aria-hidden
+                        width="38"
+                        height="38"
+                        alt="logo"
+                      />
                       <div className="CalloutHeading uppercase">Sola Tech</div>
 
                       <p className="CalloutText">
@@ -100,7 +107,7 @@ const NavigationMenuDemo = () => {
               className="NavigationMenuLink"
               href="https://github.com/radix-ui"
             >
-              Github
+              Contact us
             </NavigationMenu.Link>
           </NavigationMenu.Item>
 
@@ -117,6 +124,7 @@ const NavigationMenuDemo = () => {
   );
 };
 
+// eslint-disable-next-line react/display-name
 const ListItem = React.forwardRef(
   ({ className, children, title, ...props }, forwardedRef) => (
     <li>
