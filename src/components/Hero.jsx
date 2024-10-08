@@ -1,22 +1,21 @@
 import React from "react";
+import Image from "next/image";
+import HeroSvg from "/public/hero1.svg";
 
 const HeroSection = () => {
   return (
     <div className="w-full h-fit flex flex-col items-center gap-10">
       <div className="font-bold w-2/5 text-white text-5xl uppercase  text-center ">
-        Secure your business, Secure your future
+        Health and fitness like never before
       </div>
       <div className="text-white text-center w-2/5">
-        Data analysis software is a type of software tool used for data analysis
-        and reporting. It is designed to help businesses, organizations, and
-        individuals process, visualize,
+        Empowering Wellness through Cutting-Edge Technology and Data-Driven
+        Insights
       </div>
-      <div className=" h-fit  p-2">
-        <button className=" bg-white py-2 px-6 text-lg rounded-full text-[--violet-11]  ">
-          Get started
-        </button>
+
+      <div className="w-fit h-auto bg-red-500 ">
+        <Image src={HeroSvg} className="w-4/5 h-auto " alt="logo" />
       </div>
-      <div className=""></div>
     </div>
   );
 };

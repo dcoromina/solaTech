@@ -9,11 +9,9 @@ import "../styles.css";
 const NavigationMenuDemo = () => {
   return (
     <div className="flex flex-row w-full justify-evenly items-center p-10">
-      <div className="flex flex-row space-x-3 ">
+      <div className="flex flex-row space-x-3 items-center">
         <Image src={LogoSvg} aria-hidden width="38" height="38" alt="logo" />
-        <p className="uppercase  text-white font-extrabold text-lg w-fit">
-          Sola Tech
-        </p>
+        <p className="uppercase text-white font-bold text-3xl w-fit ">Sola</p>
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
         <NavigationMenu.List className="NavigationMenuList">
@@ -50,6 +48,35 @@ const NavigationMenuDemo = () => {
                 </ListItem>
                 <ListItem href="https://icons.radix-ui.com/" title="Vision">
                   Long-term goals and aspirations.
+                </ListItem>
+              </ul>
+            </NavigationMenu.Content>
+          </NavigationMenu.Item>
+
+          <NavigationMenu.Item>
+            <NavigationMenu.Trigger className="NavigationMenuTrigger">
+              Solutions <CaretDownIcon className="CaretDown" aria-hidden />
+            </NavigationMenu.Trigger>
+            <NavigationMenu.Content className="NavigationMenuContent">
+              <ul className="List one">
+                <ListItem
+                  title="LoreAid"
+                  href="/primitives/docs/guides/animation"
+                >
+                  A app to help take care of the elderly.
+                </ListItem>
+                <ListItem
+                  title="Myoo.io"
+                  href="/primitives/docs/overview/accessibility"
+                >
+                  A Health and Fitness ecoSystem, using the latest tech to
+                  improve health.
+                </ListItem>
+                <ListItem
+                  title="Devices"
+                  href="/primitives/docs/overview/releases"
+                >
+                  Devices to use with our solutions.
                 </ListItem>
               </ul>
             </NavigationMenu.Content>
@@ -102,15 +129,6 @@ const NavigationMenuDemo = () => {
             </NavigationMenu.Content>
           </NavigationMenu.Item>
 
-          <NavigationMenu.Item>
-            <NavigationMenu.Link
-              className="NavigationMenuLink"
-              href="https://github.com/radix-ui"
-            >
-              Contact us
-            </NavigationMenu.Link>
-          </NavigationMenu.Item>
-
           <NavigationMenu.Indicator className="NavigationMenuIndicator">
             <div className="Arrow" />
           </NavigationMenu.Indicator>
@@ -120,6 +138,7 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
         </div>
       </NavigationMenu.Root>
+      <div className="NavigationMenuLink ">Contact us</div>
     </div>
   );
 };
