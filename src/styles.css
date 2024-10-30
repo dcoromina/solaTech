@@ -4,9 +4,15 @@
 @import "@radix-ui/colors/purple.css";
 @import "@radix-ui/colors/violet.css";
 
-
 /* reset */
 
+:root {
+  background: linear-gradient(
+    90deg,
+    rgba(139, 79, 199, 1) 0%,
+    rgba(66, 98, 219, 1) 100%
+  );
+}
 
 .NavigationMenuRoot {
   position: relative;
@@ -46,7 +52,7 @@
 .NavigationMenuTrigger:hover,
 .NavigationMenuLink:hover {
   background-color: var(--violet-3);
-  color:var(--violet-11)
+  color: var(--violet-11);
 }
 
 .NavigationMenuTrigger {
@@ -229,7 +235,6 @@
 [data-state="open"] > .CaretDown {
   transform: rotate(-180deg);
   color: var(--violet-11);
-
 }
 
 .Arrow {

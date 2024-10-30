@@ -3,15 +3,18 @@ import Image from "next/image";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
-import LogoSvg from "/public/slogo.svg";
+import logoSvg from "/public/images/logo-dsh.png";
+import logoS from "/public/images/logo-s.png";
+import logoLet from "/public/images/logo-let.png";
+import logoRep from "/public/RepTrack.png";
+import logoMyoo from "/public/myoo.png";
 import "../styles.css";
 
 const NavigationMenuDemo = () => {
   return (
-    <div className="flex flex-row w-full justify-evenly items-center p-10">
+    <div className="flex flex-row w-full justify-evenly items-center py-10 px-36">
       <div className="flex flex-row space-x-3 items-center">
-        <Image src={LogoSvg} aria-hidden width="38" height="38" alt="logo" />
-        <p className="uppercase text-white font-bold text-3xl w-fit ">Sola</p>
+        <Image src={logoLet} aria-hidden width="100" height="auto" alt="logo" />
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
         <NavigationMenu.List className="NavigationMenuList">
@@ -25,7 +28,7 @@ const NavigationMenuDemo = () => {
                   <NavigationMenu.Link asChild>
                     <a className="Callout" href="/">
                       <Image
-                        src={LogoSvg}
+                        src={logoS}
                         aria-hidden
                         width="38"
                         height="38"
@@ -55,25 +58,34 @@ const NavigationMenuDemo = () => {
 
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className="NavigationMenuTrigger">
-              Solutions <CaretDownIcon className="CaretDown" aria-hidden />
+              Products <CaretDownIcon className="CaretDown" aria-hidden />
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="NavigationMenuContent">
               <ul className="List one">
-                <ListItem
+                <ListItemLogo
+                  logo={logoSvg}
                   title="LoreAid"
                   href="/primitives/docs/guides/animation"
                 >
                   A app to help take care of the elderly.
-                </ListItem>
-                <ListItem
+                </ListItemLogo>
+                <ListItemLogo
+                  logo={logoRep}
+                  title="RepTrack"
+                  href="/primitives/docs/guides/animation"
+                >
+                  Track your workouts in a simpler way.
+                </ListItemLogo>
+                <ListItemLogo
+                  logo={logoMyoo}
                   title="Myoo.io"
                   href="/primitives/docs/overview/accessibility"
                 >
                   A Health and Fitness ecoSystem, using the latest tech to
                   improve health.
-                </ListItem>
+                </ListItemLogo>
                 <ListItem
-                  title="Devices"
+                  title="Wearables"
                   href="/primitives/docs/overview/releases"
                 >
                   Devices to use with our solutions.
@@ -138,7 +150,7 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
         </div>
       </NavigationMenu.Root>
-      <div className="NavigationMenuLink ">Contact us</div>
+      <div className="NavigationMenuLink cursor-pointer">Contact us</div>
     </div>
   );
 };
@@ -154,6 +166,34 @@ const ListItem = React.forwardRef(
           ref={forwardedRef}
         >
           <div className="ListItemHeading">{title}</div>
+          <p className="ListItemText">{children}</p>
+        </a>
+      </NavigationMenu.Link>
+    </li>
+  )
+);
+
+// eslint-disable-next-line react/display-name
+const ListItemLogo = React.forwardRef(
+  ({ className, children, title, logo, ...props }, forwardedRef) => (
+    <li>
+      <NavigationMenu.Link asChild>
+        <a
+          className={classNames("ListItemLink", className)}
+          {...props}
+          ref={forwardedRef}
+        >
+          <div className="ListItemHeading flex flex-row w-full gap-2 items-center">
+            <Image
+              onError={null}
+              src={logo}
+              aria-hidden
+              width="25"
+              height="auto"
+              alt="logo"
+            />
+            {title}
+          </div>
           <p className="ListItemText">{children}</p>
         </a>
       </NavigationMenu.Link>
