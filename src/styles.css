@@ -7,11 +7,7 @@
 /* reset */
 
 :root {
-  background: linear-gradient(
-    90deg,
-    rgba(139, 79, 199, 1) 0%,
-    rgba(66, 98, 219, 1) 100%
-  );
+  background: linear-gradient(90deg, rgba(139, 79, 199, 1) 0%, #4262db 100%);
 }
 
 .NavigationMenuRoot {

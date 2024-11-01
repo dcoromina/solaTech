@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Navbar from "../components/navbar";
 import HeroSection from "../components/Hero";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <header className=" w-full h-svh  space-y-10">
         <Navbar />
         <HeroSection />
+        <Footer />
       </header>
       <body></body>
     </main>

@@ -28,6 +28,7 @@ const NavigationMenuDemo = () => {
                   <NavigationMenu.Link asChild>
                     <a className="Callout" href="/">
                       <Image
+                        style={{ objectFit: "contain" }}
                         src={logoS}
                         aria-hidden
                         width="38"
@@ -150,7 +151,9 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
         </div>
       </NavigationMenu.Root>
-      <div className="NavigationMenuLink cursor-pointer">Contact us</div>
+      <div className="text-white rounded-xl p-2 hover:bg-white hover:text-[#4262db]  cursor-pointer w-fit">
+        Contact us
+      </div>
     </div>
   );
 };
