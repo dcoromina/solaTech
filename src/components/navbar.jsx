@@ -6,6 +6,7 @@ import { CaretDownIcon } from "@radix-ui/react-icons";
 import logoSvg from "/public/images/logo-dsh.png";
 import logoS from "/public/images/logo-s.png";
 import logoLet from "/public/images/logo-let.png";
+import letter from "/public/images/letter.png";
 import logoRep from "/public/RepTrack.png";
 import logoMyoo from "/public/myoo.png";
 import "../styles.css";
@@ -14,7 +15,7 @@ const NavigationMenuDemo = () => {
   return (
     <div className="flex flex-row w-full justify-evenly items-center py-10 px-36">
       <div className="flex flex-row space-x-3 items-center">
-        <Image src={logoLet} aria-hidden width="100" height="auto" alt="logo" />
+        <Image src={letter} aria-hidden width="100" height="auto" alt="logo" />
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
         <NavigationMenu.List className="NavigationMenuList">

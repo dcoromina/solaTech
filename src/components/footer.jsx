@@ -96,7 +96,7 @@ const footer = () => {
       >
         {" "}
         <div className="bg-white h-[1px] w-[85%] bg-opacity-30"></div>
-        <p>(c) Copyright 2024, All Rights Reserved by solaTech </p>
+        <p>(c) Copyright 2024, All Rights Reserved by SolaTech </p>
       </div>
     </div>
   );
