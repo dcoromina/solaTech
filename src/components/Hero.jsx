@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <div className="w-full h-fit flex flex-col items-center  gap-20">
       <div className=" w-fit flex flex-col items-center">
-        <div className="font-bold font-mono w-5/5 text-white lg:text-5xl text-3xl uppercase  text-center ">
+        <div className="font-bold font-mono  w-5/5 text-white lg:text-5xl text-3xl uppercase  text-center ">
           A good life starts with good health
         </div>
         <div className="text-white font-mono text-center text-lg lg:text-2xl w-2/4">
@@ -24,7 +24,7 @@ const HeroSection = () => {
         />
         <Image
           src={Dashboard}
-          className="w-8/12 h-1/2 aspect-auto relative z-30 rounded-xl hover:scale-110 transition-all hover:z-50 cursor-pointer duration-200 ease-in shadow-lg hover:shadow-2xl shadow-gray-800 hover:shadow-black"
+          className="w-8/12 h-1/2 aspect-auto relative z-20 rounded-xl hover:scale-110 transition-all hover:z-50 cursor-pointer duration-200 ease-in shadow-lg hover:shadow-2xl shadow-gray-800 hover:shadow-black"
           alt="logo"
         />
         <Image

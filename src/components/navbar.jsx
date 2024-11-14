@@ -3,7 +3,8 @@ import Image from "next/image";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
-import logoSvg from "/public/images/logo-dsh.png";
+import logoSvg from "/public/slogo.svg";
+import loreAid from "/public/images/logo-dsh.png";
 import logoS from "/public/images/logo-s.png";
 import logoLet from "/public/images/logo-let.png";
 import letter from "/public/images/letter.png";
@@ -13,12 +14,12 @@ import "../styles.css";
 
 const NavigationMenuDemo = () => {
   return (
-    <div className="flex flex-row w-full justify-evenly items-center py-10 px-36">
+    <div className="flex flex-row w-full justify-center md:justify-evenly items-center py-10 px-36">
       <div className="flex flex-row space-x-3 items-center">
         <Image src={letter} aria-hidden width="100" height="auto" alt="logo" />
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
-        <NavigationMenu.List className="NavigationMenuList">
+        <NavigationMenu.List className="NavigationMenuList ">
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className="NavigationMenuTrigger">
               About <CaretDownIcon className="CaretDown" aria-hidden />
@@ -30,7 +31,7 @@ const NavigationMenuDemo = () => {
                     <a className="Callout" href="/">
                       <Image
                         style={{ objectFit: "contain" }}
-                        src={logoS}
+                        src={logoSvg}
                         aria-hidden
                         width="38"
                         height="38"
@@ -65,7 +66,7 @@ const NavigationMenuDemo = () => {
             <NavigationMenu.Content className="NavigationMenuContent">
               <ul className="List one">
                 <ListItemLogo
-                  logo={logoSvg}
+                  logo={loreAid}
                   title="LoreAid"
                   href="/primitives/docs/guides/animation"
                 >
@@ -152,7 +153,7 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
         </div>
       </NavigationMenu.Root>
-      <div className="text-white rounded-xl p-2 hover:bg-white hover:text-[#4262db]  cursor-pointer w-fit">
+      <div className="text-white rounded-xl p-2 hidden md:block hover:bg-white hover:text-[#4262db]  cursor-pointer w-fit">
         Contact us
       </div>
     </div>
