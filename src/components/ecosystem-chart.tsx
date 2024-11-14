@@ -2,7 +2,7 @@
 
 import React, { forwardRef, useRef } from "react";
 
-import logoSvg from "/public/no-bgicon.png";
+import logoSvg from "/public/no-bgIcon.png";
 import loreAid from "/public/images/logo-dsh.png";
 import logoS from "/public/images/logo-s.png";
 import logoLet from "/public/images/logo-let.png";
