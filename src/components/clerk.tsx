@@ -6,7 +6,7 @@ const EmailSMSPasscode = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+    <div className="relative w-fit h-screen overflow-hidden flex items-center justify-center">
       <div className="w-full flex flex-col gap-8 justify-center items-center h-full max-w-xs mx-auto">
         <div
           className="group isolate flex flex-col rounded-2xl bg-gray-900 shadow-[inset_0_1px,inset_0_0_0_1px] shadow-white/[0.025]"
@@ -14,12 +14,9 @@ const EmailSMSPasscode = () => {
           onMouseLeave={() => setIsHovered(false)}
         >
           <div className="relative z-10 flex-none px-6 order-last pb-6">
-            <h3 className="text-sm font-medium text-white">
-              Email and SMS one-time passcodes
-            </h3>
+            <h3 className="text-sm font-medium text-white">Title 1</h3>
             <p className="mt-2 text-sm/5 text-gray-400">
-              Fast and reliable one-time passcode delivery with built-in brute
-              force prevention.
+              Description of the feature we provide.
             </p>
           </div>
           <div

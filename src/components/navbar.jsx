@@ -14,7 +14,7 @@ import "../styles.css";
 
 const NavigationMenuDemo = () => {
   return (
-    <div className="flex flex-col w-full justify-center md:justify-evenly items-center  px-36">
+    <div className="flex flex-row w-full justify-center md:justify-evenly items-center  px-36">
       <div className="flex flex-row space-x-3 items-center">
         <Image src={letter} aria-hidden width="100" height="auto" alt="logo" />
       </div>

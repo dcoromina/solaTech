@@ -13,7 +13,7 @@ export default function Home() {
         <title>SolaTech</title>
         <meta
           name="Sola Technologies"
-          content="Website for a health and fitness company"
+          content="Website for a health and fitness"
         />
       </Head>
 
@@ -27,8 +27,9 @@ export default function Home() {
         </header>
 
         {/* Main Body Section */}
-        <section className="w-full">
+        <section className="w-full ">
           <HeroSection />
+
           <ClerkComponent />
           <BentoDemo />
         </section>
