@@ -14,9 +14,9 @@ import "../styles.css";
 
 const NavigationMenuDemo = () => {
   return (
-    <div className="flex flex-row w-full justify-center md:justify-evenly items-center  px-36">
+    <div className="flex flex-row w-full justify-center md:justify-evenly items-center  px-16 md:px-36">
       <div className="flex flex-row space-x-3 items-center">
-        <Image src={letter} aria-hidden width="100" height="auto" alt="logo" />
+        <Image src={letter} aria-hidden width="150" height="auto" alt="logo" />
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
         <NavigationMenu.List className="NavigationMenuList ">
@@ -153,7 +153,7 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
         </div>
       </NavigationMenu.Root>
-      <div className="text-white rounded-xl p-2 hidden md:block hover:bg-white hover:text-[#4262db]  cursor-pointer w-fit">
+      <div className="text-blue-500 rounded-xl p-2 hidden md:block hover:bg-white hover:text-[#4262db] cursor-pointer w-fit bg-white whitespace-nowrap">
         Contact us
       </div>
     </div>

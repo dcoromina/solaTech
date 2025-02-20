@@ -1,65 +1,84 @@
-import {
-  BellIcon,
-  CalendarIcon,
-  FileTextIcon,
-  GlobeIcon,
-  InputIcon,
-} from "@radix-ui/react-icons";
+"use client";
 
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
-import Ripple from "@/components/ui/ripple";
-import { AnimatedBeamDemo } from "@/components/ecosystem-chart";
-const features = [
-  {
-    Icon: InputIcon,
-    name: "",
-    description: "First health and fitness ecosystem.",
-    href: "/",
-    cta: "Learn more",
-    background: (
-      <div className=" absolute  -top-20 opacity-60  flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-        <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-gray-300">
-          Myoo
-        </p>
-      </div>
-    ),
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
-  },
-  {
-    Icon: GlobeIcon,
-    name: "Myoo",
-    description: "First cutting-edge health ecosystem.",
-    href: "/",
-    cta: "Learn more",
-    background: <AnimatedBeamDemo />,
-    className: "",
-  },
-  {
-    Icon: CalendarIcon,
-    name: "Health",
-    description: "Use the calendar to filter your files by date.",
-    href: "/",
-    cta: "Learn more",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2",
-  },
-  {
-    Icon: BellIcon,
-    name: "More",
-    description: "Get notified when s.",
-    href: "/",
-    cta: "Learn more",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
-    className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-4",
-  },
-];
+import { motion } from "framer-motion";
+import { IconType } from "react-icons";
+import { FiCode, FiLayout, FiSmile, FiTrendingUp, FiZap } from "react-icons/fi";
 
-export async function BentoDemo() {
-  return (
-    <BentoGrid className="lg:grid-rows-3 grid-cols-2 p-20 w-full">
-      {features.map((feature) => (
-        <BentoCard key={feature.name} {...feature} />
-      ))}
-    </BentoGrid>
-  );
+interface BentoItemProps {
+  title: string;
+  description: string;
+  icon: IconType;
+  className?: string;
 }
+
+const BentoItem = ({
+  title,
+  description,
+  icon: Icon,
+  className,
+}: BentoItemProps) => {
+  return (
+    <motion.div
+      whileHover={{ scale: 0.98 }}
+      className={`relative overflow-hidden rounded-3xl bg-gradient-to-b from-neutral-900 to-neutral-950 p-8 border border-neutral-800/50 ${className}`}
+    >
+      <div className="relative z-10">
+        <Icon className="h-8 w-8 text-emerald-500 mb-4" />
+        <h3 className="text-xl font-semibold text-neutral-100 mb-2">{title}</h3>
+        <p className="text-neutral-400">{description}</p>
+      </div>
+
+      {/* Gradient overlay on hover */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileHover={{ opacity: 1 }}
+        className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 pointer-events-none"
+      />
+    </motion.div>
+  );
+};
+
+const BentoGrid = () => {
+  const items = [
+    {
+      title: "Analytics Dashboard",
+      description:
+        "Track your fitness progress with detailed insights and metrics.",
+      icon: FiTrendingUp,
+      className: "md:col-span-2 md:row-span-2",
+    },
+    {
+      title: "Workout Plans",
+      description: "Customized training programs tailored to your goals.",
+      icon: FiLayout,
+    },
+    {
+      title: "Community",
+      description: "Connect with like-minded fitness enthusiasts.",
+      icon: FiSmile,
+    },
+    {
+      title: "Quick Start",
+      description: "Get started with our easy onboarding process.",
+      icon: FiZap,
+      className: "md:col-span-2",
+    },
+    {
+      title: "Integration",
+      description: "Connect with your favorite fitness apps and devices.",
+      icon: FiCode,
+    },
+  ];
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
+        {items.map((item, i) => (
+          <BentoItem key={i} {...item} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default BentoGrid;

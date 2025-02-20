@@ -6,31 +6,37 @@ import FoodApp from "/public/FoodApp.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-fit flex flex-col items-center  gap-20">
-      <div className=" w-fit flex flex-col items-center">
-        <div className="font-bold font-mono  w-5/5 text-white lg:text-5xl text-3xl uppercase  text-center ">
-          A good life starts with good health
-        </div>
-        <div className="text-white font-mono text-center text-lg lg:text-2xl w-2/4">
-          Empowering Health & Fitness Through Cutting-Edge Technology
+    <div className="min-h-[90vh] flex flex-col items-center justify-center gap-16 px-4 ">
+      <div className="max-w-[800px] flex flex-col items-center gap-6">
+        <span className="text-emerald-400 font-medium tracking-wide text-sm uppercase">
+          Transform Your Fitness Journey
+        </span>
+
+        <h1 className="font-bold font-mono text-white lg:text-6xl text-4xl text-center leading-tight">
+          A Good Life Starts With{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">
+            Good Health
+          </span>
+        </h1>
+
+        <p className="text-gray-400 text-center text-lg lg:text-xl max-w-[600px]">
+          Empowering your health and fitness journey through cutting-edge
+          technology. Track, analyze, and improve your performance like never
+          before.
+        </p>
+
+        <div className=" mt-4">
+          <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white rounded-full font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-emerald-500/25">
+            Get Started Free
+          </button>
         </div>
       </div>
 
-      <div className="w-full h-auto  flex flex-row justify-center  ">
-        <Image
-          src={RepTrack}
-          className="w-1/5 h-auto relative rounded-xl -rotate-12 z-10 left-[10%] hover:scale-110 transition-all duration-200 ease-in hover:z-50 cursor-pointer shadow-lg hover:shadow-2xl shadow-black hover:shadow-black"
-          alt="logo"
-        />
+      <div className="relative w-full max-w-[1200px] h-auto flex flex-row justify-center px-4">
         <Image
           src={Dashboard}
-          className="w-8/12 h-1/2 aspect-auto relative z-20 rounded-xl hover:scale-110 transition-all hover:z-50 cursor-pointer duration-200 ease-in shadow-lg hover:shadow-2xl shadow-gray-800 hover:shadow-black"
-          alt="logo"
-        />
-        <Image
-          src={FoodApp}
-          className="w-1/5 h-auto relative rounded-xl rotate-12 z-10 right-[10%] hover:scale-110 transition-all hover:z-50 cursor-pointer duration-200 ease-in shadow-lg hover:shadow-2xl shadow-black hover:shadow-black"
-          alt="logo"
+          className="w-12/12 h-auto aspect-auto relative z-20 rounded-xl hover:scale-105 transition-all hover:z-40 cursor-pointer duration-200 ease-in shadow-xl hover:shadow-2xl shadow-emerald-500/10 hover:shadow-emerald-500/20"
+          alt="Fitness dashboard overview"
         />
       </div>
     </div>
