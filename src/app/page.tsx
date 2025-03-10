@@ -2,7 +2,7 @@ import Navbar from "../components/navbar";
 import HeroSection from "../components/Hero";
 import Footer from "../components/footer";
 import BentoGrid from "@/components/bento";
-import ClerkComponent from "@/components/clerk";
+import ClerkComponent from "@/components/clerk-enhanced";
 import Head from "next/head";
 
 export default function Home() {

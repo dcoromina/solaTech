@@ -6,15 +6,15 @@ import FoodApp from "/public/FoodApp.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[90vh] flex flex-col items-center justify-center gap-16 px-4 ">
-      <div className="max-w-[800px] flex flex-col items-center gap-6">
-        <span className="text-emerald-400 font-medium tracking-wide text-sm uppercase">
+    <div className="min-h-[90vh] flex flex-col items-center justify-center gap-10 px-4 ">
+      <div className="max-w-[800px] flex flex-col items-center gap-3">
+        <span className="text-purple-300 font-medium tracking-wide text-sm uppercase">
           Transform Your Fitness Journey
         </span>
 
         <h1 className="font-bold font-mono text-white lg:text-6xl text-4xl text-center leading-tight">
           A Good Life Starts With{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
             Good Health
           </span>
         </h1>
@@ -26,7 +26,7 @@ const HeroSection = () => {
         </p>
 
         <div className=" mt-4">
-          <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white rounded-full font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-emerald-500/25">
+          <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25">
             Get Started Free
           </button>
         </div>

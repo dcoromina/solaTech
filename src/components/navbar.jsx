@@ -11,6 +11,7 @@ import letter from "/public/images/letter.png";
 import logoRep from "/public/RepTrack.png";
 import logoMyoo from "/public/myoo.png";
 import "../styles.css";
+import Link from "next/link";
 
 const NavigationMenuDemo = () => {
   return (
@@ -28,7 +29,7 @@ const NavigationMenuDemo = () => {
               <ul className="List one">
                 <li style={{ gridRow: "span 3" }}>
                   <NavigationMenu.Link asChild>
-                    <a className="Callout" href="/">
+                    <Link className="Callout" href="/">
                       <Image
                         style={{ objectFit: "contain" }}
                         src={logoSvg}
@@ -42,7 +43,7 @@ const NavigationMenuDemo = () => {
                       <p className="CalloutText">
                         Apps and solutions for the health and fitness sectors
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenu.Link>
                 </li>
 
