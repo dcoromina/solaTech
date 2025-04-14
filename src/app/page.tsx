@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
 
       {/* Main Content */}
-      <main className="flex flex-col items-center justify-between  h-auto space-y-10 p-3">
+      <main className="flex flex-col items-center justify-between h-auto space-y-10 p-3 fade-in">
         {/* Header Section */}
         <header className="w-full h-auto space-y-10">
           <div id="navSection">
@@ -27,7 +27,7 @@ export default function Home() {
         </header>
 
         {/* Main Body Section */}
-        <section className="w-full ">
+        <section className="w-full">
           <HeroSection />
           <ClerkComponent />
           <BentoGrid />
