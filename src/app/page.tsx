@@ -3,6 +3,9 @@ import HeroSection from "../components/Hero";
 import Footer from "../components/footer";
 import BentoGrid from "@/components/bento";
 import ClerkComponent from "@/components/clerk-enhanced";
+import ClerkData from "@/components/clerk-data";
+import ClerkFitness from "@/components/clerk-workout-diet";
+import Clerk from "@/components/clerk-integrate";
 import Head from "next/head";
 
 export default function Home() {
@@ -29,7 +32,18 @@ export default function Home() {
         {/* Main Body Section */}
         <section className="w-full ">
           <HeroSection />
-          <ClerkComponent />
+          <div className="grid grid-cols-2 w-fit mx-auto">
+            <div className="grid grid-rows-2 h-fit">
+              {" "}
+              <ClerkComponent />
+              <ClerkFitness />
+            </div>
+
+            <ClerkData />
+
+            <Clerk />
+          </div>
+
           <BentoGrid />
         </section>
 

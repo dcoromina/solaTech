@@ -68,10 +68,10 @@ const NavigationMenuDemo = () => {
               <ul className="List one">
                 <ListItemLogo
                   logo={loreAid}
-                  title="LoreAid"
+                  title="SolaDash"
                   href="/primitives/docs/guides/animation"
                 >
-                  A app to help take care of the elderly.
+                  You main ecosystem dashboard
                 </ListItemLogo>
                 <ListItemLogo
                   logo={logoRep}
@@ -81,12 +81,18 @@ const NavigationMenuDemo = () => {
                   Track your workouts in a simpler way.
                 </ListItemLogo>
                 <ListItemLogo
+                  logo={logoRep}
+                  title="SolaClub"
+                  href="/primitives/docs/guides/animation"
+                >
+                  Fill your coaching need using this app.
+                </ListItemLogo>
+                <ListItemLogo
                   logo={logoMyoo}
-                  title="Myoo.io"
+                  title="SolaPro"
                   href="/primitives/docs/overview/accessibility"
                 >
-                  A Health and Fitness ecoSystem, using the latest tech to
-                  improve health.
+                  Your Professional needs all in one place.
                 </ListItemLogo>
                 <ListItem
                   title="Wearables"

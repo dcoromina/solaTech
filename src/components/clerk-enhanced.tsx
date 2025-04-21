@@ -6,7 +6,7 @@ const EmailSMSPasscode = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-fit h-screen overflow-hidden flex items-center justify-center  p-100 m-0">
+    <div className="relative w-fit h-[350px] overflow-hidden flex items-center justify-center  ">
       {/* Decorative elements */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -31,15 +31,16 @@ const EmailSMSPasscode = () => {
           >
             {/* Card hover effect */}
             <div
-              className={`absolute inset-x-0 top-0 isolate h-[calc(206/16*1rem)] overflow-hidden pt-6 
+              className={`relative inset-x-0 top-0 isolate h-[calc(206/16*1rem)] overflow-hidden pt-6 
                   ${
                     isHovered ? "scale-100 translate-y-[-3rem]" : "scale-[0.98]"
                   } 
                   duration-300 ease-in-out`}
               style={{ willChange: "auto" }}
             >
+              {/* Phone outline */}
               <div
-                className="mx-auto h-56 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-indigo-900/80 to-purple-900/80 p-1.5"
+                className={`mx-auto h-72 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-indigo-900/80 to-purple-900/80 p-1.5 `}
                 style={{
                   boxShadow:
                     "0 1px 0 0 rgb(255 255 255 / 0.1) inset, 0px 2px 10px 0 rgb(138 75 175 / 0.5)",
@@ -48,6 +49,7 @@ const EmailSMSPasscode = () => {
                 }}
               >
                 <div className="relative h-[calc(200/16*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-indigo-950/90 to-purple-950/90 px-5 pt-3 ring-1 ring-inset ring-white/10">
+                  {/* Notch icon */}
                   <div
                     className={`relative z-10 mx-auto flex h-6 w-6 transform-gpu items-center justify-center rounded-full 
                         ${
@@ -93,6 +95,7 @@ const EmailSMSPasscode = () => {
                     </svg>
                   </div>
                   <span className="[perspective:1000px]">
+                    {/* Notification */}
                     <div
                       className={`absolute inset-x-2 top-12 z-20 flex origin-top items-center gap-x-3 rounded-2xl bg-gradient-to-r from-indigo-800/90 to-purple-800/90 p-2 
                           ${
@@ -170,6 +173,7 @@ const EmailSMSPasscode = () => {
                               {/* SVG path would be added here for the first 4 icons */}
                             </svg>
                           )}
+                          {/* Small app icon notification indicator */}
                           {index === 4 && (
                             <div
                               className={`absolute -left-1.5 -top-1.5 z-10 flex h-5 w-5 items-center justify-center rounded-full text-[0.625rem]/none font-semibold backdrop-blur 
@@ -197,8 +201,9 @@ const EmailSMSPasscode = () => {
                   </div>
                 </div>
               </div>
+              {/* Card Gradient */}
               <div
-                className={`absolute inset-0 bg-gradient-to-t from-indigo-900/90 
+                className={`absolute inset-0  bg-gradient-to-t from-indigo-900/90 
                     ${isHovered ? "translate-y-[2rem]" : ""} 
                     duration-300 ease-in-out`}
                 style={{ willChange: "auto" }}
