@@ -33,14 +33,17 @@ const EmailSMSPasscode = () => {
             <div
               className={`relative inset-x-0 top-0 isolate h-[calc(206/16*1rem)] overflow-hidden pt-6 
                   ${
-                    isHovered ? "scale-100 translate-y-[-3rem]" : "scale-[0.98]"
+                    isHovered ? "scale-100 translate-y-[-1rem]" : "scale-[0.98]"
                   } 
                   duration-300 ease-in-out`}
               style={{ willChange: "auto" }}
             >
               {/* Phone outline */}
               <div
-                className={`mx-auto h-72 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-indigo-900/80 to-purple-900/80 p-1.5 `}
+                className={`mx-auto h-72 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-indigo-900/80 to-purple-900/80 p-1.5 ${
+                  isHovered ? "scale-100 translate-y-[-3rem]" : "scale-[0.98]"
+                } 
+                  duration-300 ease-in-out`}
                 style={{
                   boxShadow:
                     "0 1px 0 0 rgb(255 255 255 / 0.1) inset, 0px 2px 10px 0 rgb(138 75 175 / 0.5)",
@@ -48,7 +51,7 @@ const EmailSMSPasscode = () => {
                     "linear-gradient(180deg, rgb(255 255 255 / 0.15) 0%, rgb(255 255 255 / 0) 67.19%)",
                 }}
               >
-                <div className="relative h-[calc(200/16*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-indigo-950/90 to-purple-950/90 px-5 pt-3 ring-1 ring-inset ring-white/10">
+                <div className="relative h-[calc(200/8*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-indigo-950/90 to-purple-950/90 px-5 pt-3 ring-1 ring-inset ring-white/10">
                   {/* Notch icon */}
                   <div
                     className={`relative z-10 mx-auto flex h-6 w-6 transform-gpu items-center justify-center rounded-full 
@@ -151,7 +154,7 @@ const EmailSMSPasscode = () => {
                       "SMS",
                       "Books",
                       "TV",
-                      "Google",
+                      "Myoo",
                       "X",
                       "NatWest",
                       "Clerk",
@@ -202,13 +205,13 @@ const EmailSMSPasscode = () => {
                 </div>
               </div>
               {/* Card Gradient */}
-              <div
-                className={`absolute inset-0  bg-gradient-to-t from-indigo-900/90 
-                    ${isHovered ? "translate-y-[2rem]" : ""} 
-                    duration-300 ease-in-out`}
-                style={{ willChange: "auto" }}
-              ></div>
             </div>
+            <div
+              className={`absolute inset-0  bg-gradient-to-t from-indigo-900/90 
+                    ${isHovered ? "translate-y-[0rem]" : ""} 
+                    duration-300 ease-in-out`}
+              style={{ willChange: "auto" }}
+            ></div>
           </div>
         </div>
       </div>
