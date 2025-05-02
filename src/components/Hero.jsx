@@ -6,7 +6,7 @@ import FoodApp from "/public/FoodApp.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[90vh] flex flex-col items-center justify-center gap-10 px-4 ">
+    <div className="min-h-[60vh] flex flex-col items-center justify-center gap-10 px-4 ">
       <div className="max-w-[800px] flex flex-col items-center gap-3">
         <span className="text-purple-300 font-medium tracking-wide text-sm uppercase">
           Transform Your Fitness Journey

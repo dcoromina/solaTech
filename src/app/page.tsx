@@ -7,6 +7,10 @@ import ClerkData from "@/components/clerk-data";
 import ClerkFitness from "@/components/clerk-workout-diet";
 import Clerk from "@/components/clerk-integrate";
 import Head from "next/head";
+import { TestimonialsSection } from "@/components/ui/testimonials";
+import { StatsSection } from "@/components/ui/stats-section";
+import { CTASection } from "@/components/ui/cta-section";
+import { FeaturesSection } from "@/components/ui/features-section";
 
 export default function Home() {
   return (
@@ -32,8 +36,10 @@ export default function Home() {
         {/* Main Body Section */}
         <section className="w-full">
           <HeroSection />
-          <div className="grid grid-cols-2 w-fit mx-auto">
-            <div className="grid grid-rows-2 h-fit">
+          <StatsSection />
+          <FeaturesSection />
+          <div className="grid grid-cols-1 md:grid-cols-2 w-fit mx-auto">
+            <div className="grid md:grid-rows-2 md:h-fit">
               {" "}
               <ClerkComponent />
               <ClerkFitness />
@@ -43,8 +49,10 @@ export default function Home() {
 
             <Clerk />
           </div>
+          <TestimonialsSection />
 
           <BentoGrid />
+          <CTASection />
         </section>
 
         {/* Footer */}

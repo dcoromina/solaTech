@@ -16,7 +16,7 @@ import Link from "next/link";
 const NavigationMenuDemo = () => {
   return (
     <div className="flex flex-row w-full justify-center md:justify-evenly items-center  px-16 md:px-36">
-      <div className="flex flex-row space-x-3 items-center">
+      <div className="flex flex-row space-x-3 items-center ">
         <Image src={letter} aria-hidden width="150" height="auto" alt="logo" />
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
