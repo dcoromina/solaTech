@@ -17,17 +17,17 @@ export default function Home() {
     <>
       {/* Metadata */}
       <Head>
-        <title>SolaTech</title>
+        <title>SolaTech | Enterprise Healthcare Technology</title>
         <meta
-          name="Sola Technologies"
-          content="Website for a health and fitness"
+          name="description"
+          content="SolaTech - Enterprise-grade healthcare technology solutions for modern organizations"
         />
       </Head>
 
       {/* Main Content */}
-      <main className="flex flex-col items-center justify-between h-auto space-y-10 p-3 fade-in">
+      <main className="flex flex-col bg-gray-900">
         {/* Header Section */}
-        <header className="w-full h-auto space-y-10">
+        <header className="w-full bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-white/10">
           <div id="navSection">
             <Navbar />
           </div>
@@ -38,19 +38,37 @@ export default function Home() {
           <HeroSection />
           <StatsSection />
           <FeaturesSection />
-          <div className="grid grid-cols-1 md:grid-cols-2 w-fit mx-auto">
-            <div className="grid md:grid-rows-2 md:h-fit">
-              {" "}
-              <ClerkComponent />
-              <ClerkFitness />
+
+          {/* Integration Showcase */}
+          <div className="py-20 bg-gray-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <div className="text-center mb-16">
+                <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
+                  Platform Features
+                </span>
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                  Seamless Integration
+                </h2>
+                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                  Our modular architecture allows for easy integration with your
+                  existing systems
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid md:grid-rows-2 gap-8">
+                  <ClerkComponent />
+                  <ClerkFitness />
+                </div>
+                <div className="grid gap-8">
+                  <ClerkData />
+                  <Clerk />
+                </div>
+              </div>
             </div>
-
-            <ClerkData />
-
-            <Clerk />
           </div>
-          <TestimonialsSection />
 
+          <TestimonialsSection />
           <BentoGrid />
           <CTASection />
         </section>

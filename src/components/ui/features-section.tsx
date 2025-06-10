@@ -1,65 +1,59 @@
 import React from "react";
-import {
-  Activity,
-  Brain,
-  Heart,
-  Shield,
-  Smartphone,
-  Users,
-} from "lucide-react";
+import { Code, Shield, Zap, Database, Cloud, Lock } from "lucide-react";
 
 const features = [
   {
-    icon: <Brain className="w-6 h-6" />,
-    title: "AI-Powered Health Insights",
+    icon: <Code className="w-6 h-6" />,
+    title: "Enterprise-Grade Architecture",
     description:
-      "Advanced algorithms analyze your health data to provide personalized recommendations and early warning signs.",
-  },
-  {
-    icon: <Heart className="w-6 h-6" />,
-    title: "Real-time Monitoring",
-    description:
-      "Track vital signs, activity levels, and health metrics in real-time with medical-grade accuracy.",
+      "Built with scalability in mind, our platform handles millions of health data points with ease.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "HIPAA Compliant Security",
+    title: "HIPAA & GDPR Compliant",
     description:
-      "Enterprise-grade encryption and security protocols to keep your health data safe and private.",
+      "End-to-end encryption and strict compliance with healthcare data regulations.",
   },
   {
-    icon: <Users className="w-6 h-6" />,
-    title: "Care Team Collaboration",
+    icon: <Zap className="w-6 h-6" />,
+    title: "Real-time Processing",
     description:
-      "Connect your entire healthcare team for better coordinated care and improved outcomes.",
+      "Advanced algorithms process health data in real-time for instant insights and alerts.",
   },
   {
-    icon: <Smartphone className="w-6 h-6" />,
-    title: "Mobile Health Platform",
+    icon: <Database className="w-6 h-6" />,
+    title: "Data Analytics Engine",
     description:
-      "Access your health data and insights anywhere, anytime through our mobile and web applications.",
+      "Powerful analytics tools that transform raw health data into actionable insights.",
   },
   {
-    icon: <Activity className="w-6 h-6" />,
-    title: "Predictive Analytics",
+    icon: <Cloud className="w-6 h-6" />,
+    title: "Cloud-Native Platform",
     description:
-      "Stay ahead of health issues with predictive modeling and early warning systems.",
+      "Built on modern cloud infrastructure for maximum reliability and scalability.",
+  },
+  {
+    icon: <Lock className="w-6 h-6" />,
+    title: "Advanced Security",
+    description:
+      "Multi-layer security with role-based access control and audit logging.",
   },
 ];
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-purple-800/10 to-blue-800/10">
+    <section className="py-24 bg-gradient-to-b from-gray-900 to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
-            Features
+            Technology Stack
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Advanced Healthcare Technology
+            Enterprise-Ready Solutions
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Comprehensive solutions designed for modern healthcare needs
+            Built with modern technologies to meet the demands of healthcare
+            organizations
           </p>
         </div>
 
@@ -67,17 +61,17 @@ export function FeaturesSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="p-6 rounded-2xl bg-white/50 border border-white/10 hover:border-purple-500/30 transition-all duration-300"
+              className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10"
             >
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center mb-6">
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 {React.cloneElement(feature.icon, {
                   className: "w-6 h-6 text-white",
                 })}
               </div>
-              <h3 className="text-xl font-semibold text-purple-500 mb-3">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 {feature.title}
               </h3>
-              <p className="text-white leading-relaxed">
+              <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
             </div>
