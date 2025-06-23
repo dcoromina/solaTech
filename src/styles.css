@@ -7,7 +7,18 @@
 /* reset */
 
 :root {
-  background: linear-gradient(90deg, rgba(139, 79, 199, 1) 0%, #4262db 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 79, 199, 0.72) 0%,
+    #4262db 100%
+  );
+  --color-primary: #0080ff;
+  --color-primary-light: #e6f2ff;
+  --color-secondary: #16b582;
+  --color-accent: #f34970;
+  --color-background: #f9fafb;
+  --color-text: #1e293b;
+  --color-text-light: #64748b;
 }
 
 .NavigationMenuRoot {
@@ -143,10 +154,10 @@
 @media only screen and (min-width: 600px) {
   .List.one {
     width: 500px;
-    grid-template-columns: 0.75fr 1fr;
+    grid-template-columns: 0.8fr 0.8fr;
   }
   .List.two {
-    width: 600px;
+    width: 300px;
     grid-auto-flow: column;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -176,6 +187,12 @@
 }
 
 .ListItemText {
+  color: var(--mauve-11);
+  line-height: 1.4;
+  font-weight: initial;
+}
+
+.ListItemIcon {
   color: var(--mauve-11);
   line-height: 1.4;
   font-weight: initial;

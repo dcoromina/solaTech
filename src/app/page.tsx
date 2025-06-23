@@ -27,7 +27,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex flex-col bg-gray-900">
         {/* Header Section */}
-        <header className="w-full bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-white/10">
+        <header className="w-full  sticky top-0 z-50 ">
           <div id="navSection">
             <Navbar />
           </div>
@@ -37,10 +37,10 @@ export default function Home() {
         <section className="w-full">
           <HeroSection />
           <StatsSection />
-          <FeaturesSection />
+          {/*          <FeaturesSection /> */}
 
           {/* Integration Showcase */}
-          <div className="py-20 bg-gray-800">
+          <div className="py-20 ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="text-center mb-16">
                 <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">

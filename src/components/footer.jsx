@@ -24,17 +24,29 @@ const footer = () => {
             Company
           </h6>
           <ul className="list-none text-xs md:text-sm space-y-2">
-            <li>Service</li>
-            <li>Resources</li>
-            <li>About us</li>
+            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+              Service
+            </li>
+            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+              Resources
+            </li>
+            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+              About us
+            </li>
           </ul>
         </div>
         <div className="flex flex-col gap-2">
           <h6 className="text-white font-bold text-sm md:text-base ">Help</h6>
           <ul className="list-none text-xs md:text-sm space-y-2">
-            <li>Customer Support</li>
-            <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
+            <li className=" hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+              Customer Support
+            </li>
+            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+              Terms & Conditions
+            </li>
+            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+              Privacy Policy
+            </li>
           </ul>
         </div>
         <div className="flex flex-col gap-2">
@@ -42,7 +54,7 @@ const footer = () => {
           <div className="flex flex-wrap md:flex-row gap-2 md:gap-3 w-fit">
             {/* <!-- Discord --> */}
             <svg
-              className="md:h-5 md:w-5 h-4  cursor-pointer"
+              className="md:h-5 md:w-5 h-4  cursor-pointer hover:scale-110 transition-all duration-300 hover:font-semibold"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +66,7 @@ const footer = () => {
             {/* <!-- Facebook --> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="md:h-5 md:w-5 h-4  cursor-pointer"
+              className="md:h-5 md:w-5 h-4  cursor-pointer  hover:scale-110 transition-all duration-300 hover:font-semibold"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -63,7 +75,7 @@ const footer = () => {
             {/* <!-- Twitter --> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="md:h-5 md:w-5 h-4 cursor-pointer"
+              className="md:h-5 md:w-5 h-4 cursor-pointer  hover:scale-110 transition-all duration-300 hover:font-semibold"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -72,7 +84,7 @@ const footer = () => {
             {/* <!-- Instagram --> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="md:h-5 md:w-5 h-4  cursor-pointer"
+              className="md:h-5 md:w-5 h-4  cursor-pointer hover:scale-110 transition-all duration-300 hover:font-semibold"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -81,7 +93,7 @@ const footer = () => {
             {/* <!-- Linkedin --> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="md:h-5 md:w-5 h-4 cursor-pointer"
+              className="md:h-5 md:w-5 h-4 cursor-pointer hover:scale-110 transition-all duration-300 hover:font-semibold"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

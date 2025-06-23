@@ -2,20 +2,20 @@ import React from "react";
 
 const stats = [
   {
-    number: "99.99%",
-    label: "Platform Uptime",
+    number: "5M+",
+    label: "Active Members",
   },
   {
-    number: "50ms",
-    label: "Average Latency",
+    number: "2M+",
+    label: "Workouts & Diets",
   },
   {
-    number: "10M+",
-    label: "API Calls/Day",
+    number: "100K+",
+    label: "Events",
   },
   {
-    number: "100+",
-    label: "Enterprise Clients",
+    number: "10K+",
+    label: "Partner Clubs",
   },
 ];
 

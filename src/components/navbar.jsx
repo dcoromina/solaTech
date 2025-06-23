@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
@@ -12,12 +13,45 @@ import logoRep from "/public/RepTrack.png";
 import logoMyoo from "/public/myoo.png";
 import "../styles.css";
 import Link from "next/link";
+import {
+  UserPlusIcon,
+  BuildingOfficeIcon,
+  UsersIcon,
+} from "@heroicons/react/24/outline";
 
 const NavigationMenuDemo = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <div className="flex flex-row w-full justify-center md:justify-evenly items-center  px-16 md:px-36">
+    <div
+      className={`flex flex-row w-full justify-center md:justify-evenly items-center px-16 md:px-36 py-3 transition-transform duration-300 ${
+        isVisible
+          ? "translate-y-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-transparent "
+          : "-translate-y-full"
+      }`}
+    >
       <div className="flex flex-row space-x-3 items-center ">
-        <Image src={letter} aria-hidden width="150" height="auto" alt="logo" />
+        <Image src={letter} width="150" height="auto" alt="logo" />
       </div>
       <NavigationMenu.Root className="NavigationMenuRoot">
         <NavigationMenu.List className="NavigationMenuList ">
@@ -108,45 +142,31 @@ const NavigationMenuDemo = () => {
             <NavigationMenu.Trigger className="NavigationMenuTrigger">
               Careers <CaretDownIcon className="CaretDown" aria-hidden />
             </NavigationMenu.Trigger>
-            <NavigationMenu.Content className="NavigationMenuContent">
+            <NavigationMenu.Content className="NavigationMenuContent ">
               <ul className="List two">
-                <ListItem
-                  title="Introduction"
+                <ListItemIcon
+                  title="Join Us"
                   href="/primitives/docs/overview/introduction"
+                  icon={<UserPlusIcon className="w-5 h-5" />}
                 >
-                  Build high-quality, accessible design systems and web apps.
-                </ListItem>
-                <ListItem
-                  title="Getting started"
+                  Join us in our mission to make a difference.
+                </ListItemIcon>
+                <ListItemIcon
+                  title="The Workplace"
                   href="/primitives/docs/overview/getting-started"
+                  icon={<BuildingOfficeIcon className="w-5 h-5" />}
                 >
-                  A quick tutorial to get you up and running with Radix
-                  Primitives.
-                </ListItem>
-                <ListItem
-                  title="Styling"
+                  See your future workplace.
+                </ListItemIcon>
+
+                <ListItemIcon
+                  title="Our Culture"
                   href="/primitives/docs/guides/styling"
+                  icon={<UsersIcon className="w-5 h-5" />}
                 >
-                  Unstyled and compatible with any styling solution.
-                </ListItem>
-                <ListItem
-                  title="Animation"
-                  href="/primitives/docs/guides/animation"
-                >
-                  Use CSS keyframes or any animation library of your choice.
-                </ListItem>
-                <ListItem
-                  title="Accessibility"
-                  href="/primitives/docs/overview/accessibility"
-                >
-                  Tested in a range of browsers and assistive technologies.
-                </ListItem>
-                <ListItem
-                  title="Releases"
-                  href="/primitives/docs/overview/releases"
-                >
-                  Radix Primitives releases and their changelogs.
-                </ListItem>
+                  {" "}
+                  Hear from our employees and their experiences.
+                </ListItemIcon>
               </ul>
             </NavigationMenu.Content>
           </NavigationMenu.Item>
@@ -179,6 +199,30 @@ const ListItem = React.forwardRef(
         >
           <div className="ListItemHeading">{title}</div>
           <p className="ListItemText">{children}</p>
+        </a>
+      </NavigationMenu.Link>
+    </li>
+  )
+);
+
+// eslint-disable-next-line react/display-name
+const ListItemIcon = React.forwardRef(
+  ({ className, children, title, icon, ...props }, forwardedRef) => (
+    <li>
+      <NavigationMenu.Link asChild>
+        <a
+          className={classNames("ListItemLink", className)}
+          {...props}
+          ref={forwardedRef}
+        >
+          <div className="flex flex-row justify-start items-center gap-2">
+            <div className="">{icon}</div>
+            <div className="flex flex-col">
+              {" "}
+              <div className="ListItemHeading">{title}</div>
+              <p className="ListItemText">{children}</p>
+            </div>
+          </div>
         </a>
       </NavigationMenu.Link>
     </li>
