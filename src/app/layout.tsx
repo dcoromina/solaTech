@@ -16,7 +16,7 @@ export default function RootLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time (you can remove setTimeout in production)
+    // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500);
@@ -26,6 +26,15 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <title>SolaTech | Enterprise Healthcare Technology</title>
+        <meta
+          name="description"
+          content="SolaTech - Enterprise-grade healthcare technology solutions for modern organizations"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>
         {loading ? (
           <Loader />
