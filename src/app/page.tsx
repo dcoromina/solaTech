@@ -10,6 +10,11 @@ import { TestimonialsSection } from "@/components/ui/testimonials";
 import { StatsSection } from "@/components/ui/stats-section";
 import { CTASection } from "@/components/ui/cta-section";
 import { FeaturesSection } from "@/components/ui/features-section";
+import { PricingSection } from "@/components/ui/pricing-section";
+import { AboutSection } from "@/components/ui/about-section";
+import { SecuritySection } from "@/components/ui/security-section";
+import { IntegrationSection } from "@/components/ui/integration-section";
+import { FAQSection } from "@/components/ui/faq-section";
 
 export default function Home() {
   return (
@@ -23,8 +28,16 @@ export default function Home() {
 
       {/* Main Body Section */}
       <section className="w-full flex-1">
+        {/* Hero Section */}
         <HeroSection />
+        
+        {/* Stats Section */}
         <StatsSection />
+        
+        {/* About Section */}
+        <AboutSection />
+        
+        {/* Features Section */}
         <FeaturesSection />
 
         {/* Integration Showcase */}
@@ -56,8 +69,25 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Integrations & APIs */}
+        <IntegrationSection />
+
+        {/* Security & Compliance */}
+        <SecuritySection />
+
+        {/* Testimonials */}
         <TestimonialsSection />
+
+        {/* Pricing */}
+        <PricingSection />
+
+        {/* Bento Grid - Additional Features */}
         <BentoGrid />
+
+        {/* FAQ Section */}
+        <FAQSection />
+
+        {/* Call to Action */}
         <CTASection />
       </section>
 
