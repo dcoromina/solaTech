@@ -178,21 +178,36 @@ const EmailSMSPasscode = () => {
                           )}
                           {/* Small app icon notification indicator */}
                           {index === 4 && (
-                            <div
-                              className={`absolute -left-1.5 -top-1.5 z-10 flex h-5 w-5 items-center justify-center rounded-full text-[0.625rem]/none font-semibold backdrop-blur 
+                            <div className="">
+                              <div
+                                className={`absolute -left-1.5 -top-1.5 z-10 flex h-5 w-5 items-center justify-center rounded-full text-[0.625rem]/none font-semibold backdrop-blur 
                                 scale-75 group-hover:scale-100 duration-100 ease 
                                 ${
                                   isHovered
                                     ? "bg-gradient-to-r from-blue-400 to-purple-400 text-white"
                                     : "bg-white/40 text-gray-900"
                                 }`}
-                              style={{
-                                willChange: "auto",
-                                boxShadow:
-                                  "rgba(167, 139, 250, 0.3) 0px 0px 0px 0px, rgba(255, 255, 255, 0.2) 0px 0px inset",
-                              }}
-                            >
-                              1
+                                style={{
+                                  willChange: "auto",
+                                  boxShadow:
+                                    "rgba(167, 139, 250, 0.3) 0px 0px 0px 0px, rgba(255, 255, 255, 0.2) 0px 0px inset",
+                                }}
+                              >
+                                1
+                              </div>
+                              <svg
+                                viewBox="0 0 40 40"
+                                fill="none"
+                                aria-hidden="true"
+                                className="size-10"
+                              >
+                                <path
+                                  fill="white"
+                                  fillRule="evenodd"
+                                  d="M20 32c6.627 0 12-5.373 12-12S26.627 8 20 8 8 13.373 8 20s5.373 12 12 12Zm6-12c0 2.761-2.686 5-6 5a7.2 7.2 0 0 1-1.163-.094 1.227 1.227 0 0 0-.79.14c-.613.34-1.308.571-1.983.72-.82.182-1.314-.759-.895-1.485.04-.07.08-.14.119-.212.21-.382.099-.846-.184-1.178C14.409 22.075 14 21.077 14 20c0-2.761 2.686-5 6-5s6 2.239 6 5Z"
+                                  clipRule="evenodd"
+                                ></path>
+                              </svg>
                             </div>
                           )}
                         </div>

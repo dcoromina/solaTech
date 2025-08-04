@@ -6,20 +6,20 @@ import FoodApp from "/public/FoodApp.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center gap-12 px-4 py-6">
+    <div className="min-h-[70vh] flex flex-col items-center justify-center gap-12 px-4">
       <div className="max-w-[800px] flex flex-col items-center gap-4">
         <span className="text-purple-300 font-medium tracking-wide text-sm uppercase px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full border border-purple-500/20">
           Transform Your Fitness Journey
         </span>
 
-        <h1 className="font-bold text-white lg:text-6xl text-4xl text-center leading-tight tracking-tight">
+        <h1 className="font-bold text-white lg:text-6xl text-4xl text-center leading-tight tracking-tight px-5">
           A Good Life Starts With{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
             Good Health
           </span>
         </h1>
 
-        <p className="text-gray-300 text-center text-lg lg:text-xl max-w-[600px] leading-relaxed">
+        <p className="text-gray-300 text-center text-lg lg:text-xl max-w-[600px] leading-relaxed text-pretty px-5">
           Empowering your health and fitness journey through cutting-edge
           technology. Track, analyze, and improve your performance like never
           before.

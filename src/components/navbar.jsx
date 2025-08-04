@@ -26,12 +26,16 @@ const NavigationMenuDemo = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const scrollThreshold = 50; // Only hide after scrolling 100px
 
-      if (currentScrollY > lastScrollY) {
-        // Scrolling down
+      if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+        // Scrolling down and past threshold
         setIsVisible(false);
-      } else {
-        // Scrolling up
+      } else if (
+        currentScrollY < lastScrollY ||
+        currentScrollY <= scrollThreshold
+      ) {
+        // Scrolling up or near top
         setIsVisible(true);
       }
 
@@ -44,16 +48,34 @@ const NavigationMenuDemo = () => {
 
   return (
     <div
-      className={`flex flex-row w-full justify-center md:justify-evenly items-center px-16 md:px-36 py-3 transition-transform duration-300 ${
+      className={`flex flex-col md:flex-row w-full justify-center md:justify-evenly items-center px-4 md:px-36 py-3 transition-transform duration-300${
         isVisible
           ? "translate-y-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-transparent "
           : "-translate-y-full"
       }`}
     >
-      <div className="flex flex-row space-x-3 items-center ">
-        <Image src={letter} width="150" height="auto" alt="logo" />
+      <div
+        className={`flex flex-row space-x-0 items-center mb-4 md:mb-0 transition-all duration-300 ${
+          !isVisible
+            ? "opacity-0 transform scale-95"
+            : "opacity-100 transform scale-100"
+        }`}
+      >
+        <Image
+          src={letter}
+          width="200"
+          height="auto"
+          className="md:w-[350px] w-[150px]"
+          alt="logo"
+        />
       </div>
-      <NavigationMenu.Root className="NavigationMenuRoot">
+      <NavigationMenu.Root
+        className={`NavigationMenuRoot transition-all duration-300 ${
+          !isVisible
+            ? "pointer-events-none opacity-0 transform scale-95"
+            : "opacity-100 transform scale-100"
+        }`}
+      >
         <NavigationMenu.List className="NavigationMenuList ">
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className="NavigationMenuTrigger">
@@ -180,7 +202,13 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
         </div>
       </NavigationMenu.Root>
-      <div className="text-blue-500 rounded-xl p-2 hidden md:block hover:bg-white hover:text-[#4262db] cursor-pointer w-fit bg-white whitespace-nowrap">
+      <div
+        className={`text-blue-500 rounded-xl p-2 hidden md:block hover:bg-white hover:text-[#4262db] cursor-pointer w-fit bg-white whitespace-nowrap transition-all duration-300 ${
+          !isVisible
+            ? "opacity-0 pointer-events-none transform scale-95"
+            : "opacity-100 transform scale-100"
+        }`}
+      >
         Contact us
       </div>
     </div>

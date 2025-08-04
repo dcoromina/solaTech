@@ -2,19 +2,19 @@ import React from "react";
 
 const stats = [
   {
-    number: "5M+",
+    number: "70K+",
     label: "Active Members",
   },
   {
-    number: "2M+",
+    number: "20K+",
     label: "Workouts & Diets",
   },
   {
-    number: "100K+",
+    number: "500+",
     label: "Events",
   },
   {
-    number: "10K+",
+    number: "1K+",
     label: "Partner Clubs",
   },
 ];

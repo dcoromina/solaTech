@@ -7,7 +7,7 @@ const FitnessIntegrationPhoneApp = () => {
   const [activeDevice, setActiveDevice] = useState(null);
 
   // Simulate connecting to a device
-  const handleDeviceConnect = (device) => {
+  const handleDeviceConnect = (device: any) => {
     setActiveDevice(device);
     setTimeout(() => setActiveDevice(null), 2000);
   };
@@ -173,7 +173,7 @@ const FitnessIntegrationPhoneApp = () => {
                       } transition-all duration-300 ease-in-out`}
                     >
                       <div className="text-xs text-white mb-1">
-                        Today's Activity
+                        Today&apos;s Activity
                       </div>
                       <div className="grid grid-cols-3 gap-1">
                         <div className="text-center">

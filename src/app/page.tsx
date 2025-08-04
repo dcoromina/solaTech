@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
 
       {/* Main Content */}
-      <main className="flex flex-col bg-gray-900">
+      <main className="flex flex-col bg-gray-900 pt-3">
         {/* Header Section */}
         <header className="w-full  sticky top-0 z-50 ">
           <div id="navSection">
@@ -62,13 +62,12 @@ export default function Home() {
                 </div>
                 <div className="grid gap-8">
                   <ClerkData />
-                  <Clerk />
                 </div>
               </div>
             </div>
           </div>
 
-          <TestimonialsSection />
+          {/*           <TestimonialsSection />*/}
           <BentoGrid />
           <CTASection />
         </section>

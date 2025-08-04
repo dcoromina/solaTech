@@ -78,7 +78,7 @@ export function TestimonialsSection({ className }: { className?: string }) {
                 </svg>
               </div>
               <p className="text-gray-300 italic mb-6 text-lg leading-relaxed">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
