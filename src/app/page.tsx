@@ -13,116 +13,60 @@ import { FeaturesSection } from "@/components/ui/features-section";
 import { PricingSection } from "@/components/ui/pricing-section";
 import { AboutSection } from "@/components/ui/about-section";
 import { SecuritySection } from "@/components/ui/security-section";
-import { IntegrationSection } from "@/components/ui/integration-section";
+import { IntegrationSection } from "@/components/ui/integration";
 import { FAQSection } from "@/components/ui/faq-section";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="flex flex-col bg-gray-900 min-h-screen">
-      {/* Header Section */}
-      <header className="w-full sticky top-0 z-50">
-        <div id="navSection">
-          <Navbar />
-        </div>
-      </header>
-
-<<<<<<< HEAD
       {/* Main Content */}
-      <main className="flex flex-col bg-gray-900 pt-3">
+      <div className="flex flex-col bg-gray-900 pt-3">
         {/* Header Section */}
         <header className="w-full  sticky top-0 z-50 ">
           <div id="navSection">
             <Navbar />
           </div>
         </header>
-=======
-      {/* Main Body Section */}
-      <section className="w-full flex-1">
-        {/* Hero Section */}
-        <HeroSection />
-        
-        {/* Stats Section */}
-        <StatsSection />
-        
-        {/* About Section */}
-        <AboutSection />
-        
-        {/* Features Section */}
-        <FeaturesSection />
->>>>>>> 0533f0ec4e429c9e5ef586e934d7918cce339006
 
         {/* Integration Showcase */}
-        <div className="py-20 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-16">
-              <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
-                Platform Features
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                Seamless Integration
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our modular architecture allows for easy integration with your
-                existing systems
-              </p>
-            </div>
+        <div className="py-0 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-0 sm:px-6">
+            <HeroSection />
+            <StatsSection />
+            <IntegrationSection />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="grid md:grid-rows-2 gap-8">
-                <ClerkComponent />
-                <ClerkFitness />
-              </div>
-<<<<<<< HEAD
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="grid md:grid-rows-2 gap-8">
-                  <ClerkComponent />
-                  <ClerkFitness />
-                </div>
-                <div className="grid gap-8">
-                  <ClerkData />
-                </div>
-=======
-              <div className="grid gap-8">
-                <ClerkData />
-                <Clerk />
->>>>>>> 0533f0ec4e429c9e5ef586e934d7918cce339006
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+              <ClerkComponent />
+              <ClerkComponent />
+              <ClerkFitness />
+              <ClerkData />
             </div>
           </div>
         </div>
+        <FeaturesSection />
+        {/*           <TestimonialsSection />*/}
+        {/* <BentoGrid /> */}
 
-<<<<<<< HEAD
-          {/*           <TestimonialsSection />*/}
+        <section>
+          {/*  <SecuritySection /> */}
+
+          {/* <TestimonialsSection /> */}
+
+          {/*  <PricingSection /> */}
+
+          {/* Bento Grid - Additional Features 
           <BentoGrid />
-          <CTASection />
+*/}
+          <FAQSection />
+
+          {/* maybe put it in enterprise or something like that
+          <CTASection /> */}
         </section>
-=======
-        {/* Integrations & APIs */}
-        <IntegrationSection />
->>>>>>> 0533f0ec4e429c9e5ef586e934d7918cce339006
 
-        {/* Security & Compliance */}
-        <SecuritySection />
-
-        {/* Testimonials */}
-        <TestimonialsSection />
-
-        {/* Pricing */}
-        <PricingSection />
-
-        {/* Bento Grid - Additional Features */}
-        <BentoGrid />
-
-        {/* FAQ Section */}
-        <FAQSection />
-
-        {/* Call to Action */}
-        <CTASection />
-      </section>
-
-      {/* Footer */}
-      <Footer />
+        {/* Footer */}
+        <Footer />
+      </div>
     </main>
   );
 }

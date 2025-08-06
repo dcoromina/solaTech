@@ -11,7 +11,7 @@ interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   image?: string;
 }
 
-export function HeroSection({
+export default function HeroSection({
   className,
   title,
   subtitle,

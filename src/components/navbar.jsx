@@ -11,6 +11,7 @@ import logoLet from "/public/images/logo-let.png";
 import letter from "/public/images/letter.png";
 import logoRep from "/public/RepTrack.png";
 import logoMyoo from "/public/myoo.png";
+import { AboutSection } from "./ui/about-section";
 import "../styles.css";
 import Link from "next/link";
 import {
@@ -103,7 +104,10 @@ const NavigationMenuDemo = () => {
                   </NavigationMenu.Link>
                 </li>
 
-                <ListItem href="https://stitches.dev/" title="Story">
+                <ListItem
+                  href="/src/components/ui/about-section.tsx"
+                  title="Story"
+                >
                   Brief history and inspiration behind the startup.
                 </ListItem>
                 <ListItem href="/colors" title="Mission">

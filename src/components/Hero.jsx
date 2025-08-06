@@ -4,15 +4,15 @@ import Dashboard from "/public/dashboard.png";
 import RepTrack from "/public/RepTrack.jpg";
 import FoodApp from "/public/FoodApp.jpg";
 
-const HeroSection = () => {
+const HeroSections = () => {
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center gap-12 px-4">
-      <div className="max-w-[800px] flex flex-col items-center gap-4">
+    <div className="min-h-[70vh] flex flex-col items-center justify-center gap-2 px-4">
+      <div className="max-w-[800px] flex flex-col items-center gap-2">
         <span className="text-purple-300 font-medium tracking-wide text-sm uppercase px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full border border-purple-500/20">
           Transform Your Fitness Journey
         </span>
 
-        <h1 className="font-bold text-white lg:text-6xl text-4xl text-center leading-tight tracking-tight px-5">
+        <h1 className="font-bold text-white lg:text-6xl text-4xl text-center leading-tight tracking-tight px-10 text-pretty">
           A Good Life Starts With{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
             Good Health
@@ -43,4 +43,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSections;

@@ -6,7 +6,7 @@ const EmailSMSPasscode = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-fit h-[350px] overflow-hidden flex items-center justify-center  ">
+    <div className="relative w-fit h-[400px] overflow-visible flex items-center justify-center">
       {/* Decorative elements */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -31,7 +31,7 @@ const EmailSMSPasscode = () => {
           >
             {/* Card hover effect */}
             <div
-              className={`relative inset-x-0 top-0 isolate h-[calc(206/16*1rem)] overflow-hidden pt-6 
+              className={`relative inset-x-0 top-0 isolate h-[calc(206/16*1rem)] overflow-hidden pt-8 
                   ${
                     isHovered ? "scale-100 translate-y-[-1rem]" : "scale-[0.98]"
                   } 
@@ -41,7 +41,7 @@ const EmailSMSPasscode = () => {
               {/* Phone outline */}
               <div
                 className={`mx-auto h-72 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-indigo-900/80 to-purple-900/80 p-1.5 ${
-                  isHovered ? "scale-100 translate-y-[-3rem]" : "scale-[0.98]"
+                  isHovered ? "scale-100 translate-y-[-2rem]" : "scale-[0.98]"
                 } 
                   duration-300 ease-in-out`}
                 style={{

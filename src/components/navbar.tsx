@@ -44,23 +44,24 @@ const NavigationMenuDemo = () => {
 
   return (
     <div
-      className={`flex flex-row w-full justify-between items-center px-4 md:px-8 lg:px-16 py-4 transition-all duration-300 ${
+      className={`flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-8 lg:px-16 py-4 transition-all duration-300 ${
         isVisible
           ? "translate-y-0 bg-gradient-to-b from-gray-900/95 via-gray-900/80 to-transparent backdrop-blur-md"
           : "-translate-y-full"
       }`}
     >
-      <div className="flex flex-row space-x-3 items-center">
-        <Image 
-          src={letter} 
-          width={120} 
-          height={40} 
-          alt="SolaTech Logo" 
+      {/* Logo - centered on mobile, left-aligned on larger screens */}
+      <div className="flex flex-row space-x-3 items-center justify-center md:justify-start order-1 md:order-none mb-4 md:mb-0">
+        <Image
+          src={letter}
+          width={120}
+          height={40}
+          alt="SolaTech Logo"
           className="h-8 w-auto"
         />
       </div>
 
-      <NavigationMenu.Root className="NavigationMenuRoot hidden md:flex">
+      <NavigationMenu.Root className="NavigationMenuRoot hidden md:flex order-3 md:order-none">
         <NavigationMenu.List className="NavigationMenuList">
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className="NavigationMenuTrigger">
@@ -106,38 +107,19 @@ const NavigationMenuDemo = () => {
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="NavigationMenuContent">
               <ul className="List one">
-                <ListItemLogo
-                  logo={loreAid}
-                  title="SolaDash"
-                  href="#soladash"
-                >
+                <ListItemLogo logo={loreAid} title="SolaDash" href="#soladash">
                   Your main ecosystem dashboard
                 </ListItemLogo>
-                <ListItemLogo
-                  logo={logoRep}
-                  title="RepTrack"
-                  href="#reptrack"
-                >
+                <ListItemLogo logo={logoRep} title="RepTrack" href="#reptrack">
                   Track your workouts in a simpler way.
                 </ListItemLogo>
-                <ListItemLogo
-                  logo={logoRep}
-                  title="SolaClub"
-                  href="#solaclub"
-                >
+                <ListItemLogo logo={logoRep} title="SolaClub" href="#solaclub">
                   Fill your coaching needs using this app.
                 </ListItemLogo>
-                <ListItemLogo
-                  logo={logoMyoo}
-                  title="SolaPro"
-                  href="#solapro"
-                >
+                <ListItemLogo logo={logoMyoo} title="SolaPro" href="#solapro">
                   Your professional needs all in one place.
                 </ListItemLogo>
-                <ListItem
-                  title="Wearables"
-                  href="#wearables"
-                >
+                <ListItem title="Wearables" href="#wearables">
                   Devices to use with our solutions.
                 </ListItem>
               </ul>
@@ -185,11 +167,8 @@ const NavigationMenuDemo = () => {
         </div>
       </NavigationMenu.Root>
 
-      <div className="flex items-center gap-4">
-        <button className="text-white hover:text-purple-300 transition-colors duration-200 hidden lg:block">
-          Sign In
-        </button>
-        <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg px-6 py-2 hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25">
+      <div className="flex items-center gap-4 order-2 md:order-none">
+        <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg px-6 py-2 hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex">
           Contact Us
         </button>
       </div>
