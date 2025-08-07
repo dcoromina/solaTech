@@ -19,7 +19,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-gray-900 min-h-screen">
+    <div className="flex flex-col bg-gray-900 min-h-screen">
       {/* Main Content */}
       <div className="flex flex-col bg-gray-900 pt-3">
         {/* Header Section */}
@@ -67,6 +67,6 @@ export default function Home() {
         {/* Footer */}
         <Footer />
       </div>
-    </main>
+    </div>
   );
 }
