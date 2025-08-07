@@ -88,7 +88,7 @@ const NavigationMenuDemo = () => {
                   </NavigationMenu.Link>
                 </li>
 
-                <ListItem href="#story" title="Story">
+                <ListItem href="/about" title="Story">
                   Brief history and inspiration behind the startup.
                 </ListItem>
                 <ListItem href="#mission" title="Mission">

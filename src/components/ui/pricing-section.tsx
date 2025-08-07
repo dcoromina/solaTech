@@ -84,12 +84,17 @@ export function PricingSection() {
             Choose Your Plan
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Flexible pricing options to fit your healthcare organization's needs
+            Flexible pricing options to fit your healthcare organization&apos;s
+            needs
           </p>
 
           {/* Billing Toggle */}
           <div className="flex items-center justify-center mt-8">
-            <span className={`text-sm ${!isAnnual ? 'text-white' : 'text-gray-400'}`}>
+            <span
+              className={`text-sm ${
+                !isAnnual ? "text-white" : "text-gray-400"
+              }`}
+            >
               Monthly
             </span>
             <button
@@ -98,11 +103,13 @@ export function PricingSection() {
             >
               <span
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                  isAnnual ? 'translate-x-6' : 'translate-x-1'
+                  isAnnual ? "translate-x-6" : "translate-x-1"
                 }`}
               />
             </button>
-            <span className={`text-sm ${isAnnual ? 'text-white' : 'text-gray-400'}`}>
+            <span
+              className={`text-sm ${isAnnual ? "text-white" : "text-gray-400"}`}
+            >
               Annual
               <span className="ml-1 text-green-400 text-xs">(Save 20%)</span>
             </span>
@@ -115,8 +122,8 @@ export function PricingSection() {
               key={index}
               className={`relative p-8 rounded-2xl border transition-all duration-300 hover:scale-105 ${
                 plan.popular
-                  ? 'bg-gradient-to-b from-purple-900/20 to-blue-900/20 border-purple-500/50 shadow-xl shadow-purple-500/10'
-                  : 'bg-white/5 border-white/10 hover:border-purple-500/30'
+                  ? "bg-gradient-to-b from-purple-900/20 to-blue-900/20 border-purple-500/50 shadow-xl shadow-purple-500/10"
+                  : "bg-white/5 border-white/10 hover:border-purple-500/30"
               }`}
             >
               {plan.popular && (
@@ -128,12 +135,18 @@ export function PricingSection() {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {plan.name}
+                </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  <span className="text-4xl font-bold text-white">
+                    {plan.price}
+                  </span>
                   {plan.period && (
                     <span className="text-gray-400 ml-1">
-                      {isAnnual && plan.price !== "Custom" ? "/year" : plan.period}
+                      {isAnnual && plan.price !== "Custom"
+                        ? "/year"
+                        : plan.period}
                     </span>
                   )}
                 </div>
@@ -148,7 +161,10 @@ export function PricingSection() {
                   </li>
                 ))}
                 {plan.limitations.map((limitation, limitationIndex) => (
-                  <li key={limitationIndex} className="flex items-center text-sm">
+                  <li
+                    key={limitationIndex}
+                    className="flex items-center text-sm"
+                  >
                     <X className="w-4 h-4 text-red-400 mr-3 flex-shrink-0" />
                     <span className="text-gray-400">{limitation}</span>
                   </li>
@@ -158,8 +174,8 @@ export function PricingSection() {
               <button
                 className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 shadow-lg shadow-purple-500/25'
-                    : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                    ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 shadow-lg shadow-purple-500/25"
+                    : "bg-white/10 text-white hover:bg-white/20 border border-white/20"
                 }`}
               >
                 {plan.cta}

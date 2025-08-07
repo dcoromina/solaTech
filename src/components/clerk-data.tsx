@@ -33,7 +33,7 @@ const FitnessHealthApp = () => {
   }, []);
 
   // Check if element is in viewport
-  const isInViewport = (element) => {
+  const isInViewport = (element: any) => {
     if (!element) return false;
     const rect = element.getBoundingClientRect();
     return (

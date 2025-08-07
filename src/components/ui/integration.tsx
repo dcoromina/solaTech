@@ -27,7 +27,7 @@ export function IntegrationSection() {
         ].map((app) => (
           <div
             key={app.name}
-            className="flex items-center space-x-3 bg-white/5 border border-white/10 rounded-xl pl-3 pr-5 py-2 hover:border-blue-500/30 transition-all duration-300"
+            className="flex items-center space-x-3 bg-white/5 focus:bg-white/30 border border-white/10 rounded-xl pl-3 pr-5 py-2 hover:border-blue-500/30 transition-all duration-300"
           >
             <Image
               src={app.icon}

@@ -38,7 +38,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
               <ClerkComponent />
-              <ClerkComponent />
+              <ClerkFitness />
               <ClerkFitness />
               <ClerkData />
             </div>
