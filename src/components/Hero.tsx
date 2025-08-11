@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Dashboard from "/public/dashboard.png";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center gap-12 px-4 py-18 relative overflow-hidden">
+    <div className="min-h-[70vh] flex flex-col items-center justify-center gap-12 px-4 py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl" />
@@ -30,9 +31,12 @@ const HeroSection = () => {
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row gap-4">
-          <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40">
+          <Link
+            href="/contact"
+            className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+          >
             Get Started Free
-          </button>
+          </Link>
         </div>
       </div>
 

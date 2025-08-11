@@ -91,10 +91,10 @@ const NavigationMenuDemo = () => {
                 <ListItem href="/about" title="Story">
                   Brief history and inspiration behind the startup.
                 </ListItem>
-                <ListItem href="#mission" title="Mission">
+                <ListItem href="/mission" title="Mission">
                   The core purpose and values driving the company.
                 </ListItem>
-                <ListItem href="#vision" title="Vision">
+                <ListItem href="/vision" title="Vision">
                   Long-term goals and aspirations.
                 </ListItem>
               </ul>
@@ -107,19 +107,19 @@ const NavigationMenuDemo = () => {
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="NavigationMenuContent">
               <ul className="List one">
-                <ListItemLogo logo={loreAid} title="SolaDash" href="#soladash">
+                <ListItemLogo logo={loreAid} title="SolaDash" href="/soladash">
                   Your main ecosystem dashboard
                 </ListItemLogo>
-                <ListItemLogo logo={logoRep} title="RepTrack" href="#reptrack">
-                  Track your workouts in a simpler way.
+                <ListItemLogo logo={logoRep} title="SolaEvent" href="/reptrack">
+                  Manage your events and races The easiest way possible.
                 </ListItemLogo>
-                <ListItemLogo logo={logoRep} title="SolaClub" href="#solaclub">
+                <ListItemLogo logo={logoRep} title="SolaClub" href="/solaclub">
                   Fill your coaching needs using this app.
                 </ListItemLogo>
-                <ListItemLogo logo={logoMyoo} title="SolaPro" href="#solapro">
+                <ListItemLogo logo={logoMyoo} title="SolaPro" href="/solapro">
                   Your professional needs all in one place.
                 </ListItemLogo>
-                <ListItem title="Wearables" href="#wearables">
+                <ListItem title="Wearables" href="/wearables">
                   Devices to use with our solutions.
                 </ListItem>
               </ul>
@@ -134,21 +134,21 @@ const NavigationMenuDemo = () => {
               <ul className="List two">
                 <ListItemIcon
                   title="Join Us"
-                  href="#careers"
+                  href="/careers"
                   icon={<UserPlusIcon className="w-5 h-5" />}
                 >
                   Join us in our mission to make a difference.
                 </ListItemIcon>
                 <ListItemIcon
                   title="The Workplace"
-                  href="#workplace"
+                  href="/workplace"
                   icon={<BuildingOfficeIcon className="w-5 h-5" />}
                 >
                   See your future workplace.
                 </ListItemIcon>
                 <ListItemIcon
                   title="Our Culture"
-                  href="#culture"
+                  href="/culture"
                   icon={<UsersIcon className="w-5 h-5" />}
                 >
                   Hear from our employees and their experiences.
@@ -168,9 +168,12 @@ const NavigationMenuDemo = () => {
       </NavigationMenu.Root>
 
       <div className="flex items-center gap-4 order-2 md:order-none">
-        <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg px-6 py-2 hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex">
+        <Link
+          href="/contact"
+          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg px-6 py-2 hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex"
+        >
           Contact Us
-        </button>
+        </Link>
       </div>
     </div>
   );

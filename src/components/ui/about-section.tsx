@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Users, Target, Award, Globe } from "lucide-react";
+import Link from "next/link";
 
 const values = [
   {
@@ -172,6 +173,19 @@ export function AboutSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Contact CTA */}
+        <div className="text-center mt-16">
+          <p className="text-gray-400 mb-4">
+            Want to learn more about our story or work with us?
+          </p>
+          <Link
+            href="/contact"
+            className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-medium hover:scale-105 transition-all duration-200"
+          >
+            Contact Our Team
+          </Link>
         </div>
       </div>
     </section>

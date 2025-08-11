@@ -20,53 +20,67 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex flex-col bg-gray-900 min-h-screen">
-      {/* Main Content */}
-      <div className="flex flex-col bg-gray-900 pt-3">
-        {/* Header Section */}
-        <header className="w-full  sticky top-0 z-50 ">
-          <div id="navSection">
-            <Navbar />
+      {/* Header */}
+      <header className="w-full sticky top-0 z-50 ">
+        <div id="navSection">
+          <Navbar />
+        </div>
+      </header>
+
+      {/* Hero */}
+      <HeroSection />
+
+      {/* Stats */}
+      <StatsSection />
+
+      {/* Integrations */}
+      <IntegrationSection />
+
+      {/* Product Cards */}
+      <section className="py-16 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 inline-block">
+              Our Products
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mt-4">
+              Explore the Suite
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mt-3">
+              Powerful tools to help you build, track, and grow.
+            </p>
           </div>
-        </header>
 
-        {/* Integration Showcase */}
-        <div className="py-0 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-0 sm:px-6">
-            <HeroSection />
-            <StatsSection />
-            <IntegrationSection />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-              <ClerkComponent />
-              <ClerkFitness />
-              <ClerkFitness />
-              <ClerkData />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+            <ClerkComponent />
+            <ClerkFitness />
+            <ClerkData />
           </div>
         </div>
-        <FeaturesSection />
-        {/*           <TestimonialsSection />*/}
-        {/* <BentoGrid /> */}
+      </section>
 
-        <section>
-          {/*  <SecuritySection /> */}
+      {/* Features */}
+      <FeaturesSection />
 
-          {/* <TestimonialsSection /> */}
+      {/* FAQ */}
+      <FAQSection />
 
-          {/*  <PricingSection /> */}
+      {/* CTA Header */}
+      <section className="bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-2">
+            <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 inline-block">
+              Get Started
+            </span>
+          </div>
+        </div>
+      </section>
 
-          {/* Bento Grid - Additional Features 
-          <BentoGrid />
-*/}
-          <FAQSection />
+      {/* CTA */}
+      <CTASection />
 
-          {/* maybe put it in enterprise or something like that
-          <CTASection /> */}
-        </section>
-
-        {/* Footer */}
-        <Footer />
-      </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
