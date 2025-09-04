@@ -36,7 +36,7 @@ export default function Home() {
       {/* Product Showcase Sections */}
 
       {/* All-in-One Health & Fitness App */}
-      <section className="py-24 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800">
+      <section className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -157,14 +157,14 @@ export default function Home() {
       </section>
 
       {/* Personal Trainer Dashboard */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative group order-2 lg:order-1">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-3xl p-8 backdrop-blur-sm border border-gray-700/50">
                 <Image
-                  src="/dashboard.png"
+                  src="/teams_dashboard.png"
                   alt="Personal Trainer Dashboard"
                   width={600}
                   height={400}
@@ -278,7 +278,7 @@ export default function Home() {
       </section>
 
       {/* Health Professional Platform */}
-      <section className="py-24 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800">
+      <section className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -431,7 +431,7 @@ export default function Home() {
       <FAQSection />
 
       {/* CTA Header */}
-      <section className="bg-gray-900">
+      <section className="">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-2">
             <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 inline-block">

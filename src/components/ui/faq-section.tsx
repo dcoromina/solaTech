@@ -5,36 +5,44 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const faqs = [
   {
     question: "How does SolaTech ensure HIPAA compliance?",
-    answer: "SolaTech is built with HIPAA compliance at its core. We implement end-to-end encryption, role-based access controls, audit logging, and regular security assessments. Our platform undergoes annual third-party security audits and maintains SOC 2 Type II certification."
+    answer:
+      "SolaTech is built with HIPAA compliance at its core. We implement end-to-end encryption, role-based access controls, audit logging, and regular security assessments. Our platform undergoes annual third-party security audits and maintains SOC 2 Type II certification.",
   },
   {
     question: "What integrations are available?",
-    answer: "We integrate with major EHR systems (Epic, Cerner, Allscripts), wearable devices (Apple Watch, Fitbit, Garmin), lab systems (LabCorp, Quest), and imaging systems (DICOM, PACS). Our RESTful APIs also allow custom integrations with your existing systems."
+    answer:
+      "We integrate with major EHR systems (Epic, Cerner, Allscripts), wearable devices (Apple Watch, Fitbit, Garmin), lab systems (LabCorp, Quest), and imaging systems (DICOM, PACS). Our RESTful APIs also allow custom integrations with your existing systems.",
   },
   {
     question: "How quickly can we implement SolaTech?",
-    answer: "Implementation timelines vary based on your organization's size and requirements. Typical deployments range from 2-8 weeks for standard implementations, while enterprise customizations may take 3-6 months. We provide dedicated implementation support throughout the process."
+    answer:
+      "Implementation timelines vary based on your organization's size and requirements. Typical deployments range from 2-8 weeks for standard implementations, while enterprise customizations may take 3-6 months. We provide dedicated implementation support throughout the process.",
   },
   {
     question: "What kind of support do you provide?",
-    answer: "We offer tiered support based on your plan: email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise clients. All plans include comprehensive documentation, training materials, and onboarding assistance."
+    answer:
+      "We offer tiered support based on your plan: email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise clients. All plans include comprehensive documentation, training materials, and onboarding assistance.",
   },
   {
     question: "Can SolaTech scale with our organization?",
-    answer: "Absolutely. Our cloud-native architecture is designed to scale from small practices to large health systems. We support multi-location deployments, unlimited users on Enterprise plans, and can handle millions of patient records with consistent performance."
+    answer:
+      "Absolutely. Our cloud-native architecture is designed to scale from small practices to large health systems. We support multi-location deployments, unlimited users on Enterprise plans, and can handle millions of patient records with consistent performance.",
   },
   {
     question: "What about data migration from our current system?",
-    answer: "We provide comprehensive data migration services as part of our implementation process. Our team works with you to map your existing data structure, ensure data integrity during transfer, and minimize downtime during the transition."
+    answer:
+      "We provide comprehensive data migration services as part of our implementation process. Our team works with you to map your existing data structure, ensure data integrity during transfer, and minimize downtime during the transition.",
   },
   {
     question: "Is there a mobile app available?",
-    answer: "Yes, we offer native mobile apps for both iOS and Android, as well as responsive web applications. Healthcare providers and patients can access the platform from any device with full functionality and offline capabilities."
+    answer:
+      "Yes, we offer native mobile apps for both iOS and Android, as well as responsive web applications. Healthcare providers and patients can access the platform from any device with full functionality and offline capabilities.",
   },
   {
     question: "How do you handle data backup and disaster recovery?",
-    answer: "We maintain automated daily backups with point-in-time recovery capabilities. Our disaster recovery plan includes geographically distributed data centers, 99.9% uptime SLA, and rapid failover procedures to ensure continuous service availability."
-  }
+    answer:
+      "We maintain automated daily backups with point-in-time recovery capabilities. Our disaster recovery plan includes geographically distributed data centers, 99.9% uptime SLA, and rapid failover procedures to ensure continuous service availability.",
+  },
 ];
 
 export function FAQSection() {
@@ -45,7 +53,7 @@ export function FAQSection() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-900 to-gray-950 relative overflow-hidden">
+    <section className="py-24  relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl" />
@@ -61,7 +69,8 @@ export function FAQSection() {
             Got Questions?
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Find answers to common questions about our platform, implementation, and support.
+            Find answers to common questions about our platform, implementation,
+            and support.
           </p>
         </div>
 
@@ -75,7 +84,9 @@ export function FAQSection() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
               >
-                <h3 className="text-lg font-medium text-white pr-4">{faq.question}</h3>
+                <h3 className="text-lg font-medium text-white pr-4">
+                  {faq.question}
+                </h3>
                 {openIndex === index ? (
                   <ChevronUp className="w-5 h-5 text-purple-400 flex-shrink-0" />
                 ) : (

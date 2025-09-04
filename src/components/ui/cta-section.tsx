@@ -2,7 +2,7 @@ import React from "react";
 
 export function CTASection() {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-gray-900 to-gray-950">
       <div className="absolute inset-0 " />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="bg-white/5 backdrop-blur-xl p-12 rounded-3xl border border-white/10">
