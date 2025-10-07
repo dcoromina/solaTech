@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Dashboard from "/public/dashboard.png";
+import FoodAppImage from "/public/FoodApp.jpg";
+import ReptrackImage from "/public/RepTrack.jpg";
 
 const HeroSection = () => {
   return (
@@ -26,8 +28,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-gray-300 text-center text-lg lg:text-xl max-w-[700px] leading-relaxed">
-          Smart tools to track your fitness progress and reach your goals
-          faster.
+          Your All-in-One companion in your health and fitness journey.
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row gap-4">
@@ -40,16 +41,35 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="relative w-full max-w-[1200px] h-auto flex flex-row justify-center px-4 z-10">
-        <div className="relative group">
+      <div className="relative w-full max-w-[1200px] h-auto flex flex-row justify-center items-center px-4 z-10 group/container">
+        {/* Left Image - Hidden behind, rotates out on hover */}
+        <div className="hidden lg:block absolute left-20 bottom-0 w-[190px] transform transition-all translate-x-[280px] duration-700 ease-out rotate-0 opacity-0 group-hover/container:-translate-x-8 group-hover/container:-rotate-12 group-hover/container:opacity-100 z-10">
+          <Image
+            src={FoodAppImage}
+            className="w-full h-auto rounded-xl shadow-2xl shadow-black/40 hover:scale-105 transition-transform duration-300"
+            alt="Recipe preview"
+          />
+        </div>
+
+        {/* Center Main Image */}
+        <div className="relative z-20 max-w-[800px]">
           <Image
             src={Dashboard}
-            className="w-full h-auto aspect-auto relative z-20 rounded-xl hover:scale-105 transition-all duration-300 ease-in shadow-2xl shadow-purple-500/20 hover:shadow-purple-500/30"
+            className="w-full h-auto aspect-auto relative rounded-xl hover:scale-105 transition-all  duration-300 ease-in shadow-2xl shadow-purple-500/20 hover:shadow-purple-500/30"
             alt="Fitness dashboard overview"
             priority
           />
           {/* Glow effect */}
           <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+        </div>
+
+        {/* Right Image - Hidden behind, rotates out on hover */}
+        <div className="hidden lg:block absolute right-20 bottom-0 w-[190px] transform transition-all -translate-x-[280px] duration-700 ease-out rotate-0 opacity-0 group-hover/container:translate-x-8 group-hover/container:rotate-12 group-hover/container:opacity-100 z-10">
+          <Image
+            src={ReptrackImage}
+            className="w-full h-auto rounded-xl shadow-2xl shadow-black/40 hover:scale-100 transition-transform duration-300"
+            alt="Fitness tracking app"
+          />
         </div>
       </div>
     </div>

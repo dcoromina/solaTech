@@ -170,7 +170,7 @@ const NavigationMenuDemo = () => {
       <div className="flex items-center gap-4 order-2 md:order-none">
         <Link
           href="/contact"
-          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg px-6 py-2 hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex"
+          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full px-4 py-1.5 text-sm hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex"
         >
           Contact Us
         </Link>
