@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>SolaTech | Enterprise Healthcare Technology</title>
+        <title>SolaTech | Health Technology</title>
         <meta
           name="description"
           content="SolaTech - Enterprise-grade healthcare technology solutions for modern organizations"

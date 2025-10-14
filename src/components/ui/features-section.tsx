@@ -1,42 +1,39 @@
 import React from "react";
-import { Code, Shield, Zap, Database, Cloud, Lock } from "lucide-react";
+import { FiCode, FiLayout, FiSmile, FiTrendingUp, FiZap, FiShield } from "react-icons/fi";
 
 const features = [
   {
-    icon: <Code className="w-6 h-6" />,
-    title: "Enterprise-Grade Architecture",
+    title: "Progress & Performance Analytics",
     description:
-      "Built with scalability in mind, our platform handles millions of health data points with ease.",
+      "Track workouts, recovery, and body metrics with AI-driven insights to optimize your training and health.",
+    icon: FiTrendingUp,
+    className: "md:col-span-2 md:row-span-2",
   },
   {
-    icon: <Shield className="w-6 h-6" />,
-    title: "HIPAA & GDPR Compliant",
-    description:
-      "End-to-end encryption and strict compliance with healthcare data regulations.",
+    title: "Adaptive Programs & Routines",
+    description: "Training and wellness plans that auto-adjust to your goals, schedule, and progress.",
+    icon: FiLayout,
   },
   {
-    icon: <Zap className="w-6 h-6" />,
-    title: "Real-time Processing",
-    description:
-      "Advanced algorithms process health data in real-time for instant insights and alerts.",
+    title: "Wearables & App Integrations",
+    description: "Seamless sync with Apple Health, Google Fit, Strava, Oura, Whoop, and more.",
+    icon: FiCode,
   },
   {
-    icon: <Database className="w-6 h-6" />,
-    title: "Data Analytics Engine",
-    description:
-      "Powerful analytics tools that transform raw health data into actionable insights.",
+    title: "Privacy & Data Security",
+    description: "Bank‑level encryption and best‑practice safeguards to protect your health data.",
+    icon: FiShield,
   },
   {
-    icon: <Cloud className="w-6 h-6" />,
-    title: "Cloud-Native Platform",
-    description:
-      "Built on modern cloud infrastructure for maximum reliability and scalability.",
+    title: "Quick Start Assessments",
+    description: "Onboard fast with fitness, nutrition, and lifestyle assessments that personalize your plan.",
+    icon: FiZap,
+    className: "md:col-span-2",
   },
   {
-    icon: <Lock className="w-6 h-6" />,
-    title: "Advanced Security",
-    description:
-      "Multi-layer security with role-based access control and audit logging.",
+    title: "24/7 Expert Consultation",
+    description: "Chat with certified coaches, trainers, and dietitians anytime you need guidance.",
+    icon: FiSmile,
   },
 ];
 
@@ -70,7 +67,7 @@ export function FeaturesSection() {
               className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 backdrop-blur-sm"
             >
               <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                {React.cloneElement(feature.icon, {
+                {React.createElement(feature.icon, {
                   className: "w-6 h-6 text-white",
                 })}
               </div>

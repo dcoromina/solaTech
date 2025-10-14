@@ -6,6 +6,7 @@ import BentoGrid from "@/components/bento";
 import ClerkComponent from "@/components/clerk-enhanced";
 import ClerkData from "@/components/clerk-data";
 import ClerkFitness from "@/components/clerk-workout-diet";
+import ClerkPro from "@/components/clerk-pro";
 import Clerk from "@/components/clerk-integrate";
 import { TestimonialsSection } from "@/components/ui/testimonials";
 import { StatsSection } from "@/components/ui/stats-section";
@@ -35,7 +36,7 @@ export default function Home() {
 
       {/* Stats */}
       <StatsSection />
-{/*       <ProductSelect /> */}
+{/*<ProductSelect /> */}
 
       {/* Product Showcase Sections */}
       <ProductShowcase />
@@ -62,6 +63,7 @@ export default function Home() {
             <ClerkComponent />
             <ClerkFitness />
             <ClerkData />
+            <ClerkPro/>
           </div>
         </div>
       </section>

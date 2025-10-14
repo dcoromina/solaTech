@@ -54,36 +54,36 @@ const BentoItem = ({
 const BentoGrid = () => {
   const items = [
     {
-      title: "Advanced Analytics",
+      title: "Progress & Performance Analytics",
       description:
-        "Powerful AI-driven insights that help healthcare providers make data-informed decisions and improve patient outcomes.",
+        "Track workouts, recovery, and body metrics with AI-driven insights to optimize your training and health.",
       icon: FiTrendingUp,
       className: "md:col-span-2 md:row-span-2",
     },
     {
-      title: "Custom Workflows",
-      description: "Tailored workflow automation that adapts to your organization's unique processes and requirements.",
+      title: "Adaptive Programs & Routines",
+      description: "Training and wellness plans that auto-adjust to your goals, schedule, and progress.",
       icon: FiLayout,
     },
     {
-      title: "Developer APIs",
-      description: "Comprehensive RESTful APIs with extensive documentation for seamless third-party integrations.",
+      title: "Wearables & App Integrations",
+      description: "Seamless sync with Apple Health, Google Fit, Strava, Oura, Whoop, and more.",
       icon: FiCode,
     },
     {
-      title: "Enterprise Security",
-      description: "Bank-level security with HIPAA compliance, end-to-end encryption, and regular security audits.",
+      title: "Privacy & Data Security",
+      description: "Bank‑level encryption and best‑practice safeguards to protect your health data.",
       icon: FiShield,
     },
     {
-      title: "Quick Deployment",
-      description: "Get started quickly with our streamlined onboarding process and dedicated implementation support.",
+      title: "Quick Start Assessments",
+      description: "Onboard fast with fitness, nutrition, and lifestyle assessments that personalize your plan.",
       icon: FiZap,
       className: "md:col-span-2",
     },
     {
-      title: "24/7 Support",
-      description: "Round-the-clock technical support and customer success management for enterprise clients.",
+      title: "24/7 Expert Consultation",
+      description: "Chat with certified coaches, trainers, and dietitians anytime you need guidance.",
       icon: FiSmile,
     },
   ];
@@ -99,13 +99,13 @@ const BentoGrid = () => {
       <div className="max-w-7xl mx-auto px-4 py-16 relative">
         <div className="text-center mb-16">
           <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
-            Additional Features
+            Fitness & Health Features
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
-            Everything You Need
+            Everything You Need to Feel and Perform Better
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Discover additional powerful features designed to enhance your healthcare technology stack.
+            Discover adaptable tools for training, nutrition, recovery, and professional guidance—all in one place.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[200px]">
