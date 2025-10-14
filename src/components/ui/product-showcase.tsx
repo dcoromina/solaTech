@@ -132,15 +132,8 @@ export function ProductShowcase() {
                   aria-label="Download on the App Store"
                   className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white hover:bg-white/10 transition-colors shadow-sm"
                 >
-                  {/* Apple icon */}
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    className="w-6 h-6"
-                    fill="currentColor"
-                  >
-                    <path d="M16.365 1.43c0 1.14-.456 2.229-1.196 3.033-.746.81-1.964 1.43-3.108 1.35-.137-1.095.402-2.253 1.12-3.046.73-.805 2.02-1.392 3.184-1.337zM20.69 17.005c-.6 1.38-.88 1.986-1.652 3.208-1.072 1.72-2.582 3.868-4.453 3.877-1.01.01-1.7-.288-2.58-.288-.886 0-1.61.28-2.59.298-1.86.035-3.31-1.86-4.387-3.574-3-4.7-3.32-10.22-1.47-13.102 1.32-2.08 3.41-3.41 5.787-3.445 1.104-.02 2.15.316 2.922.316.77 0 2.033-.39 3.435-.334 1.168.047 4.05.473 5.96 3.22-5.248 2.85-4.41 10.28-.972 12.824z"/>
-                  </svg>
+                  {/* Apple icon from public/icons/apple.svg */}
+                  <Image src="/icons/apple.svg" alt="Apple" width={24} height={24} className="w-6 h-6" />
                   <div className="flex flex-col leading-tight text-left">
                     <span className="text-[10px] uppercase tracking-wide text-gray-300">Download on the</span>
                     <span className="text-sm font-semibold">App Store</span>
@@ -150,20 +143,8 @@ export function ProductShowcase() {
                   aria-label="Get it on Google Play"
                   className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white hover:bg-white/10 transition-colors shadow-sm"
                 >
-                  {/* Google Play icon */}
-                  <svg
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    className="w-6 h-6"
-                  >
-                    <defs>
-                      <linearGradient id="gplay-a" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#00f260" />
-                        <stop offset="100%" stopColor="#0575e6" />
-                      </linearGradient>
-                    </defs>
-                    <path fill="url(#gplay-a)" d="M2.01 1.8l12.2 10.2-12.2 10.2c-.63-.36-1.01-1.03-1.01-1.77V3.57c0-.74.38-1.41 1.01-1.77zM15.43 12.7l3.03 2.54c.52.44.85 1.08.85 1.75 0 .66-.33 1.3-.85 1.74l-2.02 1.7-5.28-4.41 4.27-3.32zm1.83-1.42l2.02 1.71 3.3-2.76c.26-.22.42-.54.42-.89s-.16-.67-.42-.89l-3.3-2.76-2.02 1.71-4.47 3.7 4.47 3.7z"/>
-                  </svg>
+                  {/* Google Play icon from public/icons/google-play.svg */}
+                  <Image src="/icons/google-play.svg" alt="Google Play" width={24} height={24} className="w-6 h-6" />
                   <div className="flex flex-col leading-tight text-left">
                     <span className="text-[10px] uppercase tracking-wide text-gray-300">Get it on</span>
                     <span className="text-sm font-semibold">Google Play</span>
