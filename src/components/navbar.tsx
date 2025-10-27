@@ -172,7 +172,7 @@ const NavigationMenuDemo = () => {
           href="/contact"
           className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl px-3 py-1.5 text-md hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex"
         >
-          Let's begin
+          Let&apos;s begin
         </Link>
      
     </div>
