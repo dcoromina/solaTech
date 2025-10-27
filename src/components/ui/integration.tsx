@@ -5,7 +5,7 @@ import { Users, Target, Award, Globe } from "lucide-react";
 
 export function IntegrationSection() {
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-10 md:py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
           Platform Features

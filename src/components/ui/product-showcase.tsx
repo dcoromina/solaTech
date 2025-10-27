@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 const stats = [
@@ -20,10 +21,10 @@ const stats = [
   },
 ];
 
-export function ProductShowcase() {
+function ProductShowcaseInner() {
   return (
     <>
-      <section className="py-24 ">
+      <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -118,14 +119,7 @@ export function ProductShowcase() {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                  Learn More
-                </button>
-                <button className="px-8 py-4 border-2 border-green-500/30 text-green-300 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300">
-                  Watch Demo
-                </button>
-              </div>
+             
               {/* Store download buttons (no links yet) */}
               <div className="flex sm:items-center justify-center md:justify-start flex-row flex-wrap gap-3">
                 <button
@@ -154,12 +148,14 @@ export function ProductShowcase() {
             </div>
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-3xl p-8 backdrop-blur-sm border border-gray-700/50">
+              <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-3xl p-8 backdrop-blur-sm border border-gray-700/50 heroMedia">
                 <Image
                   src="/FoodApp.jpg"
                   alt="All-in-One Health & Fitness App"
                   width={600}
                   height={400}
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 600px"
                   className="rounded-2xl shadow-2xl h-[500px] w-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -180,6 +176,8 @@ export function ProductShowcase() {
                   alt="Personal Trainer Dashboard"
                   width={600}
                   height={400}
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 600px"
                   className="rounded-2xl shadow-2xl h-[500px] w-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -277,12 +275,12 @@ export function ProductShowcase() {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <Link href="/soladash" prefetch className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" role="button">
                   Explore Dashboard
-                </button>
-                <button className="px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300">
+                </Link>
+                <Link href="/solaclub" prefetch className="px-8 py-4 border-2 border-purple-500/30 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300" role="button">
                   Start Free Trial
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -386,12 +384,12 @@ export function ProductShowcase() {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <Link href="/solapro" prefetch className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" role="button">
                   Discover Platform
-                </button>
-                <button className="px-8 py-4 border-2 border-blue-500/30 text-blue-300 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300">
+                </Link>
+                <Link href="/contact" prefetch className="px-8 py-4 border-2 border-blue-500/30 text-blue-300 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300" role="button">
                   Schedule Demo
-                </button>
+                </Link>
               </div>
             </div>
             <div className="relative group">
@@ -402,6 +400,8 @@ export function ProductShowcase() {
                   alt="Health Professional Platform"
                   width={600}
                   height={400}
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 600px"
                   className="rounded-2xl shadow-2xl h-[500px] w-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -413,8 +413,13 @@ export function ProductShowcase() {
       {/* Personal Trainer Dashboard */}
       
       
+      <style jsx>{`
+        .heroMedia { min-height: 500px; }
+      `}</style>
     </>
   );
 }
+
+export const ProductShowcase = React.memo(ProductShowcaseInner);
 
 export default ProductShowcase;

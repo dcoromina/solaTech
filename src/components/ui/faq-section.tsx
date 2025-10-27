@@ -104,7 +104,7 @@ export function FAQSection() {
 
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">Still have questions?</p>
-          <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-medium hover:scale-105 transition-all duration-200">
+          <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-medium hover:scale-105 transition-all duration-200">
             Contact Our Team
           </button>
         </div>

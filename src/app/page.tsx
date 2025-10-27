@@ -31,18 +31,13 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
       <HeroSections />
 
-      {/* Stats */}
       <StatsSection />
-{/*<ProductSelect /> */}
-
-      {/* Product Showcase Sections */}
-      <ProductShowcase />
-
-      {/* Integrations */}
+      
       <IntegrationSection />
+
+   {/*    <ProductShowcase /> */}
 
       {/* Product Cards */}
       <section className="py-16 bg-gray-900">
@@ -59,7 +54,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 justify-items-center">
             <ClerkComponent />
             <ClerkFitness />
             <ClerkData />
@@ -74,19 +69,8 @@ export default function Home() {
       {/* FAQ */}
       <FAQSection />
 
-      {/* CTA Header */}
-      <section className="">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-2">
-            <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 inline-block">
-              Get Started
-            </span>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <CTASection />
+     {/*  <CTASection /> */}
 
       {/* Footer */}
       <Footer />

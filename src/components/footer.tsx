@@ -51,7 +51,7 @@ const footer = () => {
         </div>
         <div className="flex flex-col gap-2">
           <h6 className="text-white font-bold">Socials</h6>
-          <div className="flex flex-wrap md:flex-row gap-2 md:gap-3 w-fit">
+          <div className="grid grid-cols-3 md:flex md:flex-row gap-2 md:gap-3 w-fit">
             {/* <!-- Discord --> */}
             <svg
               className="md:h-5 md:w-5 h-4  cursor-pointer hover:scale-110 transition-all duration-300 hover:font-semibold"

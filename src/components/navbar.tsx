@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import logoSvg from "/public/slogo.svg";
 import loreAid from "/public/images/logo-dsh.png";
-import logoS from "/public/images/logo-s.png";
+import logoS from "/public/images/s_letter.png";
 import logoLet from "/public/images/logo-let.png";
 import letter from "/public/images/letter.png";
 import logoRep from "/public/RepTrack.png";
@@ -51,15 +51,15 @@ const NavigationMenuDemo = () => {
       }`}
     >
       {/* Logo - centered on mobile, left-aligned on larger screens */}
-      <div className="flex flex-row space-x-3 items-center justify-center md:justify-start order-1 md:order-none mb-4 md:mb-0">
-        <Image
+      <Link className="flex flex-row space-x-3 items-center justify-center md:justify-start order-1 md:order-none mb-4 md:mb-0" href="/">
+        <Image 
           src={letter}
           width={120}
           height={40}
           alt="SolaTech Logo"
           className="h-8 w-auto"
         />
-      </div>
+      </Link>
 
       <NavigationMenu.Root className="NavigationMenuRoot hidden md:flex order-3 md:order-none">
         <NavigationMenu.List className="NavigationMenuList">
@@ -74,7 +74,7 @@ const NavigationMenuDemo = () => {
                     <Link className="Callout" href="/">
                       <Image
                         style={{ objectFit: "contain" }}
-                        src={logoSvg}
+                        src={logoS}
                         aria-hidden
                         width="38"
                         height="38"
@@ -167,14 +167,14 @@ const NavigationMenuDemo = () => {
         </div>
       </NavigationMenu.Root>
 
-      <div className="flex items-center gap-4 order-2 md:order-none">
+   
         <Link
           href="/contact"
-          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full px-4 py-1.5 text-sm hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex"
+          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl px-3 py-1.5 text-md hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex"
         >
-          Contact Us
+          Let's begin
         </Link>
-      </div>
+     
     </div>
   );
 };

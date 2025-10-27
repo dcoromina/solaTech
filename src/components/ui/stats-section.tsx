@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const stats = [
   {
@@ -17,20 +17,92 @@ const stats = [
     number: "1K+",
     label: "Partner Clubs",
   },
-];
+] as const;
+
+interface Stat {
+  number: string;
+  label: string;
+}
+
+function CountUpStat({ stat }: { stat: Stat }) {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  const parseStatNumber = (numStr: string) => {
+    const match = numStr.match(/(\d+)(.*)/);
+    if (!match) return { number: 0, suffix: "" };
+    
+    const number = parseInt(match[1]);
+    const suffix = match[2];
+    
+    return { number, suffix };
+  };
+
+  const { number: targetNumber, suffix } = parseStatNumber(stat.number);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsVisible(true);
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [hasAnimated]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = targetNumber / steps;
+    const stepDuration = duration / steps;
+
+    let current = 0;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= targetNumber) {
+        setCount(targetNumber);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, stepDuration);
+
+    return () => clearInterval(timer);
+  }, [isVisible, targetNumber]);
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-2">
+        {count}{suffix}
+      </div>
+      <div className="text-gray-400 font-medium">{stat.label}</div>
+    </div>
+  );
+}
 
 export function StatsSection() {
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-10 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-400 font-medium">{stat.label}</div>
-            </div>
+            <CountUpStat key={index} stat={stat} />
           ))}
         </div>
       </div>
