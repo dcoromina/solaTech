@@ -24,7 +24,7 @@ const stats = [
 function ProductShowcaseInner() {
   return (
     <>
-      <section className="py-20 ">
+      <section className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -119,7 +119,7 @@ function ProductShowcaseInner() {
                   </span>
                 </div>
               </div>
-             
+
               {/* Store download buttons (no links yet) */}
               <div className="flex sm:items-center justify-center md:justify-start flex-row flex-wrap gap-3">
                 <button
@@ -409,10 +409,10 @@ function ProductShowcaseInner() {
           </div>
         </div>
       </section>
-      
+
       {/* Personal Trainer Dashboard */}
-      
-      
+
+
       <style jsx>{`
         .heroMedia { min-height: 500px; }
       `}</style>

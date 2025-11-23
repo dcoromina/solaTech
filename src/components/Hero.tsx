@@ -5,6 +5,7 @@ import Link from "next/link";
 import Dashboard from "/public/dashboard.png";
 import FoodAppImage from "/public/FoodApp.jpg";
 import ReptrackImage from "/public/RepTrack.jpg";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -16,32 +17,57 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-[900px] flex flex-col items-center  gap-6 relative z-10">
-        <span className="text-purple-300 font-medium tracking-wide text-sm uppercase px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full border border-purple-500/20">
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-purple-300 font-medium tracking-wide text-sm uppercase px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full border border-purple-500/20"
+        >
           Transform Your Fitness Journey
-        </span>
+        </motion.span>
 
-        <h1 className="font-bold text-white lg:text-6xl md:text-5xl text-4xl text-center leading-tight tracking-tight md:text-balance text-pretty px-1">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="font-bold text-white lg:text-6xl md:text-5xl text-4xl text-center leading-tight tracking-tight md:text-balance text-pretty px-1"
+        >
           A Good Life Starts With{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
             Good Health
           </span>
-        </h1>
+        </motion.h1>
 
-        <p className="text-gray-300 text-center text-lg lg:text-xl max-w-[700px] leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-gray-300 text-center text-lg lg:text-xl max-w-[700px] leading-relaxed"
+        >
           Your All-in-One companion in your health and fitness journey.
-        </p>
+        </motion.p>
 
-        <div className="mt-6 flex flex-col sm:flex-row gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-6 flex flex-col sm:flex-row gap-4"
+        >
           <Link
-            href="/contact"
+            href="/JOINNOW"
             className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
           >
             Get Started Free
           </Link>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="relative w-full max-w-[1200px] h-auto flex flex-row justify-center items-center px-4 z-10 group/container">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="relative w-full max-w-[1200px] h-auto flex flex-row justify-center items-center px-4 z-10 group/container"
+      >
         {/* Left Image - Hidden behind, rotates out on hover */}
         <div className="hidden lg:block absolute left-20 bottom-0 w-[190px] transform transition-all translate-x-[280px] duration-700 ease-out rotate-0 opacity-0 group-hover/container:-translate-x-8 group-hover/container:-rotate-12 group-hover/container:opacity-100 z-10">
           <Image
@@ -71,7 +97,7 @@ const HeroSection = () => {
             alt="Fitness tracking app"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

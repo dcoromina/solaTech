@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const stats = [
   {
@@ -33,10 +34,10 @@ function CountUpStat({ stat }: { stat: Stat }) {
   const parseStatNumber = (numStr: string) => {
     const match = numStr.match(/(\d+)(.*)/);
     if (!match) return { number: 0, suffix: "" };
-    
+
     const number = parseInt(match[1]);
     const suffix = match[2];
-    
+
     return { number, suffix };
   };
 
@@ -98,11 +99,19 @@ function CountUpStat({ stat }: { stat: Stat }) {
 
 export function StatsSection() {
   return (
-    <section className="py-10 bg-gray-900">
+    <section className="py-24 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <CountUpStat key={index} stat={stat} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <CountUpStat stat={stat} />
+            </motion.div>
           ))}
         </div>
       </div>

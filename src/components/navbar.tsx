@@ -44,15 +44,14 @@ const NavigationMenuDemo = () => {
 
   return (
     <div
-      className={`flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-8 lg:px-16 py-4 transition-all duration-300 ${
-        isVisible
-          ? "translate-y-0 bg-gradient-to-b from-gray-900/95 via-gray-900/80 to-transparent backdrop-blur-md"
-          : "-translate-y-full"
-      }`}
+      className={`flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-8 lg:px-16 py-4 transition-all duration-300 ${isVisible
+        ? "translate-y-0 bg-gradient-to-b from-gray-900/95 via-gray-900/80 to-transparent backdrop-blur-md"
+        : "-translate-y-full"
+        }`}
     >
       {/* Logo - centered on mobile, left-aligned on larger screens */}
       <Link className="flex flex-row space-x-3 items-center justify-center md:justify-start order-1 md:order-none mb-4 md:mb-0" href="/">
-        <Image 
+        <Image
           src={letter}
           width={120}
           height={40}
@@ -167,14 +166,13 @@ const NavigationMenuDemo = () => {
         </div>
       </NavigationMenu.Root>
 
-   
-        <Link
-          href="/contact"
-          className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl px-3 py-1.5 text-md hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex"
-        >
-          Let&apos;s begin
-        </Link>
-     
+
+      <Link
+        href="/joinnow"
+        className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl px-3 py-3 text-md hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex items-center justify-center whitespace-nowrap"
+      >
+        Let&apos;s begin
+      </Link>
     </div>
   );
 };

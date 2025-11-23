@@ -37,8 +37,8 @@ const pathways = [
 
 export default function JoinNowPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-gray-950 text-white">
-      <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-gray-950/80 backdrop-blur">
+    <div className="flex min-h-screen flex-col bg-gray-900 text-white">
+      <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-gray-900/80 backdrop-blur">
         <Navbar />
       </header>
 
@@ -86,7 +86,7 @@ export default function JoinNowPage() {
         </section>
 
         {/* Path selection */}
-        <section className="flex h-full items-center border-t border-white/5 bg-gray-950/80 p-6 sm:p-12 lg:border-l lg:border-t-0">
+        <section className="flex h-full items-center border-t border-white/5 bg-gray-900/80 p-6 sm:p-12 lg:border-l lg:border-t-0">
           <div className="w-full max-w-xl space-y-10">
             <div className="space-y-3">
               <h2 className="text-3xl font-semibold sm:text-4xl">Pick where you want to start.</h2>
