@@ -30,10 +30,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="font-bold text-white lg:text-6xl md:text-5xl text-4xl text-center leading-tight tracking-tight md:text-balance text-pretty px-1"
+          className="font-bold text-white lg:text-7xl md:text-6xl text-5xl text-center leading-tight tracking-tighter md:text-balance text-pretty px-1"
         >
           A Good Life Starts With{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 animate-gradient-x bg-300%">
             Good Health
           </span>
         </motion.h1>
@@ -42,7 +42,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-gray-300 text-center text-lg lg:text-xl max-w-[700px] leading-relaxed"
+          className="text-gray-300 text-center text-lg lg:text-xl max-w-[700px] leading-relaxed tracking-wide"
         >
           Your All-in-One companion in your health and fitness journey.
         </motion.p>
@@ -51,11 +51,11 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-6 flex flex-col sm:flex-row gap-4"
+          className="mt-8 flex flex-col sm:flex-row gap-4"
         >
           <Link
             href="/JOINNOW"
-            className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-xl shadow-purple-500/30 hover:shadow-purple-500/50 ring-1 ring-white/20"
           >
             Get Started Free
           </Link>

@@ -6,10 +6,10 @@ const ProfessionalConsultPhone = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-fit h-[400px] overflow-visible flex items-center justify-center">
+    <div className="relative w-fit h-[320px] overflow-visible flex items-center justify-center">
       {/* Decorative elements */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-10 left-10 w-56 h-56 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
 
       <div className="w-full flex flex-col justify-center items-center h-full max-w-xs mx-auto z-10">
         <div
@@ -34,17 +34,15 @@ const ProfessionalConsultPhone = () => {
             {/* Card hover effect */}
             <div
               className={`relative inset-x-0 top-0 isolate h-[calc(206/16*1rem)] overflow-hidden pt-8 
-                  ${
-                    isHovered ? "scale-100 translate-y-[-1rem]" : "scale-[0.98]"
-                  } 
+                  ${isHovered ? "scale-100 translate-y-[-1rem]" : "scale-[0.98]"
+                } 
                   duration-300 ease-in-out`}
               style={{ willChange: "auto" }}
             >
               {/* Phone outline */}
               <div
-                className={`mx-auto h-72 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-blue-900/80 to-indigo-900/80 p-1.5 ${
-                  isHovered ? "scale-100 translate-y-[-2rem]" : "scale-[0.98]"
-                } 
+                className={`mx-auto h-60 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-blue-900/80 to-indigo-900/80 p-1.5 ${isHovered ? "scale-100 translate-y-[-2rem]" : "scale-[0.98]"
+                  } 
                   duration-300 ease-in-out`}
                 style={{
                   boxShadow:
@@ -53,7 +51,7 @@ const ProfessionalConsultPhone = () => {
                     "linear-gradient(180deg, rgb(255 255 255 / 0.15) 0%, rgb(255 255 255 / 0) 67.19%)",
                 }}
               >
-                <div className="relative h-[calc(200/8*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-blue-950/90 to-indigo-950/90 px-5 pt-3 ring-1 ring-inset ring-white/10">
+                <div className="relative h-[calc(160/8*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-blue-950/90 to-indigo-950/90 px-5 pt-3 ring-1 ring-inset ring-white/10">
                   {/* Status bar */}
                   <div className="flex justify-between items-center mb-3">
                     <div className="text-xs text-white/70">11:23 AM</div>
@@ -68,11 +66,10 @@ const ProfessionalConsultPhone = () => {
                   <div className="relative h-full overflow-hidden">
                     {/* Active Consultation Page */}
                     <div
-                      className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                        isHovered
+                      className={`absolute inset-0 transition-all duration-500 ease-in-out ${isHovered
                           ? "opacity-0 transform translate-x-[-100%]"
                           : "opacity-100 transform translate-x-0"
-                      }`}
+                        }`}
                     >
                       {/* Header */}
                       <div className="flex items-center justify-between mb-4">
@@ -189,11 +186,10 @@ const ProfessionalConsultPhone = () => {
 
                     {/* Professional Directory Page */}
                     <div
-                      className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                        isHovered
+                      className={`absolute inset-0 transition-all duration-500 ease-in-out ${isHovered
                           ? "opacity-100 transform translate-x-0"
                           : "opacity-0 transform translate-x-[100%]"
-                      }`}
+                        }`}
                     >
                       {/* Header */}
                       <div className="flex items-center justify-between mb-3">

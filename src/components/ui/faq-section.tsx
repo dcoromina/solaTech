@@ -53,14 +53,8 @@ export function FAQSection() {
   };
 
   return (
-    <section className="py-24  relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl" />
-      </div>
-
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative">
+    <section className="py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="text-center mb-16">
           <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
             Frequently Asked Questions

@@ -68,13 +68,7 @@ export function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-900 to-gray-950 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl" />
-      </div>
-
+    <section className="py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="text-center mb-16">
           <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
@@ -91,9 +85,8 @@ export function PricingSection() {
           {/* Billing Toggle */}
           <div className="flex items-center justify-center mt-8">
             <span
-              className={`text-sm ${
-                !isAnnual ? "text-white" : "text-gray-400"
-              }`}
+              className={`text-sm ${!isAnnual ? "text-white" : "text-gray-400"
+                }`}
             >
               Monthly
             </span>
@@ -102,9 +95,8 @@ export function PricingSection() {
               className="mx-3 relative inline-flex h-6 w-11 items-center rounded-full bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
             >
               <span
-                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                  isAnnual ? "translate-x-6" : "translate-x-1"
-                }`}
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${isAnnual ? "translate-x-6" : "translate-x-1"
+                  }`}
               />
             </button>
             <span
@@ -120,11 +112,10 @@ export function PricingSection() {
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`relative p-8 rounded-2xl border transition-all duration-300 hover:scale-105 ${
-                plan.popular
-                  ? "bg-gradient-to-b from-purple-900/20 to-blue-900/20 border-purple-500/50 shadow-xl shadow-purple-500/10"
-                  : "bg-white/5 border-white/10 hover:border-purple-500/30"
-              }`}
+              className={`relative p-8 rounded-2xl border transition-all duration-300 hover:scale-105 ${plan.popular
+                ? "bg-gradient-to-b from-purple-900/20 to-blue-900/20 border-purple-500/50 shadow-xl shadow-purple-500/10"
+                : "bg-white/5 border-white/10 hover:border-purple-500/30"
+                }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -172,11 +163,10 @@ export function PricingSection() {
               </ul>
 
               <button
-                className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
-                  plan.popular
-                    ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 shadow-lg shadow-purple-500/25"
-                    : "bg-white/10 text-white hover:bg-white/20 border border-white/20"
-                }`}
+                className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${plan.popular
+                  ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:scale-105 shadow-lg shadow-purple-500/25"
+                  : "bg-white/10 text-white hover:bg-white/20 border border-white/20"
+                  }`}
               >
                 {plan.cta}
               </button>

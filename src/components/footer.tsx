@@ -107,7 +107,7 @@ const footer = () => {
         className="flex flex-col items-center gap-3 pb-3 text-xs "
       >
         {" "}
-        <div className="bg-white h-[1px] w-[85%] bg-opacity-30"></div>
+        <div className="bg-white h-[1px] w-[85%] bg-opacity-20"></div>
         <p>(c) Copyright 2024, All Rights Reserved by SolaTech </p>
       </div>
     </div>

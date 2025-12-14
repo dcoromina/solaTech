@@ -21,10 +21,10 @@ const BentoItem = ({
     <motion.div
       whileHover={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 300 }}
-      className={`group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm p-8 border border-white/10 shadow-lg hover:border-purple-500/30 transition-all duration-300 ${className}`}
+      className={`group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm p-6 border border-white/10 shadow-lg hover:border-purple-500/30 transition-all duration-300 ${className}`}
     >
       <div className="relative z-10">
-        <div className="p-3 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl w-fit mb-5 shadow-md group-hover:scale-110 transition-transform duration-300">
+        <div className="p-3 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl w-fit mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
           <Icon className="h-6 w-6 text-white" />
         </div>
         <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
@@ -89,15 +89,15 @@ const BentoGrid = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-950 to-gray-900 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-16 relative">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-4 py-8 relative">
+        <div className="text-center mb-10">
           <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
             Fitness & Health Features
           </span>
@@ -108,7 +108,7 @@ const BentoGrid = () => {
             Discover adaptable tools for training, nutrition, recovery, and professional guidance—all in one place.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[200px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]">
           {items.map((item, i) => (
             <BentoItem key={i} {...item} />
           ))}

@@ -6,10 +6,10 @@ const EmailSMSPasscode = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-fit h-[400px] overflow-visible flex items-center justify-center">
+    <div className="relative w-fit h-[320px] overflow-visible flex items-center justify-center">
       {/* Decorative elements */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-10 left-10 w-56 h-56 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
 
       <div className="w-full flex flex-col justify-center items-center h-full max-w-xs mx-auto z-10">
         <div
@@ -32,17 +32,15 @@ const EmailSMSPasscode = () => {
             {/* Card hover effect */}
             <div
               className={`relative inset-x-0 top-0 isolate h-[calc(206/16*1rem)] overflow-hidden pt-8 
-                  ${
-                    isHovered ? "scale-100 translate-y-[-1rem]" : "scale-[0.98]"
-                  } 
+                  ${isHovered ? "scale-100 translate-y-[-1rem]" : "scale-[0.98]"
+                } 
                   duration-300 ease-in-out`}
               style={{ willChange: "auto" }}
             >
               {/* Phone outline */}
               <div
-                className={`mx-auto h-72 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-indigo-900/80 to-purple-900/80 p-1.5 ${
-                  isHovered ? "scale-100 translate-y-[-2rem]" : "scale-[0.98]"
-                } 
+                className={`mx-auto h-60 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-indigo-900/80 to-purple-900/80 p-1.5 ${isHovered ? "scale-100 translate-y-[-2rem]" : "scale-[0.98]"
+                  } 
                   duration-300 ease-in-out`}
                 style={{
                   boxShadow:
@@ -51,15 +49,14 @@ const EmailSMSPasscode = () => {
                     "linear-gradient(180deg, rgb(255 255 255 / 0.15) 0%, rgb(255 255 255 / 0) 67.19%)",
                 }}
               >
-                <div className="relative h-[calc(200/8*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-indigo-950/90 to-purple-950/90 px-5 pt-3 ring-1 ring-inset ring-white/10">
+                <div className="relative h-[calc(160/8*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-indigo-950/90 to-purple-950/90 px-5 pt-3 ring-1 ring-inset ring-white/10">
                   {/* Notch icon */}
                   <div
                     className={`relative z-10 mx-auto flex h-6 w-6 transform-gpu items-center justify-center rounded-full 
-                        ${
-                          isHovered
-                            ? "bg-gradient-to-r from-blue-400 to-purple-400"
-                            : "bg-[#131316]"
-                        } 
+                        ${isHovered
+                        ? "bg-gradient-to-r from-blue-400 to-purple-400"
+                        : "bg-[#131316]"
+                      } 
                         duration-300 ease`}
                     style={{
                       boxShadow: "rgba(255, 255, 255, 0.1) 0px 1px",
@@ -101,11 +98,10 @@ const EmailSMSPasscode = () => {
                     {/* Notification */}
                     <div
                       className={`absolute inset-x-2 top-12 z-20 flex origin-top items-center gap-x-3 rounded-2xl bg-gradient-to-r from-indigo-800/90 to-purple-800/90 p-2 
-                          ${
-                            isHovered
-                              ? "scale-100 opacity-100 translate-y-0"
-                              : "translate-y-[-6.5rem] scale-90 opacity-50"
-                          } 
+                          ${isHovered
+                          ? "scale-100 opacity-100 translate-y-0"
+                          : "translate-y-[-6.5rem] scale-90 opacity-50"
+                        } 
                           duration-300 ease-in-out 
                           ${isHovered ? "blur-0" : "blur-[2px]"} 
                           delay-150`}
@@ -182,11 +178,10 @@ const EmailSMSPasscode = () => {
                               <div
                                 className={`absolute -left-1.5 -top-1.5 z-10 flex h-5 w-5 items-center justify-center rounded-full text-[0.625rem]/none font-semibold backdrop-blur 
                                 scale-75 group-hover:scale-100 duration-100 ease 
-                                ${
-                                  isHovered
+                                ${isHovered
                                     ? "bg-gradient-to-r from-blue-400 to-purple-400 text-white"
                                     : "bg-white/40 text-gray-900"
-                                }`}
+                                  }`}
                                 style={{
                                   willChange: "auto",
                                   boxShadow:

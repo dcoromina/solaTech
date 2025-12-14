@@ -53,13 +53,7 @@ const certifications = [
 
 export function SecuritySection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-900 to-gray-950 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-green-500/10 to-blue-500/10 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/10 to-green-500/10 blur-3xl" />
-      </div>
-
+    <section className="py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="text-center mb-16">
           <span className="px-4 py-2 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-full text-green-300 font-medium tracking-wide text-sm uppercase border border-green-500/20 mb-4 inline-block">

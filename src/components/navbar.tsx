@@ -45,7 +45,7 @@ const NavigationMenuDemo = () => {
   return (
     <div
       className={`flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-8 lg:px-16 py-4 transition-all duration-300 ${isVisible
-        ? "translate-y-0 bg-gradient-to-b from-gray-900/95 via-gray-900/80 to-transparent backdrop-blur-md"
+        ? "translate-y-0 bg-gray-900/80 backdrop-blur-xl supports-[backdrop-filter]:bg-gray-900/60"
         : "-translate-y-full"
         }`}
     >

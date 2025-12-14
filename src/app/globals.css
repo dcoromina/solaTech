@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #0080ff; /* Medical blue */
+  --color-primary: #0080ff;
+  /* Medical blue */
   --color-primary-light: #e6f2ff;
-  --color-secondary: #16b582; /* Healthy green */
-  --color-accent: #f34970; /* Energetic accent */
+  --color-secondary: #16b582;
+  /* Healthy green */
+  --color-accent: #f34970;
+  /* Energetic accent */
   --color-background: #f9fafb;
   --color-text: #1e293b;
   --color-text-light: #64748b;
@@ -16,29 +19,32 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
-::-webkit-scrollbar-track-piece {
-  background: transparent;
-  width: 10px;
-}
-
-/* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 10px;
+  background: #111827;
+  /* gray-900 */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: grey;
-  border-radius: 10px;
+  background: #374151;
+  /* gray-700 */
+  border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(84, 84, 84);
+  background: #4b5563;
+  /* gray-600 */
+}
+
+body {
+  background-color: #111827;
+  /* gray-900 */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 .tab__button {
