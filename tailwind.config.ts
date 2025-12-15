@@ -59,11 +59,6 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-up": "accordion-up 0.2s ease-out",
-        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
-        "gradient-x": "gradient-x 15s ease infinite",
-      },
-      keyframes: {
         "gradient-x": {
           "0%, 100%": {
             "background-size": "200% 200%",
