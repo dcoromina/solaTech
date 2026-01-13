@@ -4,13 +4,13 @@ import Image from "next/image";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
-import logoSvg from "/public/slogo.svg";
-import loreAid from "/public/images/logo-dsh.png";
-import logoS from "/public/images/logo-s.png";
-import logoLet from "/public/images/logo-let.png";
-import letter from "/public/images/letter.png";
-import logoRep from "/public/RepTrack.png";
-import logoMyoo from "/public/myoo.png";
+import logoSvg from "../../public/slogo.svg";
+import loreAid from "../../public/images/logo-dsh.png";
+import logoS from "../../public/images/logo-s.png";
+import logoLet from "../../public/images/logo-let.png";
+import letter from "../../public/images/letter.png";
+import logoRep from "../../public/RepTrack.png";
+import logoMyoo from "../../public/myoo.png";
 import { AboutSection } from "./ui/about-section";
 import "../styles.css";
 import Link from "next/link";
@@ -49,18 +49,16 @@ const NavigationMenuDemo = () => {
 
   return (
     <div
-      className={`flex flex-col md:flex-row w-full justify-center md:justify-evenly items-center px-4 md:px-36 py-3 transition-transform duration-300${
-        isVisible
-          ? "translate-y-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-transparent "
-          : "-translate-y-full"
-      }`}
+      className={`flex flex-col md:flex-row w-full justify-center md:justify-evenly items-center px-4 md:px-36 py-3 transition-transform duration-300${isVisible
+        ? "translate-y-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-transparent "
+        : "-translate-y-full"
+        }`}
     >
       <div
-        className={`flex flex-row space-x-0 items-center mb-4 md:mb-0 transition-all duration-300 ${
-          !isVisible
-            ? "opacity-0 transform scale-95"
-            : "opacity-100 transform scale-100"
-        }`}
+        className={`flex flex-row space-x-0 items-center mb-4 md:mb-0 transition-all duration-300 ${!isVisible
+          ? "opacity-0 transform scale-95"
+          : "opacity-100 transform scale-100"
+          }`}
       >
         <Image
           src={letter}
@@ -71,11 +69,10 @@ const NavigationMenuDemo = () => {
         />
       </div>
       <NavigationMenu.Root
-        className={`NavigationMenuRoot transition-all duration-300 ${
-          !isVisible
-            ? "pointer-events-none opacity-0 transform scale-95"
-            : "opacity-100 transform scale-100"
-        }`}
+        className={`NavigationMenuRoot transition-all duration-300 ${!isVisible
+          ? "pointer-events-none opacity-0 transform scale-95"
+          : "opacity-100 transform scale-100"
+          }`}
       >
         <NavigationMenu.List className="NavigationMenuList ">
           <NavigationMenu.Item>
@@ -172,7 +169,7 @@ const NavigationMenuDemo = () => {
               <ul className="List two">
                 <ListItemIcon
                   title="Join Us"
-                  href="/primitives/docs/overview/introduction"
+                  href="/joinnow"
                   icon={<UserPlusIcon className="w-5 h-5" />}
                 >
                   Join us in our mission to make a difference.
@@ -206,15 +203,15 @@ const NavigationMenuDemo = () => {
           <NavigationMenu.Viewport className="NavigationMenuViewport" />
         </div>
       </NavigationMenu.Root>
-      <div
-        className={`text-blue-500 rounded-xl p-2 hidden md:block hover:bg-white hover:text-[#4262db] cursor-pointer w-fit bg-white whitespace-nowrap transition-all duration-300 ${
-          !isVisible
-            ? "opacity-0 pointer-events-none transform scale-95"
-            : "opacity-100 transform scale-100"
-        }`}
+      <Link
+        href="/joinnow"
+        className={`text-blue-500 rounded-xl p-2 hidden md:block hover:bg-white hover:text-[#4262db] cursor-pointer w-fit bg-white whitespace-nowrap transition-all duration-300 ${!isVisible
+          ? "opacity-0 pointer-events-none transform scale-95"
+          : "opacity-100 transform scale-100"
+          }`}
       >
         Contact us
-      </div>
+      </Link>
     </div>
   );
 };

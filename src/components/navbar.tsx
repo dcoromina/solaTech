@@ -1,16 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { Dumbbell } from "lucide-react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
-import logoSvg from "/public/slogo.svg";
-import loreAid from "/public/images/logo-dsh.png";
-import logoS from "/public/images/s_letter.png";
-import logoLet from "/public/images/logo-let.png";
-import letter from "/public/images/letter.png";
-import logoRep from "/public/RepTrack.png";
-import logoMyoo from "/public/myoo.png";
+import loreAid from "../../public/images/logo-dsh.png";
+import logoS from "../../public/images/s_letter.png";
+import letter from "../../public/images/letter.png";
+import logoRep from "../../public/RepTrack.png";
+import logoMyoo from "../../public/myoo.png";
 import "../styles.css";
 import Link from "next/link";
 import {
@@ -19,7 +18,7 @@ import {
   UsersIcon,
 } from "@heroicons/react/24/outline";
 
-const NavigationMenuDemo = () => {
+const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -44,23 +43,24 @@ const NavigationMenuDemo = () => {
 
   return (
     <div
-      className={`flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-8 lg:px-16 py-4 transition-all duration-300 ${isVisible
-        ? "translate-y-0 bg-gray-900/80 backdrop-blur-xl supports-[backdrop-filter]:bg-gray-900/60"
-        : "-translate-y-full"
+      className={`fixed left-1/2 transform -translate-x-1/2 z-50 flex flex-row w-[90%] md:w-[60%] justify-center md:justify-between items-center gap-8 px-6 py-3 transition-all duration-300 rounded-full border-none ${isVisible
+        ? "top-5 translate-y-0 backdrop-blur-md bg-transparent"
+        : "-translate-y-40"
         }`}
     >
       {/* Logo - centered on mobile, left-aligned on larger screens */}
-      <Link className="flex flex-row space-x-3 items-center justify-center md:justify-start order-1 md:order-none mb-4 md:mb-0" href="/">
+      <Link className="" href="/">
         <Image
           src={letter}
           width={120}
           height={40}
           alt="SolaTech Logo"
-          className="h-8 w-auto"
+          className="h-8 w-auto object-contain"
+          priority
         />
       </Link>
 
-      <NavigationMenu.Root className="NavigationMenuRoot hidden md:flex order-3 md:order-none">
+      <NavigationMenu.Root className="NavigationMenuRoot hidden md:flex">
         <NavigationMenu.List className="NavigationMenuList">
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className="NavigationMenuTrigger">
@@ -106,18 +106,18 @@ const NavigationMenuDemo = () => {
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="NavigationMenuContent">
               <ul className="List one">
-                <ListItemLogo logo={loreAid} title="SolaDash" href="/soladash">
+                <ListItem logo={loreAid} title="SolaDash" href="/soladash">
                   Your main ecosystem dashboard
-                </ListItemLogo>
-                <ListItemLogo logo={logoRep} title="SolaEvent" href="/reptrack">
+                </ListItem>
+                <ListItem logo={logoRep} title="SolaEvent" href="/reptrack">
                   Manage your events and races The easiest way possible.
-                </ListItemLogo>
-                <ListItemLogo logo={logoRep} title="SolaClub" href="/solaclub">
+                </ListItem>
+                <ListItem logo={logoRep} title="SolaClub" href="/solaclub">
                   Fill your coaching needs using this app.
-                </ListItemLogo>
-                <ListItemLogo logo={logoMyoo} title="SolaPro" href="/solapro">
+                </ListItem>
+                <ListItem logo={logoMyoo} title="SolaPro" href="/solapro">
                   Your professional needs all in one place.
-                </ListItemLogo>
+                </ListItem>
                 <ListItem title="Wearables" href="/wearables">
                   Devices to use with our solutions.
                 </ListItem>
@@ -131,27 +131,27 @@ const NavigationMenuDemo = () => {
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="NavigationMenuContent">
               <ul className="List two">
-                <ListItemIcon
+                <ListItem
                   title="Join Us"
                   href="/careers"
-                  icon={<UserPlusIcon className="w-5 h-5" />}
+                  icon={<UserPlusIcon className="w-5 h-5 text-purple-500" />}
                 >
                   Join us in our mission to make a difference.
-                </ListItemIcon>
-                <ListItemIcon
+                </ListItem>
+                <ListItem
                   title="The Workplace"
                   href="/workplace"
-                  icon={<BuildingOfficeIcon className="w-5 h-5" />}
+                  icon={<BuildingOfficeIcon className="w-5 h-5 text-purple-500" />}
                 >
                   See your future workplace.
-                </ListItemIcon>
-                <ListItemIcon
+                </ListItem>
+                <ListItem
                   title="Our Culture"
                   href="/culture"
-                  icon={<UsersIcon className="w-5 h-5" />}
+                  icon={<UsersIcon className="w-5 h-5 text-purple-500" />}
                 >
                   Hear from our employees and their experiences.
-                </ListItemIcon>
+                </ListItem>
               </ul>
             </NavigationMenu.Content>
           </NavigationMenu.Item>
@@ -168,10 +168,11 @@ const NavigationMenuDemo = () => {
 
 
       <Link
-        href="/joinnow"
-        className="bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl px-3 py-3 text-md hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex items-center justify-center whitespace-nowrap"
+        href="/letsbegin"
+        className="group bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full px-6 py-2.5 text-sm font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex items-center justify-center gap-2 whitespace-nowrap"
       >
         Let&apos;s begin
+        <Dumbbell className="w-4 h-4 transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" />
       </Link>
     </div>
   );
@@ -184,32 +185,10 @@ const ListItem = React.forwardRef<
     className?: string;
     children?: React.ReactNode;
     title?: string;
-  }
->(({ className, children, title, ...props }, forwardedRef) => (
-  <li>
-    <NavigationMenu.Link asChild>
-      <a
-        className={classNames("ListItemLink", className)}
-        {...props}
-        ref={forwardedRef}
-      >
-        <div className="ListItemHeading">{title}</div>
-        <p className="ListItemText">{children}</p>
-      </a>
-    </NavigationMenu.Link>
-  </li>
-));
-
-// eslint-disable-next-line react/display-name
-const ListItemIcon = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a"> & {
-    className?: string;
-    children?: React.ReactNode;
-    title?: string;
     icon?: React.ReactNode;
+    logo?: any;
   }
->(({ className, children, title, icon, ...props }, forwardedRef) => (
+>(({ className, children, title, icon, logo, ...props }, forwardedRef) => (
   <li>
     <NavigationMenu.Link asChild>
       <a
@@ -217,8 +196,22 @@ const ListItemIcon = React.forwardRef<
         {...props}
         ref={forwardedRef}
       >
-        <div className="flex flex-row justify-start items-center gap-2">
-          <div className="">{icon}</div>
+        <div className="flex flex-row justify-start items-center gap-3">
+          {(icon || logo) && (
+            <div className="flex-shrink-0">
+              {icon}
+              {logo && (
+                <Image
+                  src={logo}
+                  aria-hidden
+                  width={25}
+                  height={25}
+                  alt="logo"
+                  className="w-6 h-6 object-contain"
+                />
+              )}
+            </div>
+          )}
           <div className="flex flex-col">
             <div className="ListItemHeading">{title}</div>
             <p className="ListItemText">{children}</p>
@@ -229,38 +222,4 @@ const ListItemIcon = React.forwardRef<
   </li>
 ));
 
-// eslint-disable-next-line react/display-name
-const ListItemLogo = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a"> & {
-    className?: string;
-    children?: React.ReactNode;
-    title?: string;
-    logo?: any;
-  }
->(({ className, children, title, logo, ...props }, forwardedRef) => (
-  <li>
-    <NavigationMenu.Link asChild>
-      <a
-        className={classNames("ListItemLink", className)}
-        {...props}
-        ref={forwardedRef}
-      >
-        <div className="ListItemHeading flex flex-row w-full gap-2 items-center">
-          <Image
-            src={logo}
-            aria-hidden
-            width="25"
-            height="25"
-            alt="logo"
-            className="w-6 h-6 object-contain"
-          />
-          {title}
-        </div>
-        <p className="ListItemText">{children}</p>
-      </a>
-    </NavigationMenu.Link>
-  </li>
-));
-
-export default NavigationMenuDemo;
+export default Navbar;
