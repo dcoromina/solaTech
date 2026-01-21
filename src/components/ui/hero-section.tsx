@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -60,7 +61,7 @@ export default function HeroSection({
           </div>
           <div className="relative">
             {image && (
-              <img
+              <Image
                 src={image}
                 alt="Hero image"
                 className="rounded-lg shadow-lg w-full object-cover"

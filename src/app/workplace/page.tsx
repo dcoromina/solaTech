@@ -67,7 +67,7 @@ export default function WorkplacePage() {
                 transition={{ delay: 0.2 }}
                 className="text-lg text-gray-400 leading-relaxed mb-8 max-w-xl"
               >
-                Our workspace is more than just a physical location. It's a living ecosystem tailored to inspire creativity, support deep focus, and celebrate community.
+                Our workspace is more than just a physical location. It&apos;s a living ecosystem tailored to inspire creativity, support deep focus, and celebrate community.
               </motion.p>
             </div>
 

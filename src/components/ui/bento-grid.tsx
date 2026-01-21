@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -69,7 +70,7 @@ export function BentoCard({
     >
       {image && (
         <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-15 transition-opacity duration-300">
-          <img src={image} alt="" className="h-full w-full object-cover" />
+          <Image src={image} alt="" fill className="object-cover" />
         </div>
       )}
       <div className="relative z-10 p-6 h-full flex flex-col">

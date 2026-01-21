@@ -71,7 +71,7 @@ export default function CareersPage() {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12"
           >
-            At SolaTech, we're not just coding; we're crafting experiences that transform lives.
+            At SolaTech, we&apos;re not just coding; we&apos;re crafting experiences that transform lives.
             Join a team of passionate creators, engineers, and fitness enthusiasts.
           </motion.p>
 
@@ -126,7 +126,7 @@ export default function CareersPage() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Work where you thrive.</h2>
                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                   We believe that great work happens when people are happy, healthy, and inspired.
-                  That's why we offer a flexible, remote-first environment with benefits that support your whole self.
+                  That&apos;s why we offer a flexible, remote-first environment with benefits that support your whole self.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {perks.map((perk, idx) => (
@@ -171,7 +171,7 @@ export default function CareersPage() {
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-6">Current Openings</h2>
             <p className="text-gray-400 mb-10">
-              We are constantly looking for talent. If you don't see a role that fits, send us your resume anyway.
+              We are constantly looking for talent. If you don&apos;t see a role that fits, send us your resume anyway.
             </p>
 
             <div className="p-8 rounded-2xl border border-white/10 bg-white/5 mb-8">

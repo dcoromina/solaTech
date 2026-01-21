@@ -279,7 +279,7 @@ export default function SolaClubPage() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 leading-relaxed italic">"{t.quote}"</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed italic">&apos;{t.quote}&apos;</p>
                   <div>
                     <div className="font-bold text-white">{t.author}</div>
                     <div className="text-sm text-gray-500">{t.role}</div>
@@ -325,7 +325,7 @@ export default function SolaClubPage() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">"{t.quote}"</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">&apos;{t.quote}&apos;</p>
                   <div>
                     <div className="font-bold text-white">{t.author}</div>
                     <div className="text-sm text-gray-500">{t.role}</div>

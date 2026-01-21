@@ -173,9 +173,7 @@ export default function ProductSelect() {
                     >
                       {link.icon && (
                         <div className="relative w-6 h-6">
-                          {/* Using simple div placeholder if image not found, or standard img tag if path is valid. 
-                               Assuming public/icons exist as per previous file content */}
-                          <img src={link.icon} alt={link.label} className="w-full h-full object-contain" />
+                          <Image src={link.icon} alt={link.label} fill className="object-contain" />
                         </div>
                       )}
                       <div className="flex flex-col leading-tight text-left">
@@ -297,10 +295,11 @@ export default function ProductSelect() {
                 ) : (
                   /* Product Image for others */
                   <div className="relative w-full h-full flex items-center justify-center transition-all duration-500 transform hover:scale-[1.02]">
-                    <img
+                    <Image
                       src={currentProduct.image}
                       alt={currentProduct.title}
-                      className="max-w-full max-h-full object-contain drop-shadow-2xl rounded-2xl"
+                      fill
+                      className="object-contain drop-shadow-2xl rounded-2xl"
                     />
                   </div>
                 )}
