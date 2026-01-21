@@ -7,11 +7,9 @@
 /* reset */
 
 :root {
-  background: linear-gradient(
-    135deg,
-    rgba(139, 79, 199, 0.72) 0%,
-    #4262db 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(139, 79, 199, 0.72) 0%,
+      #4262db 100%);
   --color-primary: #0080ff;
   --color-primary-light: #e6f2ff;
   --color-secondary: #16b582;
@@ -52,10 +50,12 @@
   font-size: 15px;
   color: #ffff;
 }
+
 .NavigationMenuTrigger:focus,
 .NavigationMenuLink:focus {
   box-shadow: 0 0 0 2px var(--violet-7);
 }
+
 .NavigationMenuTrigger:hover,
 .NavigationMenuLink:hover {
   background-color: var(--violet-3);
@@ -84,18 +84,23 @@
   animation-duration: 250ms;
   animation-timing-function: ease;
 }
+
 .NavigationMenuContent[data-motion="from-start"] {
   animation-name: enterFromLeft;
 }
+
 .NavigationMenuContent[data-motion="from-end"] {
   animation-name: enterFromRight;
 }
+
 .NavigationMenuContent[data-motion="to-start"] {
   animation-name: exitToLeft;
 }
+
 .NavigationMenuContent[data-motion="to-end"] {
   animation-name: exitToRight;
 }
+
 @media only screen and (min-width: 600px) {
   .NavigationMenuContent {
     width: auto;
@@ -112,9 +117,11 @@
   z-index: 1;
   transition: width, transform 250ms ease;
 }
+
 .NavigationMenuIndicator[data-state="visible"] {
   animation: fadeIn 200ms ease;
 }
+
 .NavigationMenuIndicator[data-state="hidden"] {
   animation: fadeOut 200ms ease;
 }
@@ -132,12 +139,15 @@
   height: var(--radix-navigation-menu-viewport-height);
   transition: width, height, 300ms ease;
 }
+
 .NavigationMenuViewport[data-state="open"] {
   animation: scaleIn 200ms ease;
 }
+
 .NavigationMenuViewport[data-state="closed"] {
   animation: scaleOut 200ms ease;
 }
+
 @media only screen and (min-width: 600px) {
   .NavigationMenuViewport {
     width: var(--radix-navigation-menu-viewport-width);
@@ -151,11 +161,13 @@
   column-gap: 10px;
   list-style: none;
 }
+
 @media only screen and (min-width: 600px) {
   .List.one {
     width: 500px;
     grid-template-columns: 0.8fr 0.8fr;
   }
+
   .List.two {
     width: 300px;
     grid-auto-flow: column;
@@ -172,9 +184,11 @@
   font-size: 15px;
   line-height: 1;
 }
+
 .ListItemLink:focus {
   box-shadow: 0 0 0 2px var(--violet-7);
 }
+
 .ListItemLink:hover {
   background-color: var(--mauve-3);
 }
@@ -210,6 +224,7 @@
   text-decoration: none;
   outline: none;
 }
+
 .Callout:focus {
   box-shadow: 0 0 0 2px var(--violet-7);
 }
@@ -245,7 +260,8 @@
   top: 1px;
   transition: transform 250ms ease;
 }
-[data-state="open"] > .CaretDown {
+
+[data-state="open"]>.CaretDown {
   transform: rotate(-180deg);
   color: var(--violet-11);
 }
@@ -265,6 +281,7 @@
     opacity: 0;
     transform: translateX(200px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -276,6 +293,7 @@
     opacity: 0;
     transform: translateX(-200px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -287,6 +305,7 @@
     opacity: 1;
     transform: translateX(0);
   }
+
   to {
     opacity: 0;
     transform: translateX(200px);
@@ -298,6 +317,7 @@
     opacity: 1;
     transform: translateX(0);
   }
+
   to {
     opacity: 0;
     transform: translateX(-200px);
@@ -309,6 +329,7 @@
     opacity: 0;
     transform: rotateX(-30deg) scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: rotateX(0deg) scale(1);
@@ -320,6 +341,7 @@
     opacity: 1;
     transform: rotateX(0deg) scale(1);
   }
+
   to {
     opacity: 0;
     transform: rotateX(-10deg) scale(0.95);
@@ -330,6 +352,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -339,6 +362,7 @@
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }

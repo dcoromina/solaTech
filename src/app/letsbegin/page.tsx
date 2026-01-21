@@ -161,6 +161,27 @@ export default function JoinNowPage() {
                                     <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                 </Link>
                             ))}
+
+                            {/* Login / Dashboard Access */}
+                            <Link href="/soladash" className="group relative block mt-8">
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.5 }}
+                                    className="relative z-10 flex flex-row items-center gap-4 rounded-2xl border border-white/10 bg-gradient-to-r from-gray-900 to-gray-800 p-4 transition-all group-hover:border-blue-500/30 group-hover:translate-x-2"
+                                >
+                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20 group-hover:text-blue-300 transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-base font-bold text-gray-200 group-hover:text-blue-200 transition-colors">Wait, I already have an account</h3>
+                                        <p className="text-xs text-gray-400">Log in to your SolaDash dashboard</p>
+                                    </div>
+                                    <span className="text-gray-400 group-hover:text-white transition-colors pr-2">→</span>
+                                </motion.div>
+                            </Link>
                         </div>
 
                         <div className="pt-8 border-t border-white/5 text-center sm:text-left">

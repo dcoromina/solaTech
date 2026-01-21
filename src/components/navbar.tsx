@@ -5,8 +5,10 @@ import { Dumbbell } from "lucide-react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
+import logoSvg from "../../public/slogo.svg";
 import loreAid from "../../public/images/logo-dsh.png";
 import logoS from "../../public/images/s_letter.png";
+import logoLet from "../../public/images/logo-let.png";
 import letter from "../../public/images/letter.png";
 import logoRep from "../../public/RepTrack.png";
 import logoMyoo from "../../public/myoo.png";
@@ -18,34 +20,27 @@ import {
   UsersIcon,
 } from "@heroicons/react/24/outline";
 
-const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+const NavigationMenuDemo = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down
-        setIsVisible(false);
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
       } else {
-        // Scrolling up
-        setIsVisible(true);
+        setIsScrolled(false);
       }
-
-      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <div
-      className={`fixed left-1/2 transform -translate-x-1/2 z-50 flex flex-row w-[90%] md:w-[60%] justify-center md:justify-between items-center gap-8 px-6 py-3 transition-all duration-300 rounded-full border-none ${isVisible
-        ? "top-5 translate-y-0 backdrop-blur-md bg-transparent"
-        : "-translate-y-40"
+      className={`fixed left-1/2 transform -translate-x-1/2 z-50 flex flex-row w-[90%] md:w-[70%] justify-between items-center gap-4 px-6 py-3 transition-all duration-300 rounded-full border-none ${isScrolled
+        ? "top-5 backdrop-blur-md bg-black/20 border-white/10 shadow-lg shadow-purple-500/10"
+        : "top-5 bg-transparent"
         }`}
     >
       {/* Logo - centered on mobile, left-aligned on larger screens */}
@@ -56,7 +51,6 @@ const Navbar = () => {
           height={40}
           alt="SolaTech Logo"
           className="h-8 w-auto object-contain"
-          priority
         />
       </Link>
 
@@ -106,18 +100,18 @@ const Navbar = () => {
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="NavigationMenuContent">
               <ul className="List one">
-                <ListItem logo={loreAid} title="SolaDash" href="/soladash">
+                <ListItemLogo logo={loreAid} title="SolaDash" href="/soladash">
                   Your main ecosystem dashboard
-                </ListItem>
-                <ListItem logo={logoRep} title="SolaEvent" href="/reptrack">
+                </ListItemLogo>
+                <ListItemLogo logo={logoRep} title="SolaEvent" href="/reptrack">
                   Manage your events and races The easiest way possible.
-                </ListItem>
-                <ListItem logo={logoRep} title="SolaClub" href="/solaclub">
+                </ListItemLogo>
+                <ListItemLogo logo={logoRep} title="SolaClub" href="/solaclub">
                   Fill your coaching needs using this app.
-                </ListItem>
-                <ListItem logo={logoMyoo} title="SolaPro" href="/solapro">
+                </ListItemLogo>
+                <ListItemLogo logo={logoMyoo} title="SolaPro" href="/solapro">
                   Your professional needs all in one place.
-                </ListItem>
+                </ListItemLogo>
                 <ListItem title="Wearables" href="/wearables">
                   Devices to use with our solutions.
                 </ListItem>
@@ -131,27 +125,27 @@ const Navbar = () => {
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="NavigationMenuContent">
               <ul className="List two">
-                <ListItem
+                <ListItemIcon style={{ color: "purple" }}
                   title="Join Us"
                   href="/careers"
-                  icon={<UserPlusIcon className="w-5 h-5 text-purple-500" />}
+                  icon={<UserPlusIcon className="w-5 h-5" />}
                 >
                   Join us in our mission to make a difference.
-                </ListItem>
-                <ListItem
+                </ListItemIcon>
+                <ListItemIcon style={{ color: "purple" }}
                   title="The Workplace"
                   href="/workplace"
-                  icon={<BuildingOfficeIcon className="w-5 h-5 text-purple-500" />}
+                  icon={<BuildingOfficeIcon className="w-5 h-5" />}
                 >
                   See your future workplace.
-                </ListItem>
-                <ListItem
+                </ListItemIcon>
+                <ListItemIcon style={{ color: "purple" }}
                   title="Our Culture"
                   href="/culture"
-                  icon={<UsersIcon className="w-5 h-5 text-purple-500" />}
+                  icon={<UsersIcon className="w-5 h-5" />}
                 >
                   Hear from our employees and their experiences.
-                </ListItem>
+                </ListItemIcon>
               </ul>
             </NavigationMenu.Content>
           </NavigationMenu.Item>
@@ -185,10 +179,8 @@ const ListItem = React.forwardRef<
     className?: string;
     children?: React.ReactNode;
     title?: string;
-    icon?: React.ReactNode;
-    logo?: any;
   }
->(({ className, children, title, icon, logo, ...props }, forwardedRef) => (
+>(({ className, children, title, ...props }, forwardedRef) => (
   <li>
     <NavigationMenu.Link asChild>
       <a
@@ -196,22 +188,32 @@ const ListItem = React.forwardRef<
         {...props}
         ref={forwardedRef}
       >
-        <div className="flex flex-row justify-start items-center gap-3">
-          {(icon || logo) && (
-            <div className="flex-shrink-0">
-              {icon}
-              {logo && (
-                <Image
-                  src={logo}
-                  aria-hidden
-                  width={25}
-                  height={25}
-                  alt="logo"
-                  className="w-6 h-6 object-contain"
-                />
-              )}
-            </div>
-          )}
+        <div className="ListItemHeading">{title}</div>
+        <p className="ListItemText">{children}</p>
+      </a>
+    </NavigationMenu.Link>
+  </li>
+));
+
+// eslint-disable-next-line react/display-name
+const ListItemIcon = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & {
+    className?: string;
+    children?: React.ReactNode;
+    title?: string;
+    icon?: React.ReactNode;
+  }
+>(({ className, children, title, icon, ...props }, forwardedRef) => (
+  <li>
+    <NavigationMenu.Link asChild>
+      <a
+        className={classNames("ListItemLink", className)}
+        {...props}
+        ref={forwardedRef}
+      >
+        <div className="flex flex-row justify-start items-center gap-2">
+          <div className="">{icon}</div>
           <div className="flex flex-col">
             <div className="ListItemHeading">{title}</div>
             <p className="ListItemText">{children}</p>
@@ -222,4 +224,38 @@ const ListItem = React.forwardRef<
   </li>
 ));
 
-export default Navbar;
+// eslint-disable-next-line react/display-name
+const ListItemLogo = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & {
+    className?: string;
+    children?: React.ReactNode;
+    title?: string;
+    logo?: any;
+  }
+>(({ className, children, title, logo, ...props }, forwardedRef) => (
+  <li>
+    <NavigationMenu.Link asChild>
+      <a
+        className={classNames("ListItemLink", className)}
+        {...props}
+        ref={forwardedRef}
+      >
+        <div className="ListItemHeading flex flex-row w-full gap-2 items-center">
+          <Image
+            src={logo}
+            aria-hidden
+            width="25"
+            height="25"
+            alt="logo"
+            className="w-6 h-6 object-contain"
+          />
+          {title}
+        </div>
+        <p className="ListItemText">{children}</p>
+      </a>
+    </NavigationMenu.Link>
+  </li>
+));
+
+export default NavigationMenuDemo;

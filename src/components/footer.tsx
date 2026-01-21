@@ -9,7 +9,7 @@ const footer = () => {
         <div className="flex flex-col items gap-3 w-2/6">
           <Image
             className="w-fit h-3 md:h-5"
-            src="/images/logo-let.png"
+            src="/images/s_letter.png"
             width={500}
             height={500}
             alt="Picture of the author"
