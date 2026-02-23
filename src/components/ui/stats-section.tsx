@@ -89,10 +89,10 @@ function CountUpStat({ stat }: { stat: Stat }) {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-2">
+      <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple to-cyan mb-2">
         {count}{suffix}
       </div>
-      <div className="text-gray-400 font-medium">{stat.label}</div>
+      <div className="text-muted-foreground font-medium">{stat.label}</div>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 
 export default function CulturePage() {
   return (
-    <div className="flex flex-col bg-gray-900 min-h-screen">
+    <div className="flex flex-col bg-background min-h-screen text-foreground">
       <header className="w-full sticky top-0 z-50">
         <Navbar />
       </header>

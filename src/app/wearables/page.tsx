@@ -63,7 +63,7 @@ const ecosystemIcons = [
 
 export default function WearablesPage() {
   return (
-    <div className="flex flex-col bg-[#030712] min-h-screen text-white">
+    <div className="flex flex-col bg-background min-h-screen text-foreground">
       <header className="w-full sticky top-0 z-50">
         <Navbar />
       </header>
@@ -77,7 +77,7 @@ export default function WearablesPage() {
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
                 Next-Gen <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Wearables</span>
               </h1>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Discover the frontier of health technology. From high-performance trackers to neural-integrated bionics.
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function WearablesPage() {
 
         {/* Categories Showcase */}
         {wearableProducts.map((cat) => (
-          <section key={cat.id} className="py-24 border-t border-white/5">
+          <section key={cat.id} className="py-24 border-t border-border">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="mb-16">
                 <h2 className="text-3xl font-bold mb-4">{cat.category}</h2>
@@ -97,8 +97,8 @@ export default function WearablesPage() {
                 {cat.products.map((product) => (
                   <div key={product.name} className="group relative">
                     <div className={`absolute -inset-1 bg-gradient-to-r ${product.gradient} rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200`}></div>
-                    <div className="relative bg-gray-900/50 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden p-8 flex flex-col h-full">
-                      <div className="relative aspect-square mb-8 rounded-2xl overflow-hidden bg-black/40 p-4">
+                    <div className="relative bg-card/50 backdrop-blur-xl border border-border rounded-3xl overflow-hidden p-8 flex flex-col h-full">
+                      <div className="relative aspect-square mb-8 rounded-2xl overflow-hidden bg-background/40 p-4">
                         <Image
                           src={product.image}
                           alt={product.name}
@@ -111,12 +111,12 @@ export default function WearablesPage() {
                           <h3 className="text-3xl font-bold">{product.name}</h3>
                           <span className={`${product.accent} text-sm font-medium tracking-wider uppercase`}>{product.tagline}</span>
                         </div>
-                        <p className="text-gray-400 leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed">
                           {product.description}
                         </p>
                         <div className="grid grid-cols-2 gap-3 pt-4">
                           {product.features.map((feature) => (
-                            <div key={feature} className="flex items-center gap-2 text-sm text-gray-300">
+                            <div key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
                               <Check className={`w-4 h-4 ${product.accent}`} />
                               {feature}
                             </div>
@@ -124,7 +124,7 @@ export default function WearablesPage() {
                         </div>
                       </div>
                       <div className="mt-8 flex gap-4">
-                        <button className={`flex-1 py-4 px-6 rounded-xl font-semibold bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-center`}>
+                        <button className={`flex-1 py-4 px-6 rounded-xl font-semibold bg-card border border-border hover:bg-card/80 transition-all text-center`}>
                           View Specs
                         </button>
                         <button className={`flex-1 py-4 px-6 rounded-xl font-semibold bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 transition-all text-center shadow-lg hover:shadow-cyan-500/20`}>
@@ -144,7 +144,7 @@ export default function WearablesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center space-y-12">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">Universal Ecosystem Integration</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                 Our devices work seamlessly with the platforms you already use. Keep all your health data in one place.
               </p>
             </div>
@@ -152,7 +152,7 @@ export default function WearablesPage() {
             <div className="flex flex-wrap justify-center gap-8 items-center opacity-70 hover:opacity-100 transition-opacity">
               {/* Placeholders for ecosystem logos */}
               {["Apple Health", "Google Fit", "Oura", "WHOOP", "Strava", "Garmin"].map(name => (
-                <div key={name} className="px-6 py-3 bg-white/5 rounded-full border border-white/10 text-gray-300 font-medium hover:bg-white/10 transition-colors">
+                <div key={name} className="px-6 py-3 bg-card rounded-full border border-border text-muted-foreground font-medium hover:bg-card/80 transition-colors">
                   {name}
                 </div>
               ))}

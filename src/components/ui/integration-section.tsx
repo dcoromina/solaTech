@@ -57,22 +57,22 @@ const apiFeatures = [
 
 export function integrate() {
   return (
-    <section className="pt-24 bg-gradient-to-b from-gray-950 to-gray-900 relative overflow-hidden">
+    <section className="pt-24 bg-gradient-to-b from-background to-card relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue/10 to-purple/10 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple/10 to-blue/10 blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full text-blue-300 font-medium tracking-wide text-sm uppercase border border-blue-500/20 mb-4 inline-block">
+          <span className="px-4 py-2 bg-gradient-to-r from-blue/10 to-purple/10 rounded-full text-blue font-medium tracking-wide text-sm uppercase border border-blue/20 mb-4 inline-block">
             Integrations & APIs
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Connect Everything
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Seamlessly integrate with your existing healthcare ecosystem. Our
             platform connects with leading EHR systems, medical devices, and
             third-party applications.
@@ -84,17 +84,17 @@ export function integrate() {
           {apiFeatures.map((feature, index) => (
             <div
               key={index}
-              className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 group"
+              className="bg-card p-6 rounded-2xl border border-border hover:border-blue/30 transition-all duration-300 group"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue to-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 {React.cloneElement(feature.icon, {
-                  className: "w-6 h-6 text-white",
+                  className: "w-6 h-6 text-primary-foreground",
                 })}
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
+              <h3 className="text-lg font-semibold text-foreground mb-2">
                 {feature.title}
               </h3>
-              <p className="text-gray-400 text-sm">{feature.description}</p>
+              <p className="text-muted-foreground text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -104,18 +104,18 @@ export function integrate() {
           {integrations.map((category, index) => (
             <div
               key={index}
-              className="bg-white/5 rounded-2xl p-6 border border-white/10"
+              className="bg-card rounded-2xl p-6 border border-border"
             >
-              <h3 className="text-lg font-semibold text-white mb-4">
+              <h3 className="text-lg font-semibold text-foreground mb-4">
                 {category.category}
               </h3>
               <ul className="space-y-2">
                 {category.items.map((item, itemIndex) => (
                   <li
                     key={itemIndex}
-                    className="text-gray-400 text-sm flex items-center"
+                    className="text-muted-foreground text-sm flex items-center"
                   >
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-blue rounded-full mr-3"></div>
                     {item}
                   </li>
                 ))}
@@ -125,20 +125,20 @@ export function integrate() {
         </div>
 
         {/* Developer Resources */}
-        <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-2xl p-8 border border-blue-500/20">
+        <div className="bg-gradient-to-r from-blue/10 to-purple/10 rounded-2xl p-8 border border-blue/20">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
               Developer Resources
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Get started quickly with our comprehensive documentation, SDKs,
               and developer tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:scale-105 transition-all duration-200">
+              <button className="px-6 py-3 bg-gradient-to-r from-blue to-purple text-primary-foreground rounded-lg font-medium hover:scale-105 transition-all duration-200">
                 View API Docs
               </button>
-              <button className="px-6 py-3 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-all duration-200 border border-white/20">
+              <button className="px-6 py-3 bg-muted/10 text-foreground rounded-lg font-medium hover:bg-muted/20 transition-all duration-200 border border-border">
                 Download SDKs
               </button>
             </div>

@@ -26,8 +26,8 @@ export default function WorkplacePage() {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-900 text-white selection:bg-purple-500/30">
-      <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-gray-900/80 backdrop-blur-xl">
+    <div className="flex min-h-screen flex-col bg-background text-foreground selection:bg-purple/30">
+      <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-xl">
         <Navbar />
       </header>
 
@@ -45,7 +45,7 @@ export default function WorkplacePage() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-purple-300 text-sm font-medium tracking-wide mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/5 border border-border text-purple text-sm font-medium tracking-wide mb-6"
               >
                 <MapPin className="w-4 h-4" />
                 <span>Global Headquarters</span>
@@ -55,17 +55,17 @@ export default function WorkplacePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400"
+                className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-muted-foreground to-muted"
               >
                 Designed for <br />
-                <span className="text-white">Visionaries.</span>
+                <span className="text-foreground">Visionaries.</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-lg text-gray-400 leading-relaxed mb-8 max-w-xl"
+                className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl"
               >
                 Our workspace is more than just a physical location. It&apos;s a living ecosystem tailored to inspire creativity, support deep focus, and celebrate community.
               </motion.p>
@@ -77,27 +77,27 @@ export default function WorkplacePage() {
               transition={{ delay: 0.3 }}
               className="relative"
             >
-              <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-purple-900/20 aspect-[4/3] relative group">
+              <div className="rounded-3xl overflow-hidden border border-border shadow-2xl shadow-purple/20 aspect-[4/3] relative group">
                 <Image
                   src="/office/office1.png"
                   alt="SolaTech Office"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <p className="font-semibold text-lg">The Main Hub</p>
-                  <p className="text-gray-300 text-sm">Where ideas take flight</p>
+                  <p className="text-muted-foreground text-sm">Where ideas take flight</p>
                 </div>
               </div>
               {/* Decorative element */}
-              <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full border border-white/5 rounded-3xl" />
+              <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full border border-border rounded-3xl" />
             </motion.div>
           </div>
         </section>
 
         {/* Features Grid */}
-        <section className="py-24 bg-gray-900/50 border-t border-white/5">
+        <section className="py-24 bg-background/50 border-t border-border">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-8">
               {features.map((feature, idx) => (
@@ -107,13 +107,13 @@ export default function WorkplacePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                  className="p-8 rounded-2xl bg-card border border-border hover:bg-card/80 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-300 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-purple/20 flex items-center justify-center text-purple mb-4">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
+                  <p className="text-muted-foreground">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -123,7 +123,7 @@ export default function WorkplacePage() {
         {/* Remote Statement */}
         <section className="py-24 max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">Built for Hybrid</h2>
-          <p className="text-xl text-gray-400 leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             While we love our hub, we embrace the freedom of remote work.
             Our digital workplace is just as robust as our physical one, ensuring you stay connected from anywhere in the world.
           </p>

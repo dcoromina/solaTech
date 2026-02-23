@@ -23,14 +23,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-gray-900 min-h-screen relative">
+    <div className="flex flex-col bg-background min-h-screen text-foreground relative">
       {/* Unified Background Gradients */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-purple-500/15 to-blue-500/15 blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 w-[550px] h-[550px] rounded-full bg-gradient-to-r from-purple-500/12 to-blue-500/12 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/3 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-blue-500/15 to-purple-500/15 blur-3xl animate-pulse" style={{ animationDuration: '10s' }} />
-        <div className="absolute bottom-0 left-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-purple/15 to-blue/15 blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue/10 to-purple/10 blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-[550px] h-[550px] rounded-full bg-gradient-to-r from-purple/12 to-blue/12 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/3 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-blue/15 to-purple/15 blur-3xl animate-pulse" style={{ animationDuration: '10s' }} />
+        <div className="absolute bottom-0 left-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-purple/10 to-blue/10 blur-3xl" />
       </div>
 
       {/* Header */}
@@ -44,24 +44,26 @@ export default function Home() {
 
       <StatsSection />
 
+      <IntegrationSection />
+
       {/* Features */}
       <FeaturesSection />
 
 
       {/*      <ProductSelect /> */}
-      <BentoGrid />
+      {/*   <BentoGrid /> */}
 
       {/* Product Cards */}
       <section className="py-24 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           <div className="text-center mb-10">
-            <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 inline-block">
+            <span className="px-4 py-2 bg-gradient-to-r from-purple/10 to-blue/10 rounded-full text-purple font-medium tracking-wide text-sm uppercase border border-purple/20 inline-block">
               Our Products
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mt-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4">
               Explore the Suite
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto mt-3">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mt-3">
               Powerful tools to help you build, track, and grow.
             </p>
           </div>
@@ -75,7 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      <IntegrationSection />
+
 
       <TestimonialsSection />
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const footer = () => {
   return (
-    <div id="footer" className="bg-gray-950">
+    <div id="footer" className="bg-background border-t border-border mt-auto">
       <div className="flex flex-row w-full h-1/6 p-3 md:p-6 justify-evenly gap-4 ">
         {" "}
         <div className="flex flex-col items gap-3 w-2/6">
@@ -20,37 +20,37 @@ const footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <h6 className="text-white font-bold text-sm md:text-base ">
+          <h6 className="text-foreground font-bold text-sm md:text-base ">
             Company
           </h6>
-          <ul className="list-none text-xs md:text-sm space-y-2">
-            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+          <ul className="list-none text-xs md:text-sm space-y-2 text-muted-foreground">
+            <li className="hover:text-foreground transition-all duration-300 hover:font-semibold cursor-pointer">
               Service
             </li>
-            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+            <li className="hover:text-foreground transition-all duration-300 hover:font-semibold cursor-pointer">
               Resources
             </li>
-            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+            <li className="hover:text-foreground transition-all duration-300 hover:font-semibold cursor-pointer">
               About us
             </li>
           </ul>
         </div>
         <div className="flex flex-col gap-2">
-          <h6 className="text-white font-bold text-sm md:text-base ">Help</h6>
-          <ul className="list-none text-xs md:text-sm space-y-2">
-            <li className=" hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+          <h6 className="text-foreground font-bold text-sm md:text-base ">Help</h6>
+          <ul className="list-none text-xs md:text-sm space-y-2 text-muted-foreground">
+            <li className=" hover:text-foreground transition-all duration-300 hover:font-semibold cursor-pointer">
               Customer Support
             </li>
-            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+            <li className="hover:text-foreground transition-all duration-300 hover:font-semibold cursor-pointer">
               Terms & Conditions
             </li>
-            <li className="hover:text-white transition-all duration-300 hover:font-semibold cursor-pointer">
+            <li className="hover:text-foreground transition-all duration-300 hover:font-semibold cursor-pointer">
               Privacy Policy
             </li>
           </ul>
         </div>
         <div className="flex flex-col gap-2">
-          <h6 className="text-white font-bold">Socials</h6>
+          <h6 className="text-foreground font-bold">Socials</h6>
           <div className="grid grid-cols-3 md:flex md:flex-row gap-2 md:gap-3 w-fit">
             {/* <!-- Discord --> */}
             <svg
@@ -104,10 +104,10 @@ const footer = () => {
       </div>
       <div
         id="Copyright"
-        className="flex flex-col items-center gap-3 pb-3 text-xs "
+        className="flex flex-col items-center gap-3 pb-3 text-xs text-muted-foreground"
       >
         {" "}
-        <div className="bg-white h-[1px] w-[85%] bg-opacity-20"></div>
+        <div className="bg-border h-[1px] w-[85%]"></div>
         <p>(c) Copyright 2024, All Rights Reserved by SolaTech </p>
       </div>
     </div>

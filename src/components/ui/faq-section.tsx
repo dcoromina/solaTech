@@ -56,13 +56,13 @@ export function FAQSection() {
     <section className="py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
+          <span className="px-4 py-2 bg-gradient-to-r from-purple/10 to-blue/10 rounded-full text-purple font-medium tracking-wide text-sm uppercase border border-purple/20 mb-4 inline-block">
             Frequently Asked Questions
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Got Questions?
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Find answers to common questions about our platform, implementation,
             and support.
           </p>
@@ -72,24 +72,24 @@ export function FAQSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white/5 rounded-2xl border border-white/10 overflow-hidden transition-all duration-300 hover:border-purple-500/30"
+              className="bg-card rounded-2xl border border-border overflow-hidden transition-all duration-300 hover:border-purple/30"
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
               >
-                <h3 className="text-lg font-medium text-white pr-4">
+                <h3 className="text-lg font-medium text-foreground pr-4">
                   {faq.question}
                 </h3>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                  <ChevronUp className="w-5 h-5 text-purple flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-purple flex-shrink-0" />
                 )}
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
@@ -97,8 +97,8 @@ export function FAQSection() {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-400 mb-4">Still have questions?</p>
-          <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-medium hover:scale-105 transition-all duration-200">
+          <p className="text-muted-foreground mb-4">Still have questions?</p>
+          <button className="px-6 py-3 bg-gradient-to-r from-purple to-blue text-primary rounded-xl font-medium hover:scale-105 transition-all duration-200">
             Contact Our Team
           </button>
         </div>

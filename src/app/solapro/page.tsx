@@ -6,21 +6,21 @@ import { SectionHeader } from "@/components/ui/section-header";
 
 export default function SolaProPage() {
   return (
-    <div className="flex flex-col bg-gray-900 min-h-screen">
+    <div className="flex flex-col bg-background min-h-screen text-foreground">
       <header className="w-full sticky top-0 z-50">
         <Navbar />
       </header>
       <main className="flex-1">
         {/* Breadcrumbs */}
-        <div className="py-3 border-b border-white/10 bg-gray-900/60 sticky top-[64px] z-40 backdrop-blur-sm">
+        <div className="py-3 border-b border-border bg-background/60 sticky top-[64px] z-40 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav aria-label="Breadcrumb" className="text-sm text-gray-400">
               <ol className="flex items-center gap-2">
                 <li>
-                  <Link href="/" prefetch className="hover:text-white">Home</Link>
+                  <Link href="/" prefetch className="hover:text-foreground">Home</Link>
                 </li>
                 <li aria-hidden="true" className="text-gray-500">/</li>
-                <li className="text-white">SolaPro</li>
+                <li className="text-foreground">SolaPro</li>
               </ol>
             </nav>
           </div>
@@ -33,7 +33,7 @@ export default function SolaProPage() {
                 <span className="px-6 py-3 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full text-blue-300 font-semibold tracking-wide text-sm uppercase border border-blue-500/30 inline-block backdrop-blur-sm">
                   For Health Professionals
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                   Deliver Better Care with
                   <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> SolaPro</span>
                 </h1>
@@ -78,7 +78,7 @@ export default function SolaProPage() {
                 { title: "Collaboration", desc: "Secure messaging and team workflows." },
               ].map((f, i) => (
                 <div key={i} className="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm p-8 border border-white/10 shadow-lg">
-                  <h3 className="text-xl font-semibold text-white mb-3">{f.title}</h3>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{f.title}</h3>
                   <p className="text-gray-300">{f.desc}</p>
                 </div>
               ))}

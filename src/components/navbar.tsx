@@ -39,7 +39,7 @@ const NavigationMenuDemo = () => {
   return (
     <div
       className={`fixed left-1/2 transform -translate-x-1/2 z-50 flex flex-row w-[90%] md:w-[70%] justify-between items-center gap-4 px-6 py-3 transition-all duration-300 rounded-full border-none ${isScrolled
-        ? "top-5 backdrop-blur-md bg-black/20 border-white/10 shadow-lg shadow-purple-500/10"
+        ? "top-5 backdrop-blur-md bg-background/20 border-border shadow-lg shadow-purple/10"
         : "top-5 bg-transparent"
         }`}
     >
@@ -50,7 +50,7 @@ const NavigationMenuDemo = () => {
           width={120}
           height={40}
           alt="SolaTech Logo"
-          className="h-8 w-auto object-contain"
+          className="h-12 w-auto object-contain"
         />
       </Link>
 
@@ -163,7 +163,7 @@ const NavigationMenuDemo = () => {
 
       <Link
         href="/letsbegin"
-        className="group bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full px-6 py-2.5 text-sm font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/25 hidden lg:flex items-center justify-center gap-2 whitespace-nowrap"
+        className="group bg-gradient-to-r from-purple to-blue text-primary rounded-full px-6 py-2.5 text-sm font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple/25 hidden lg:flex items-center justify-center gap-2 whitespace-nowrap"
       >
         Let&apos;s begin
         <Dumbbell className="w-4 h-4 transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" />

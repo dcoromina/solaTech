@@ -25,7 +25,7 @@ export default function SolaClubPage() {
   };
 
   return (
-    <div className="flex flex-col bg-gray-950 min-h-screen text-white selection:bg-green-500/30">
+    <div className="flex flex-col bg-background min-h-screen text-foreground selection:bg-teal/30">
       <header className="w-full sticky top-0 z-50">
         <Navbar />
       </header>
@@ -65,14 +65,14 @@ export default function SolaClubPage() {
                 </p>
                 {/* Store badges */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Link href="#" className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white hover:bg-white/10 transition-colors shadow-sm group">
+                  <Link href="#" className="flex items-center gap-3 rounded-xl border border-border bg-card/5 px-4 py-4 text-foreground hover:bg-card/10 transition-colors shadow-sm group">
                     <Image src="/icons/apple.svg" alt="Apple" width={30} height={30} className="w-8 h-8 opacity-80 group-hover:opacity-100 transition-opacity" />
                     <div className="flex flex-col leading-none text-left">
                       <span className="text-[10px] uppercase tracking-wide text-gray-400">Download on the</span>
                       <span className="text-sm font-semibold">App Store</span>
                     </div>
                   </Link>
-                  <Link href="#" className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-white hover:bg-white/10 transition-colors shadow-sm group">
+                  <Link href="#" className="flex items-center gap-3 rounded-xl border border-border bg-card/5 px-4 py-2 text-foreground hover:bg-card/10 transition-colors shadow-sm group">
                     <Image src="/icons/google-play.svg" alt="Google Play" width={30} height={30} className="w-8 h-8 opacity-80 group-hover:opacity-100 transition-opacity" />
                     <div className="flex flex-col leading-none text-left">
                       <span className="text-[10px] uppercase tracking-wide text-gray-400">Download it on</span>
@@ -105,7 +105,7 @@ export default function SolaClubPage() {
                     <span className="text-sm text-gray-400 font-medium">/ 5.0</span>
                   </div>
                   <p className="text-sm text-gray-400">
-                    Trusted by <span className="text-white font-semibold">12,000+ coaches</span> to power their communities.
+                    Trusted by <span className="text-foreground font-semibold">12,000+ coaches</span> to power their communities.
                   </p>
                 </div>
 
@@ -183,7 +183,7 @@ export default function SolaClubPage() {
         </section>
 
         {/* Features */}
-        <section className="py-24 bg-gray-950 relative">
+        <section className="py-24 bg-background relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeader
               title="Everything you need"
@@ -228,7 +228,7 @@ export default function SolaClubPage() {
                   <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-white/5">
                     {f.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{f.title}</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">{f.title}</h3>
                   <p className="text-sm text-gray-400 leading-relaxed">
                     {f.desc}
                   </p>
@@ -281,7 +281,7 @@ export default function SolaClubPage() {
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed italic">&apos;{t.quote}&apos;</p>
                   <div>
-                    <div className="font-bold text-white">{t.author}</div>
+                    <div className="font-bold text-foreground">{t.author}</div>
                     <div className="text-sm text-gray-500">{t.role}</div>
                   </div>
                 </motion.div>

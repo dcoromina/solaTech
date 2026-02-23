@@ -51,11 +51,11 @@ export function BentoCard({
 
   const variantClasses = {
     default:
-      "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700",
+      "bg-background dark:bg-card border border-border",
     highlight:
-      "bg-primary-50 dark:bg-primary-950 border border-primary-200 dark:border-primary-800",
+      "bg-primary/5 border border-primary/20",
     muted:
-      "bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800",
+      "bg-muted/5 border border-border",
   };
 
   return (
@@ -75,14 +75,14 @@ export function BentoCard({
       )}
       <div className="relative z-10 p-6 h-full flex flex-col">
         {icon && (
-          <div className="mb-3 text-primary-600 dark:text-primary-400">
+          <div className="mb-3 text-primary">
             {icon}
           </div>
         )}
-        <h3 className="text-lg md:text-xl font-medium text-gray-900 dark:text-gray-100 mb-2">
+        <h3 className="text-lg md:text-xl font-medium text-foreground mb-2">
           {title}
         </h3>
-        <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+        <p className="text-muted-foreground text-sm mb-4 flex-grow">
           {description}
         </p>
         {children && <div className="mt-auto">{children}</div>}

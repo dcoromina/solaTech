@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ["class"],
+  darkMode: "media",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,44 +20,55 @@ const config = {
     extend: {
       colors: {
         border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        input: "hsl(var(--border))",
+        ring: "hsl(var(--brand-blue))",
+        background: "hsl(var(--primary-foreground))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(var(--brand-teal))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "hsl(var(--status-red))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hsl(var(--brand-cyan))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "hsl(var(--background))",
+          foreground: "hsl(var(--foreground))",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Action & Highlight Colors
+        cyan: "hsl(var(--brand-cyan))",
+        blue: "hsl(var(--brand-blue))",
+        teal: "hsl(var(--brand-teal))",
+        // Status & Data Category Colors
+        orange: "hsl(var(--status-orange))",
+        red: "hsl(var(--status-red))",
+        purple: "hsl(var(--status-purple))",
+        pink: "hsl(var(--status-pink))",
+        yellow: "hsl(var(--status-yellow))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
       keyframes: {
         "gradient-x": {
           "0%, 100%": {
