@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { FiCode, FiLayout, FiSmile, FiTrendingUp, FiZap, FiShield } from "react-icons/fi";
 
 const features = [
@@ -7,39 +9,43 @@ const features = [
     description:
       "Track workouts, recovery, and body metrics with AI-driven insights to optimize your training and health.",
     icon: FiTrendingUp,
-    className: "md:col-span-2 md:row-span-2",
+    gradient: "from-purple-500 to-violet-500",
   },
   {
     title: "Adaptive Programs & Routines",
     description: "Training and wellness plans that auto-adjust to your goals, schedule, and progress.",
     icon: FiLayout,
+    gradient: "from-blue-500 to-cyan-500",
   },
   {
     title: "Wearables & App Integrations",
     description: "Seamless sync with Apple Health, Google Fit, Strava, Oura, Whoop, and more.",
     icon: FiCode,
+    gradient: "from-indigo-500 to-blue-500",
   },
   {
     title: "Privacy & Data Security",
     description: "Bank‑level encryption and best‑practice safeguards to protect your health data.",
     icon: FiShield,
+    gradient: "from-green-500 to-emerald-500",
   },
   {
     title: "Quick Start Assessments",
     description: "Onboard fast with fitness, nutrition, and lifestyle assessments that personalize your plan.",
     icon: FiZap,
-    className: "md:col-span-2",
+    gradient: "from-amber-500 to-orange-500",
   },
   {
     title: "24/7 Expert Consultation",
     description: "Chat with certified coaches, trainers, and dietitians anytime you need guidance.",
     icon: FiSmile,
+    gradient: "from-pink-500 to-rose-500",
   },
 ];
 
 export function FeaturesSection() {
   return (
-    <section className="py-0  relative overflow-hidden">
+    <section id="features" className="py-20 md:py-28 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl" />
@@ -48,35 +54,69 @@ export function FeaturesSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block"
+          >
             Features & Benefits
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="text-3xl md:text-5xl font-bold text-white mb-6"
+          >
             Empower Your Health & Fitness Journey
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-xl text-gray-400 max-w-3xl mx-auto"
+          >
             Discover AI-driven tools, personalized guidance, and seamless integrations designed to help you thrive in fitness and wellness.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
-              className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 backdrop-blur-sm"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: index * 0.08,
+                duration: 0.5,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              }}
+              className="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:border-purple-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-purple-500/5 backdrop-blur-sm overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                {React.createElement(feature.icon, {
-                  className: "w-6 h-6 text-white",
-                })}
+              {/* Hover gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/[0.05] to-blue-500/[0.05] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+
+              {/* Corner decoration */}
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl" />
+
+              <div className="relative z-10">
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300`}>
+                  {React.createElement(feature.icon, {
+                    className: "w-6 h-6 text-white",
+                  })}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-blue-300 transition-all duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

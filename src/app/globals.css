@@ -12,33 +12,55 @@
   --color-text-light: #64748b;
 }
 
-/* Scrollbar */
+/* Animated gradient text */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-/* width */
+.animate-gradient {
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track-piece {
   background: transparent;
-  width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: grey;
+  background: rgba(139, 92, 246, 0.3);
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(84, 84, 84);
+  background: rgba(139, 92, 246, 0.5);
 }
 
 .tab__button {
