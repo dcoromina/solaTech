@@ -3,15 +3,62 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #0080ff; /* Medical blue */
+
+  /*
+  --color-primary: #0080ff;
   --color-primary-light: #e6f2ff;
-  --color-secondary: #16b582; /* Healthy green */
-  --color-accent: #f34970; /* Energetic accent */
+  --color-secondary: #16b582;
+  --color-accent: #f34970;
   --color-background: #f9fafb;
   --color-text: #1e293b;
   --color-text-light: #64748b;
+  */
+
+
+  /* Core Theme Colors */
+  --background: 0 0% 100%;
+  /* #FFFFFF */
+  --foreground: 222 47% 5%;
+  /* #020817 */
+  --primary: 222 47% 11%;
+  /* #0F172A */
+  --primary-foreground: 210 40% 98%;
+  /* #F8FAFC */
+
+  /* Brand Action Colors */
+  --brand-cyan: 192 91% 36%;
+  /* #0891B2 */
+  --brand-blue: 221 83% 53%;
+  /* #2563EB */
+  --brand-teal: 173 80% 40%;
+  /* #14B8A6 */
+
+  /* Status & Category Colors */
+  --status-orange: 25 95% 53%;
+  /* #F97316 */
+  --status-red: 0 84% 60%;
+  /* #EF4444 */
+  --status-purple: 270 91% 65%;
+  /* #A855F7 */
+  --status-pink: 330 81% 50%;
+  /* #DB2777 */
+  --status-yellow: 45 93% 47%;
+  /* #EAB308 */
+
+  /* UI Surface Colors */
+  --card: 0 0% 100%;
+  /* #FFFFFF */
+  --card-foreground: 222 47% 5%;
+  --border: 214 32% 91%;
+  /* #E2E8F0 */
+  --muted: 215 16% 47%;
+  /* #64748B */
+  --muted-foreground: 215 16% 47%;
+
+  --radius: 0.75rem;
 }
 
+<<<<<<< HEAD
 /* Animated gradient text */
 @keyframes gradient-shift {
   0% {
@@ -24,6 +71,37 @@
     background-position: 0% 50%;
   }
 }
+=======
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Core Theme Colors */
+    --background: 222 47% 5%;
+    /* #020817 */
+    --foreground: 210 40% 98%;
+    /* #F8FAFC */
+    --primary: 210 40% 98%;
+    /* #F8FAFC */
+    --primary-foreground: 222 47% 11%;
+
+    /* Brand Action Updates (Dark Mode Specifics) */
+    --brand-cyan: 189 80% 60%;
+    /* #22D3EE */
+
+    /* UI Surface Colors */
+    --card: 215 28% 17%;
+    /* #1F2937 */
+    --card-foreground: 210 40% 98%;
+    --border: 217 19% 27%;
+    /* #374151 */
+    --muted: 215 20% 65%;
+    /* #94A3B8 */
+    --muted-foreground: 215 20% 65%;
+  }
+}
+
+
+/* Scrollbar */
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
 
 .animate-gradient {
   animation: gradient-shift 4s ease infinite;
@@ -45,22 +123,43 @@ html {
   width: 8px;
 }
 
+<<<<<<< HEAD
 ::-webkit-scrollbar-track-piece {
   background: transparent;
 }
 
+=======
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
 ::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 10px;
+  background: #111827;
+  /* gray-900 */
 }
 
 ::-webkit-scrollbar-thumb {
+<<<<<<< HEAD
   background: rgba(139, 92, 246, 0.3);
   border-radius: 10px;
+=======
+  background: #374151;
+  /* gray-700 */
+  border-radius: 4px;
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
 }
 
 ::-webkit-scrollbar-thumb:hover {
+<<<<<<< HEAD
   background: rgba(139, 92, 246, 0.5);
+=======
+  background: #4b5563;
+  /* gray-600 */
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  background-image: radial-gradient(hsl(var(--foreground) / 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
 }
 
 .tab__button {

@@ -6,22 +6,22 @@ const EmailSMSPasscode = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative w-fit h-[400px] overflow-visible flex items-center justify-center">
+    <div className="relative w-fit h-[320px] overflow-visible flex items-center justify-center">
       {/* Decorative elements */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-10 left-10 w-56 h-56 bg-purple/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-64 h-64 bg-blue/10 rounded-full blur-3xl"></div>
 
       <div className="w-full flex flex-col justify-center items-center h-full max-w-xs mx-auto z-10">
         <div
-          className="group isolate flex flex-col rounded-2xl bg-white/5 shadow-[0_0_20px_rgba(138,75,175,0.2)] backdrop-blur-sm border border-white/10"
+          className="group isolate flex flex-col rounded-2xl bg-card shadow-[0_0_20px_hsla(var(--purple),0.2)] backdrop-blur-sm border border-border"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           <div className="relative z-10 flex-none px-4 order-last pb-4">
-            <h3 className="text-sm font-medium text-white">
+            <h3 className="text-sm font-medium text-foreground">
               Secure Authentication
             </h3>
-            <p className="mt-2 text-sm/5 text-purple-100/70">
+            <p className="mt-2 text-sm/5 text-purple/70">
               Multi-factor security to protect your account.
             </p>
           </div>
@@ -32,34 +32,31 @@ const EmailSMSPasscode = () => {
             {/* Card hover effect */}
             <div
               className={`relative inset-x-0 top-0 isolate h-[calc(206/16*1rem)] overflow-hidden pt-8 
-                  ${
-                    isHovered ? "scale-100 translate-y-[-1rem]" : "scale-[0.98]"
-                  } 
+                  ${isHovered ? "scale-100 translate-y-[-1rem]" : "scale-[0.98]"
+                } 
                   duration-300 ease-in-out`}
               style={{ willChange: "auto" }}
             >
               {/* Phone outline */}
               <div
-                className={`mx-auto h-72 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-indigo-900/80 to-purple-900/80 p-1.5 ${
-                  isHovered ? "scale-100 translate-y-[-2rem]" : "scale-[0.98]"
-                } 
+                className={`mx-auto h-60 w-[calc(264/16*1rem)] rounded-[calc(44/16*1rem)] bg-gradient-to-b from-blue/20 to-purple/20 p-1.5 ${isHovered ? "scale-100 translate-y-[-2rem]" : "scale-[0.98]"
+                  } 
                   duration-300 ease-in-out`}
                 style={{
                   boxShadow:
                     "0 1px 0 0 rgb(255 255 255 / 0.1) inset, 0px 2px 10px 0 rgb(138 75 175 / 0.5)",
                   backgroundImage:
-                    "linear-gradient(180deg, rgb(255 255 255 / 0.15) 0%, rgb(255 255 255 / 0) 67.19%)",
+                    "linear-gradient(180deg, hsla(var(--foreground), 0.15) 0%, hsla(var(--foreground), 0) 67.19%)",
                 }}
               >
-                <div className="relative h-[calc(200/8*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-indigo-950/90 to-purple-950/90 px-5 pt-3 ring-1 ring-inset ring-white/10">
+                <div className="relative h-[calc(160/8*1rem)] overflow-hidden rounded-[calc(38/16*1rem)] bg-gradient-to-br from-background/90 to-background/90 px-5 pt-3 ring-1 ring-inset ring-border">
                   {/* Notch icon */}
                   <div
                     className={`relative z-10 mx-auto flex h-6 w-6 transform-gpu items-center justify-center rounded-full 
-                        ${
-                          isHovered
-                            ? "bg-gradient-to-r from-blue-400 to-purple-400"
-                            : "bg-[#131316]"
-                        } 
+                        ${isHovered
+                        ? "bg-gradient-to-r from-blue-400 to-purple-400"
+                        : "bg-[#131316]"
+                      } 
                         duration-300 ease`}
                     style={{
                       boxShadow: "rgba(255, 255, 255, 0.1) 0px 1px",
@@ -100,12 +97,11 @@ const EmailSMSPasscode = () => {
                   <span className="[perspective:1000px]">
                     {/* Notification */}
                     <div
-                      className={`absolute inset-x-2 top-12 z-20 flex origin-top items-center gap-x-3 rounded-2xl bg-gradient-to-r from-indigo-800/90 to-purple-800/90 p-2 
-                          ${
-                            isHovered
-                              ? "scale-100 opacity-100 translate-y-0"
-                              : "translate-y-[-6.5rem] scale-90 opacity-50"
-                          } 
+                      className={`absolute inset-x-2 top-12 z-20 flex origin-top items-center gap-x-3 rounded-2xl bg-gradient-to-r from-blue/20 to-purple/20 p-2 
+                          ${isHovered
+                          ? "scale-100 opacity-100 translate-y-0"
+                          : "translate-y-[-6.5rem] scale-90 opacity-50"
+                        } 
                           duration-300 ease-in-out 
                           ${isHovered ? "blur-0" : "blur-[2px]"} 
                           delay-150`}
@@ -116,7 +112,7 @@ const EmailSMSPasscode = () => {
                       }}
                     >
                       <div
-                        className="flex h-10 w-10 flex-none items-center justify-center rounded-[calc(10/16*1rem)] bg-gradient-to-br from-blue-600 to-purple-600"
+                        className="flex h-10 w-10 flex-none items-center justify-center rounded-[calc(10/16*1rem)] bg-gradient-to-br from-blue to-purple"
                         style={{
                           boxShadow: "0 1px rgb(255 255 255 / 0.1) inset",
                           backgroundImage:
@@ -138,12 +134,12 @@ const EmailSMSPasscode = () => {
                         </svg>
                       </div>
                       <div className="min-w-0">
-                        <div className="text-[0.625rem]/4 font-medium text-blue-200">
+                        <div className="text-[0.625rem]/4 font-medium text-blue">
                           Security alert
                         </div>
-                        <div className="truncate text-xs/4 text-purple-100/90">
+                        <div className="truncate text-xs/4 text-purple/90">
                           Your security passcode is{" "}
-                          <span className="text-white font-medium">764676</span>
+                          <span className="text-foreground font-medium">764676</span>
                         </div>
                       </div>
                     </div>
@@ -161,7 +157,7 @@ const EmailSMSPasscode = () => {
                     ].map((label, index) => (
                       <div key={label} className="flex-none">
                         <div
-                          className="relative size-10 rounded-[calc(10/16*1rem)] bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors"
+                          className="relative size-10 rounded-[calc(10/16*1rem)] bg-muted/5 backdrop-blur-sm hover:bg-muted/10 transition-colors"
                           style={{
                             boxShadow: "0 1px rgb(255 255 255 / 0.1) inset",
                           }}
@@ -182,11 +178,10 @@ const EmailSMSPasscode = () => {
                               <div
                                 className={`absolute -left-1.5 -top-1.5 z-10 flex h-5 w-5 items-center justify-center rounded-full text-[0.625rem]/none font-semibold backdrop-blur 
                                 scale-75 group-hover:scale-100 duration-100 ease 
-                                ${
-                                  isHovered
-                                    ? "bg-gradient-to-r from-blue-400 to-purple-400 text-white"
-                                    : "bg-white/40 text-gray-900"
-                                }`}
+                                ${isHovered
+                                    ? "bg-gradient-to-r from-blue to-purple text-primary-foreground"
+                                    : "bg-muted/40 text-foreground"
+                                  }`}
                                 style={{
                                   willChange: "auto",
                                   boxShadow:
@@ -211,7 +206,7 @@ const EmailSMSPasscode = () => {
                             </div>
                           )}
                         </div>
-                        <div className="mt-1.5 text-[0.625rem]/4 font-medium text-purple-100/70">
+                        <div className="mt-1.5 text-[0.625rem]/4 font-medium text-purple/70">
                           {label}
                         </div>
                       </div>
@@ -222,7 +217,7 @@ const EmailSMSPasscode = () => {
               {/* Card Gradient */}
             </div>
             <div
-              className={`absolute inset-0  bg-gradient-to-t from-indigo-900/90 
+              className={`absolute inset-0  bg-gradient-to-t from-blue/20 
                     ${isHovered ? "translate-y-[0rem]" : ""} 
                     duration-300 ease-in-out`}
               style={{ willChange: "auto" }}

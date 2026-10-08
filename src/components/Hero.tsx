@@ -2,10 +2,17 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+<<<<<<< HEAD
 import { motion } from "framer-motion";
 import Dashboard from "/public/dashboard.png";
 import FoodAppImage from "/public/FoodApp.jpg";
 import ReptrackImage from "/public/RepTrack.jpg";
+=======
+import Dashboard from "../../public/dashboard.png";
+import FoodAppImage from "../../public/FoodApp.jpg";
+import ReptrackImage from "../../public/RepTrack.jpg";
+import { motion } from "framer-motion";
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -22,6 +29,7 @@ const fadeUp = {
 
 const HeroSection = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-[80vh] flex flex-col items-center justify-center gap-12 px-4 py-0 md:py-10 relative overflow-hidden">
       {/* Animated Grid Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -106,21 +114,65 @@ const HeroSection = () => {
         >
           A Good Life Starts With{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-400 to-blue-500 animate-gradient bg-[length:200%_auto]">
+=======
+    <div className="min-h-[70vh] flex flex-col items-center justify-center gap-12 px-4  mt-20 md:py-10 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-purple/20 to-blue/20 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-r from-blue/20 to-purple/20 blur-3xl" />
+      </div>
+
+      <div className="max-w-[900px] flex flex-col items-center  gap-6 relative z-10">
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-purple font-medium tracking-wide text-sm uppercase px-4 py-2 bg-gradient-to-r from-purple/10 to-blue/10 rounded-full border border-purple/20"
+        >
+          Transform Your Fitness Journey
+        </motion.span>
+
+        {/*      <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-purple-300 font-medium tracking-wide text-sm uppercase px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full border border-purple-500/20"
+        >
+          Transform Your Fitness Journey
+        </motion.span> */}
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="font-bold text-foreground lg:text-6xl md:text-5xl text-4xl text-center leading-tight tracking-tight md:text-balance text-pretty px-1"
+        >
+          A Good Life Starts With{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple via-cyan to-blue">
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
             Good Health
           </span>
         </motion.h1>
 
         <motion.p
+<<<<<<< HEAD
           custom={2}
           initial="hidden"
           animate="visible"
           variants={fadeUp}
           className="text-gray-300 text-center text-lg lg:text-xl max-w-[700px] leading-relaxed"
+=======
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-muted-foreground text-center text-lg lg:text-xl max-w-[700px] leading-relaxed"
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
         >
           Your All-in-One companion in your health and fitness journey.
         </motion.p>
 
         <motion.div
+<<<<<<< HEAD
           custom={3}
           initial="hidden"
           animate="visible"
@@ -130,10 +182,21 @@ const HeroSection = () => {
           <Link
             href="/contact"
             className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-medium hover:scale-105 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 overflow-hidden"
+=======
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-6 flex flex-col sm:flex-row gap-4"
+        >
+          <Link
+            href="/JOINNOW"
+            className="px-8 py-4 bg-gradient-to-r from-purple to-blue text-primary rounded-xl font-medium hover:scale-105 transition-all duration-200 shadow-lg shadow-purple/25 hover:shadow-purple/40"
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
           >
             <span className="relative z-10">Get Started Free</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Link>
+<<<<<<< HEAD
           <Link
             href="#features"
             className="px-8 py-4 bg-white/5 text-white rounded-xl font-medium hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 backdrop-blur-sm"
@@ -168,10 +231,13 @@ const HeroSection = () => {
             </svg>
             Cancel anytime
           </span>
+=======
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
         </motion.div>
       </div>
 
       <motion.div
+<<<<<<< HEAD
         initial={{ opacity: 0, y: 60, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ delay: 0.7, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -179,13 +245,23 @@ const HeroSection = () => {
       >
         {/* Left Image - Hidden behind, rotates out on hover */}
         <div className="hidden lg:block absolute left-20 bottom-0 w-[190px] transform transition-all translate-x-[280px] duration-700 ease-out rotate-0 opacity-0 group-hover/container:-translate-x-8 group-hover/container:-rotate-12 group-hover/container:opacity-100 z-10">
+=======
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="relative w-full max-w-[1200px] h-auto flex justify-center items-center mt-10 perspective-1000 group/cards"
+      >
+        {/* Left Image - Fans out to left */}
+        <div className="absolute z-10 top-1/2 left-1/2 w-[100px] sm:w-[160px] md:w-[230px] scale-75 -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out group-hover/cards:-translate-x-[40%] sm:group-hover/cards:-translate-x-[80%] md:group-hover/cards:-translate-x-[230%] group-hover/cards:-rotate-12 group-hover/cards:scale-95">
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
           <Image
             src={FoodAppImage}
-            className="w-full h-auto rounded-xl shadow-2xl shadow-black/40 hover:scale-105 transition-transform duration-300"
-            alt="Recipe preview"
+            className="w-full h-auto rounded-xl shadow-2xl shadow-black/40 border border-border"
+            alt="Food App"
           />
         </div>
 
+<<<<<<< HEAD
         {/* Center Main Image */}
         <div className="relative z-20 max-w-[800px]">
           <Image
@@ -202,12 +278,29 @@ const HeroSection = () => {
 
         {/* Right Image - Hidden behind, rotates out on hover */}
         <div className="hidden hover:scale-105 lg:block absolute right-20 bottom-0 w-[190px] transform transition-all -translate-x-[280px] duration-700 ease-out rotate-0 opacity-0 group-hover/container:translate-x-8 group-hover/container:rotate-12 group-hover/container:opacity-100 z-10">
+=======
+        {/* Right Image - Fans out to right */}
+        <div className="absolute z-10 top-1/2 left-1/2 w-[100px] sm:w-[160px] md:w-[230px] scale-75 -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-out group-hover/cards:translate-x-[40%] sm:group-hover/cards:translate-x-[80%] md:group-hover/cards:translate-x-[140%] group-hover/cards:rotate-12 group-hover/cards:scale-95">
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
           <Image
             src={ReptrackImage}
-            className="w-full h-auto rounded-xl shadow-2xl shadow-black/40 hover:scale-100 transition-transform duration-300"
-            alt="Fitness tracking app"
+            className="w-full h-auto rounded-xl shadow-2xl shadow-black/40 border border-border"
+            alt="Rep Tracker"
           />
         </div>
+<<<<<<< HEAD
+=======
+
+        {/* Center Main Image - Stays scale */}
+        <div className="relative z-20 w-full h-full max-w-[800px] transition-transform duration-500 ease-out group-hover/cards:scale-105 group-hover/cards:z-30">
+          <Image
+            src={Dashboard}
+            className="w-full h-auto aspect-auto rounded-xl shadow-2xl shadow-purple/20 group-hover/cards:shadow-purple/40 border border-border"
+            alt="Dashboard"
+            priority
+          />
+        </div>
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
       </motion.div>
     </div>
   );

@@ -38,25 +38,19 @@ export function TestimonialsSection({ className }: { className?: string }) {
   return (
     <section
       className={cn(
-        "py-24 relative overflow-hidden bg-gradient-to-b from-gray-900 to-gray-950",
+        "py-24 relative z-10",
         className
       )}
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/2 w-80 h-80 -translate-x-1/2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl" />
-        <div className="absolute bottom-0 right-1/2 w-80 h-80 translate-x-1/2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl" />
-      </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full text-purple-300 font-medium tracking-wide text-sm uppercase border border-purple-500/20 mb-4 inline-block">
+          <span className="px-4 py-2 bg-gradient-to-r from-purple/10 to-blue/10 rounded-full text-purple font-medium tracking-wide text-sm uppercase border border-purple/20 mb-4 inline-block">
             Success Stories
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
             Trusted by Healthcare Leaders
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Join thousands of healthcare providers and patients who are
             transforming healthcare with our technology.
           </p>
@@ -66,32 +60,32 @@ export function TestimonialsSection({ className }: { className?: string }) {
           {testimonialsList.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-purple-500/30 transition-all duration-300 group"
+              className="bg-card backdrop-blur-xl p-8 rounded-2xl border border-border hover:border-purple/30 transition-all duration-300 group"
             >
               <div className="mb-6">
                 <svg
-                  className="w-10 h-10 text-purple-500/80"
+                  className="w-10 h-10 text-purple/80"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M14.417 6.679C15.447 7.773 16 9 16 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.379.132-.79.198-1.213.198-2.210 0-3.901-1.617-3.901-3.9 0-2.249 1.876-4.007 4.134-4.007 1.485 0 2.775.650 3.73 1.806zm9.143 0C24.590 7.773 25.143 9 25.143 10.989c0 3.5-2.457 6.637-6.03 8.188l-.893-1.378c3.335-1.804 3.987-4.145 4.247-5.621-.379.132-.79.198-1.213.198C19.044 12.376 17.353 10.759 17.353 8.476c0-2.249 1.876-4.007 4.134-4.007 1.485 0 2.775.650 3.73 1.806z" />
                 </svg>
               </div>
-              <p className="text-gray-300 italic mb-6 text-lg leading-relaxed">
+              <p className="text-muted-foreground italic mb-6 text-lg leading-relaxed">
                 &quot;{testimonial.quote}&quot;
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
-                  <span className="text-white font-medium text-lg">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple to-blue flex items-center justify-center">
+                  <span className="text-primary font-medium text-lg">
                     {testimonial.author.charAt(0)}
                   </span>
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-medium text-white">
+                  <h4 className="font-medium text-foreground">
                     {testimonial.author}
                   </h4>
                   {(testimonial.role || testimonial.company) && (
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-muted-foreground">
                       {testimonial.role}
                       {testimonial.role && testimonial.company && ", "}
                       {testimonial.company}

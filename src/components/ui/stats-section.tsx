@@ -1,6 +1,10 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+<<<<<<< HEAD
 import { motion, useInView } from "framer-motion";
+=======
+import { motion } from "framer-motion";
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
 
 const stats = [
   {
@@ -94,6 +98,7 @@ function CountUpStat({ stat, index }: { stat: Stat; index: number }) {
   }, [isVisible, targetNumber]);
 
   return (
+<<<<<<< HEAD
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
@@ -119,11 +124,20 @@ function CountUpStat({ stat, index }: { stat: Stat; index: number }) {
         <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
       )}
     </motion.div>
+=======
+    <div ref={ref} className="text-center">
+      <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple to-cyan mb-2">
+        {count}{suffix}
+      </div>
+      <div className="text-muted-foreground font-medium">{stat.label}</div>
+    </div>
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
   );
 }
 
 export function StatsSection() {
   return (
+<<<<<<< HEAD
     <section className="py-16 bg-gray-900 relative">
       {/* Top divider */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
@@ -132,6 +146,21 @@ export function StatsSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
           {stats.map((stat, index) => (
             <CountUpStat key={index} stat={stat} index={index} />
+=======
+    <section className="py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <CountUpStat stat={stat} />
+            </motion.div>
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
           ))}
         </div>
       </div>

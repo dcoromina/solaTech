@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiCode, FiLayout, FiSmile, FiTrendingUp, FiZap, FiShield } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -45,6 +46,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
+<<<<<<< HEAD
     <section id="features" className="py-20 md:py-28 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -79,10 +81,23 @@ export function FeaturesSection() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-xl text-gray-400 max-w-3xl mx-auto"
           >
+=======
+    <section className="py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
+        <div className="text-center mb-16">
+          <span className="px-4 py-2 bg-gradient-to-r from-purple/10 to-blue/10 rounded-full text-purple font-medium tracking-wide text-sm uppercase border border-purple/20 mb-4 inline-block">
+            Features & Benefits
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+            Empower Your Health & Fitness Journey
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
             Discover AI-driven tools, personalized guidance, and seamless integrations designed to help you thrive in fitness and wellness.
           </motion.p>
         </div>
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <motion.div
@@ -116,9 +131,46 @@ export function FeaturesSection() {
                   {feature.description}
                 </p>
               </div>
+=======
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2
+              }
+            }
+          }}
+        >
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+              }}
+              className="group p-8 rounded-3xl bg-card border border-border hover:border-purple/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple/20 backdrop-blur-md hover:-translate-y-1"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple/20 to-blue/20 border border-border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 group-hover:border-purple/30">
+                {React.createElement(feature.icon, {
+                  className: "w-7 h-7 text-purple group-hover:text-foreground transition-colors duration-300",
+                })}
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-base">
+                {feature.description}
+              </p>
+>>>>>>> 3051ac14ece559a7e0eee9d5961fd19e199b0cc5
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
