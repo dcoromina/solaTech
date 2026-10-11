@@ -21,7 +21,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-purple font-medium tracking-wide text-sm uppercase px-4 py-2 bg-gradient-to-r from-purple/10 to-blue/10 rounded-full border border-purple/20"
+          className="text-purple-500 font-medium tracking-wide text-sm uppercase px-4 py-2 bg-gradient-to-r from-purple/10 to-blue/10 rounded-full border border-purple/20"
         >
           Transform Your Fitness Journey
         </motion.span>

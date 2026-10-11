@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { Calculator, Activity, HeartPulse, Flame } from "lucide-react";
 import classNames from "classnames";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import logoSvg from "../../public/slogo.svg";
@@ -157,6 +158,44 @@ const NavigationMenuDemo = () => {
                 >
                   Devices to use with our solutions.
                 </ListItem>
+              </ul>
+            </NavigationMenu.Content>
+          </NavigationMenu.Item>
+
+          <NavigationMenu.Item>
+            <NavigationMenu.Trigger className="NavigationMenuTrigger">
+              Tools <CaretDownIcon className="CaretDown" aria-hidden />
+            </NavigationMenu.Trigger>
+            <NavigationMenu.Content className="NavigationMenuContent">
+              <ul className="List two">
+                <ListItemIcon style={{ color: "purple" }}
+                  title="BMI Calculator"
+                  href="/tools?tab=bmi"
+                  icon={<Calculator className="w-5 h-5" />}
+                >
+                  Calculate your Body Mass Index (BMI).
+                </ListItemIcon>
+                <ListItemIcon style={{ color: "purple" }}
+                  title="BMR Calculator"
+                  href="/tools?tab=bmr"
+                  icon={<Activity className="w-5 h-5" />}
+                >
+                  Find your Basal Metabolic Rate (BMR).
+                </ListItemIcon>
+                <ListItemIcon style={{ color: "purple" }}
+                  title="Calorie Calculator"
+                  href="/tools?tab=calories"
+                  icon={<Flame className="w-5 h-5" />}
+                >
+                  Calculate your daily target calories.
+                </ListItemIcon>
+                <ListItemIcon style={{ color: "purple" }}
+                  title="Macro Calculator"
+                  href="/tools?tab=macros"
+                  icon={<HeartPulse className="w-5 h-5" />}
+                >
+                  Determine your daily macronutrient needs.
+                </ListItemIcon>
               </ul>
             </NavigationMenu.Content>
           </NavigationMenu.Item>
